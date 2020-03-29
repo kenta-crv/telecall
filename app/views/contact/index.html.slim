@@ -14,55 +14,59 @@
     br
     table.company
       colgroup
-        col width="40%"
-        col width="60%"
+        col width="10%"
+        col width="20%"
+        col width="70%"
+        tr
+          td
+            strong.label 必須
+          td.arrow_box
+            | 会社名
+          td = f.text_field :company
       tr
-        th.arrow_box
-          | 会社名
-          strong.label.label-blue 必須
-          small 株式会ABC
-        td= f.text_field :company
-      tr
-        th.arrow_box
+        td
+          strong.label 必須
+        td.arrow_box
           | 担当者名
-          strong.label.label-blue 必須
-          small 山田太郎
-        td= f.text_field :name
+        td = f.text_field :name
       tr
-        th.arrow_box
+        td
+          strong.label 必須
+        td.arrow_box
           | 電話番号
-          strong.label.label-blue 必須
-          small 00-0000-0000
-        td= f.text_field :tel
+        td = f.text_field :tel
       tr
-        th.arrow_box
+        td
+          strong.label 必須
+        td.arrow_box
           | メールアドレス
-          strong.label.label-blue 必須
-          small aaa@aaa.com
-        td= f.email_field :email
+        td = f.email_field :email
       tr
-        th.arrow_box
+        td
+          strong.label 必須
+        td.arrow_box
           | 住所
-          strong.label.label-blue 必須
-          small 東京都東京市東京町1-1-1
-        td= f.text_field :address
+        td = f.text_field :address
       tr
-        th.arrow_box
+        td
+          strong.label 必須
+        td.arrow_box
           | 件名
-          strong.label.label-blue 必須
-        td= f.select(:subject, [ \
+        td = f.select(:subject, [ \
             ["選択する","選択する"],      \
             ["テレマーケティング代行のご依頼","テレマーケティング代行のご依頼"],      \
             ["テストマーケティングのご依頼","テストマーケティングのご依頼"],      \
             ["HP制作・LPページ制作のご依頼","HP制作・LPページ制作のご依頼"],      \
-            ["Web開発のご依頼","Web開発のご依頼"],      \
+            ["Webアプリケーション開発のご依頼","Webアプリケーション開発のご依頼"],      \
             ["その他","その他"]      \
             ])
       tr
-        th.arrow_box
-          | 本文
-          strong.label.label-blue 必須
-        td= f.text_area :message
+        td
+          strong.label 必須
+        td.arrow_box
+          | 件名
+        td
+          = f.text_area :message
       tr
-        td colspan="2"
+        td colspan="3"
           = f.submit "確認"

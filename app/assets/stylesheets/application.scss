@@ -17,45 +17,120 @@
  $main_color: #004D7F;
  $sub_color: #1481c8;
 
+ /*ヘッダーのベース設定*/
+header {
+width:100%;
+background-color:white;
+position: sticky;
+top: 0;
+z-index:10;
+  .header-image {
+    max-width:250px;
+    height: 100%;
+  }
+  .navi {
+    background-color:$main_color;
+    line-height:middle;
+    height:40px;
+    a {
+      text-decoration: none;
+      color:white;
+      text-shadow: 1px 1px 1px #000;
+      margin-top:auto;
+      margin-top:8px;
+      a:hover {
+        background-color: rgba(255,255,255,0.1);
+      }
+    }
+  }
+
+    #dropmenu{
+     list-style-type: none;
+     width: 100%;
+     height: 40px;
+     margin: 0 auto;
+     background: $main_color;
+    }
+    #dropmenu li{
+     position: relative;
+     width: 15%;
+     float: left;
+     text-align: center;
+    }
+    #dropmenu li a{
+     display: block;
+     margin: 0;
+     padding: 10px 0px 15px;
+     color: #fff;
+     font-size: 100%;
+     text-shadow: 1px 1px 1px #000;
+     line-height: 1;
+     text-decoration: none;
+    }
+    #dropmenu li ul{
+     list-style: none;
+     position: absolute;
+     top: 100%;
+     left: 0;
+     margin: 0;
+     padding: 0;
+     border-radius: 0 0 3px 3px;
+    }
+    #dropmenu li:last-child ul{
+     left: -100%;
+     width: 100%
+    }
+    #dropmenu li ul li{
+     overflow: hidden;
+     width: 300%;
+     height: 0;
+     color: #fff;
+     -moz-transition: .2s;
+     -webkit-transition: .2s;
+     -o-transition: .2s;
+     -ms-transition: .2s;
+     transition: .2s;
+    }
+    #dropmenu li ul li a{
+     padding: 13px 15px;
+     background: $main_color;
+     text-align: left;
+     font-size: 12px;
+     font-weight: normal;
+    }
+    #dropmenu li:hover > a{
+    background-color:$sub_color;
+     color: #fff;
+    }
+
+    #dropmenu li:hover ul li{
+     overflow: visible;
+     height: 38px;
+     border-top: 1px solid #fff;
+     border-bottom: 1px solid #fff;
+    }
+    #dropmenu li:hover ul li:first-child{
+     border-top: 0;
+    }
+    #dropmenu li:hover ul li:last-child{
+     border-bottom: 0;
+    }
+    #dropmenu li:hover ul li:last-child a{
+     border-radius: 0 0 3px 3px;
+    }
+}
+
 body {
   width:100%;
-  margin:0 auto;
   text-align:center;
-}
-
-
-                                /*ヘッダーのベース設定*/
-header {
-  width: 100%;
-  background-color:white;
-  position: fixed;
-  z-index:10;
-  margin-top:-10px;
-     .left {
-       float:left;
-     }
-     .right {
-       float:right;
-     }
-}
 
 main {
-  margin-top:90px;
+  margin-top:-65px;
 }
-
-
 
                                   /*  メイン画像  */
+
 .back-image-app {
-  background-image: url('base.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-  padding-bottom:50px;
-  margin-top:-22px;
-  margin-right:-15px;
-}
-.back-image-recruit {
   background-image: url('base2.png');
   background-size: 100%;
   background-repeat: no-repeat;
@@ -64,6 +139,27 @@ main {
   margin-top:-22px;
   margin-right:-15px;
 }
+
+.back-image-metal {
+  background-image: url('work.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  padding-bottom:50px;
+  margin-top:-22px;
+  margin-right:-15px;
+}
+
+.back-image-marke {
+  background-image: url('marke.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  padding-bottom:50px;
+  margin-top:-22px;
+  margin-right:-15px;
+}
+
 .back-image {
     .box2 {
      padding: 1vw 4.5vw 0.3vw;
@@ -83,6 +179,7 @@ main {
       .face-2 {
           font-size:5.5vw;
           font-weight:bold;
+          margin-bottom:-85px;
       }
       .face-3 {
           font-size:5.5vw;
@@ -106,9 +203,68 @@ main {
       }
  }
 
-.information {
-  margin-top:45px;
-}
+
+ .back-image-it {
+ background-image: url('baset.png');
+ background-size: 100%;
+ background-repeat: no-repeat;
+ vertical-align: middle;
+ padding-bottom:50px;
+ margin-top:-22px;
+ margin-right:-15px;
+ }
+ .back-image-lp {
+   text-align:center;
+     .box2 {
+      padding: 1vw 4.5vw 0.3vw;
+      display:inline-block;
+      background:red;
+            p {
+            color: #FFF;/*文字色*/
+            font-weight: bold;
+            font-size:2.0vw;
+              }
+       }
+       .face-1 {
+           font-size:3.5vw;
+           font-weight:bold;
+           margin-top:30px;
+           color:#327BEE;
+           text-shadow: 2px 2px 2px #fff, -2px 2px 2px #fff, 2px -2px 2px #fff, -2px -2px 2px #fff, 2px 2px 2px #fff, -2px 2px 2px #fff, 2px -2px 2px #fff, -2px -2px 2px #fff;
+       }
+       .face-2 {
+           font-size:3.6vw;
+           font-weight:bold;
+       }
+       .face-3 {
+           font-size:8.0vw;
+           font-weight:bold;
+           color: #004D7F;
+           text-shadow: 3px 3px 3px #fff, -3px 3px 3px #fff, 3px -3px 3px #fff, -3px -3px 3px #fff, 3px 3px 3px #fff, -3px 3px 3px #fff, 3px -3px 3px #fff, -3px -3px 3px #fff;
+       }
+       .face-4 {
+           font-size:2.0vw;
+           font-weight:bold;
+           text-shadow: 1px 1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff, -1px -1px 1px #fff, 1px 1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff, -1px -1px 1px #fff;
+           line-height:4.0vw;
+       }
+       .face-price {
+           font-size:5.0vw;
+           font-weight:bold;
+           color:orange;
+           margin:-10px 0 -25px;
+           padding-left:50px;
+           margin-top:20px;
+           text-shadow: 1px 1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff, -1px -1px 1px #fff, 1px 1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff, -1px -1px 1px #fff;
+           margin-bottom:0px;
+       }
+       .face-conversion {
+           font-size:3.0vw;
+           font-weight:bold;
+           color:red;
+       }
+  }
+
 
     .box1 {
      padding: 1rem 4.5rem 0.3rem;
@@ -137,7 +293,6 @@ main {
     font-weight:bold;
     width:100%;
     text-shadow: 2px 2px 2px #000;
-
 }
 .under {
      background: linear-gradient(transparent 60%, #FFFF66 60%);
@@ -309,86 +464,6 @@ table.company {
   color:black;
 }
 
-
-
-#dropmenu{
- list-style-type: none;
- width: 100%;
- height: 40px;
- margin: 0 auto;
- background: $main_color;
-}
-#dropmenu li{
- position: relative;
- width: 16%;
- float: left;
- margin: 0;
- padding: 0;
- text-align: center;
-}
-#dropmenu li a{
- display: block;
- margin: 0;
- padding: 10px 0 15px;
- color: #fff;
- font-size: 100%;
- text-shadow: 1px 1px 1px #000;
- line-height: 1;
- text-decoration: none;
-}
-#dropmenu li ul{
- list-style: none;
- position: absolute;
- top: 100%;
- left: 0;
- margin: 0;
- padding: 0;
- border-radius: 0 0 3px 3px;
-}
-#dropmenu li:last-child ul{
- left: -100%;
- width: 100%
-}
-#dropmenu li ul li{
- overflow: hidden;
- width: 300%;
- height: 0;
- color: #fff;
- -moz-transition: .2s;
- -webkit-transition: .2s;
- -o-transition: .2s;
- -ms-transition: .2s;
- transition: .2s;
-}
-#dropmenu li ul li a{
- padding: 13px 15px;
- background: $main_color;
- text-align: left;
- font-size: 12px;
- font-weight: normal;
-}
-#dropmenu li:hover > a{
-background-color:$sub_color;
- color: #fff;
-}
-
-#dropmenu li:hover ul li{
- overflow: visible;
- height: 38px;
- border-top: 1px solid #fff;
- border-bottom: 1px solid #fff;
-}
-#dropmenu li:hover ul li:first-child{
- border-top: 0;
-}
-#dropmenu li:hover ul li:last-child{
- border-bottom: 0;
-}
-#dropmenu li:hover ul li:last-child a{
- border-radius: 0 0 3px 3px;
-}
-
-
 .headline {
   padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
   color: #494949;/*文字色*/
@@ -409,7 +484,6 @@ background-color:$sub_color;
   color:#666;
 }
 
-
 .top-wrapper {
   margin:0 40px -50px;
   text-align:left;
@@ -422,9 +496,6 @@ background-color:$sub_color;
      line-height:2.0;
    }
 }
-
-
-
 
 /* 黒板風　タイトル　3 */
 .kokuban-t3 {
@@ -488,7 +559,30 @@ background-color:$sub_color;
 }
 }
 
+.red {
+  color: red;
+}
 
+.font-height {
+  line-height:3.0vw;
+  margin:0 30px;
+}
+
+.font-height-2 {
+  font-size:0.5vw;
+  margin:0 30px;
+}
+
+.business-wrapper {
+  text-align:left;
+  margin:0 30px;
+  padding-left:20px;
+  h3 {
+    font-size:21px;
+    color:$main_color;
+    font-weight:bold;
+  }
+}
 
 .red {
   color: red;
@@ -502,4 +596,142 @@ background-color:$sub_color;
 .font-height-2 {
   font-size:0.5vw;
   margin:0 30px;
+}
+
+.label {
+  background: red;
+}
+
+.label-blue {
+  background: blue;
+}
+
+
+.call-flow {
+  text-align:center;
+  h5 {
+    font-size:24px;
+    color: black;
+    font-weight:bold;
+  }
+  .col-sm-6 {
+    padding:0 40px;
+  }
+  p {
+    font-size:12px;
+  }
+}
+
+}
+
+
+
+
+nav.globalMenuSp {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background: $main_color;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    text-align: center;
+    transform: translateY(-100%);
+    transition: all 0.6s;
+    width: 100%;
+}
+
+nav.globalMenuSp ul {
+    background: $main_color;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+nav.globalMenuSp ul li {
+    font-size: 1.0em;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    border-bottom: 1px dotted #fff;
+}
+
+/* 最後はラインを描かない */
+nav.globalMenuSp ul li:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+nav.globalMenuSp ul li a {
+    display: block;
+    color: #fff;
+    line-height:3em;
+}
+
+/* このクラスを、jQueryで付与・削除する */
+nav.globalMenuSp.active {
+    transform: translateY(0%);
+}
+
+
+.navToggle {
+    display: block;
+    position: fixed;    /* bodyに対しての絶対位置指定 */
+    right: 13px;
+    top: 12px;
+    width: 42px;
+    height: 51px;
+    cursor: pointer;
+    z-index: 3;
+    background: $sub_color;
+    text-align: center;
+}
+
+.navToggle span {
+    display: block;
+    position: absolute;    /* .navToggleに対して */
+    width: 30px;
+    border-bottom: solid 3px #eee;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+    left: 6px;
+}
+
+.navToggle span:nth-child(1) {
+    top: 9px;
+}
+
+.navToggle span:nth-child(2) {
+    top: 18px;
+}
+
+.navToggle span:nth-child(3) {
+    top: 27px;
+}
+
+.navToggle span:nth-child(4) {
+    border: none;
+    color: #eee;
+    font-size: 9px;
+    font-weight: bold;
+    top: 34px;
+}
+
+/* 最初のspanをマイナス45度に */
+.navToggle.active span:nth-child(1) {
+    top: 18px;
+    left: 6px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* 2番目と3番目のspanを45度に */
+.navToggle.active span:nth-child(2),
+.navToggle.active span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
 }

@@ -3,28 +3,51 @@ html
   head
       = render template: 'layouts/_head.html.slim'
   header
-    .row
-      .col-xs-3
-          =image_tag "logo1.png", height: "85vw", class:"left"
-      .col-xs-6
-      .col-xs-3
-          =image_tag "tel.gif", height: "85vw", class:"right"
+      .row
+        .col-xs-4
+           = link_to "/"
+            =image_tag "logo1.png", width: "100%", class:"header-image"
+        .col-xs-3
+        .col-xs-4
+            =image_tag "tel.gif", width: "100%", class:"header-image"
+        .col-xs-1
+                .navToggle
+                  span
+                  span
+                  span
+                  span menu
+      .row.navi
+        .col-xs-12.center.hidden-xs
+          ul#dropmenu
+           li
+             = link_to  'トップ', '/' , class: "col-md"
+           li
+             = link_to  '事業内容', '/business' , :class=>"col-md"
+           li
+             = link_to  '代理店募集', '/agent' , :class=>"col-md"
+           li
+             = link_to  '採用募集', '/recruit' , :class=>"col-md"
+           li
+             = link_to  '会社概要', '/company' , :class=>"col-md"
+           li
+            = link_to  '問い合わせ', '/contact' , :class=>"col-md"
 
-    .row.header
-      .col-xs-12
-        ul#dropmenu
-         li
-           = link_to  'トップ', '#' , class: "col-md"
-         li
-           = link_to  'RiPlusとは？', '#' , :class=>"col-md"
-         li
-           = link_to  'アポ代行', '#' , :class=>"col-md"
-         li
-           = link_to  '記事一覧', '#' , :class=>"col-md"
-         li
-           = link_to  '会社概要', '#' , :class=>"col-md"
-         li
-          = link_to  '問い合わせ', '#' , :class=>"col-md"
+
+        nav.globalMenuSp
+           ul
+            li
+             = link_to  'トップ', '/'
+            li
+             = link_to  '事業内容', '/business'
+            li
+             = link_to  '代理店募集', '/agent'
+            li
+             = link_to  '採用募集', '/recruit'
+            li
+             = link_to  '会社概要', '/company'
+            li
+             = link_to  '問い合わせ', '/contact'
+
   body
     p.notice
       = notice
@@ -34,3 +57,5 @@ html
       .bread
         = render_breadcrumbs separator: ' > '
       = yield
+  footer
+     = render template: 'layouts/_footer.html.slim'

@@ -1,28 +1,24 @@
 Rails.application.routes.draw do
   devise_for :admins
-  #devise_for :admins
 
-  root to: 'app#index' #トップランディングページ
-  get 'lp' => 'app#lp'
-  get 'app/business' => 'app#business'
-  get 'app/price' => 'app#price'
-  get 'app/company' => 'app#company'
-  get 'app/agent' => 'app#agent'
-  get 'app/review' => 'app#review'
-  get 'app/recruit' => 'app#recruit'
-    get 'app/parttime' => 'app#parttime'
-    get 'app/regular' => 'app#regular'
-  get 'foreign' => 'app#foreign'
+  root to: 'top#index' #トップランディングページ
+    get 'engilance' => 'top#engilance' #エンジランス
+    get 'movies' => 'top#movies' #ムービーズ
+    get 'mail' => 'top#mail' #メールマーケティング
+    get 'metal' => 'top#metal' #金属加工
+    get 'marketing' => 'top#marketing' #デジタルマーケティング
+  get 'business' => 'top#business'
+  get 'price' => 'top#price'
+  get 'company' => 'top#company'
+  get 'agent' => 'top#agent'
+  get 'review' => 'top#review'
+  get 'recruit' => 'top#recruit'
+    get 'recruit/parttime' => 'top#parttime'
+    get 'recruit/regular' => 'top#regular'
+    get 'recruit/subcontracting' => 'top#subcontracting'
+  get 'foreign' => 'top#foreign'
 
   resources :posts
-
-  get 'it' => 'it#index'
-  get 'it/business' => 'it#business'
-  get 'it/price' => 'it#price'
-  get 'it/company' => 'it#company'
-  get 'it/privacy' => 'it#privacy'
-  get 'it/agent' => 'it#agent'
-  get 'it/review' => 'it#review'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get '/contact' => 'contact#index'
