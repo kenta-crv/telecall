@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   get 'foreign' => 'top#foreign'
 
   resources :posts
+  resources :workers
+  get 'workers/agreement' => 'workers#agreement'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get '/contact' => 'contact#index'

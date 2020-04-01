@@ -1,0 +1,105 @@
+= form_for @worker do |f|
+     table.company
+       colgroup
+         col width="10%"
+         col width="20%"
+         col width="70%"
+         tr
+           td
+             strong.label 必須
+           td.arrow_box
+             | 氏名
+           td
+             = f.text_field :first_name
+             = f.text_field :last_name
+         tr
+           td
+             strong.label 必須
+           td.arrow_box
+             | フリガナ
+           td
+             = f.text_field :first_kana
+             = f.text_field :last_kana
+         tr
+           td
+             strong.label 必須
+           td.arrow_box
+             | 電話番号(ハイフンなし)
+
+           td
+             = f.number_field :tel
+         tr
+           td
+             strong.label 必須
+           td.arrow_box
+             | メールアドレス
+           td
+             = f.email_field :mail
+         tr
+           td
+             strong.label 必須
+           td.arrow_box
+             | 郵便番号（ハイフンなし）
+           td
+             = f.text_field :postnumber
+         tr
+           td
+             strong.label 必須
+           td.arrow_box
+             | 住所
+           td
+             = f.text_field :address
+
+
+         tr
+           td
+             strong.label 必須
+           td.arrow_box
+             | 経験
+           td
+             =f.select(:experience,[ \
+             ["選択する","選択する"],      \
+             ["発信業務経験あり","発信業務経験あり"],      \
+             ["受電業務経験あり","発信業務経験あり"],      \
+             ["未経験","未経験"],      \
+             ])
+         tr
+           td
+             strong.label 必須
+           td.arrow_box
+             | 商材（複数記載可）
+           td
+             = f.text_field :item
+         tr
+           td
+             strong.label 必須
+           td.arrow_box
+             | ago
+
+           td
+             = f.number_field :ago
+             |年
+         tr
+           td
+             strong.label 必須
+           td.arrow_box
+             | 週稼働時間
+           td
+             = f.email_field :worktime
+         tr
+           td
+             strong.label 必須
+           td.arrow_box
+             | 郵便番号（ハイフンなし）
+           td
+             = f.text_field :postnumber
+         tr
+           td
+             strong.label 必須
+           td.arrow_box
+             | 住所
+           td
+             = f.text_field :address
+         tr
+           td colspan="3"
+             = f.submit "確認"
