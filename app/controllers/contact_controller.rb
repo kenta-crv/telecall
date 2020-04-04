@@ -18,6 +18,13 @@ class ContactController < ApplicationController
     ContactMailer.received_email(@contact).deliver
   end
 
+  def update
+    contact = Contact.find(params[:id])
+    contact.update(contact_params)
+    company = contact.company
+    ContactMailer.send_when_admin_reply(contact).deliver
+  end
+
   private
   def contact_params
     params.require(:contact).permit(
