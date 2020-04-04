@@ -16,13 +16,7 @@ class ContactController < ApplicationController
   def thanks
     @contact = Contact.new(contact_params)
     ContactMailer.received_email(@contact).deliver
-  end
-
-  def update
-    contact = Contact.find(params[:id])
-    contact.update(contact_params)
-    company = contact.company
-    ContactMailer.send_when_admin_reply(contact).deliver
+    ContactMailer.send_email(@contact).deliver
   end
 
   private
