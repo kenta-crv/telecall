@@ -16,11 +16,12 @@ Rails.application.routes.draw do
     get 'recruit/parttime' => 'top#parttime'
     get 'recruit/regular' => 'top#regular'
     get 'recruit/subcontracting' => 'top#subcontracting'
-  get 'foreign' => 'top#foreign'
 
   resources :posts
-  resources :workers
-  get 'workers/agreement' => 'workers#agreement'
+  get 'script' => 'top#script'
+  get 'workers/new' => 'workers#new'
+  post 'workers/confirm' => 'workers#confirm'
+  post 'workers/thanks' => 'workers#thanks'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get '/contact' => 'contact#index'

@@ -54,6 +54,12 @@ ActiveRecord::Schema.define(version: 2020_03_31_143333) do
     t.string "store"
     t.string "account_number"
     t.string "transfer_name"
+    t.string "other_1"
+    t.string "other_2"
+    t.string "other_3"
+    t.string "other_4"
+    t.string "other_5"
+    t.string "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

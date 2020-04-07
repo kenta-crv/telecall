@@ -1,7 +1,5 @@
- h1.headline
-      | 求人応募申請フォーム
- =form_for(@worker, url: { action: :confirm }) do |f|
-      table.company
+= form_for(@worker, url: { action: :thanks }) do |f|
+  table.company
        colgroup
          col width="10%"
          col width="20%"
@@ -12,16 +10,20 @@
            td.arrow_box
              | 氏名
            td
-             = f.text_field :first_name, class:"harf"
-             = f.text_field :last_name, class:"harf"
+             = f.hidden_field :first_name
+             = @worker.first_name
+             = f.hidden_field :last_name
+             = @worker.last_name
          tr
            td
              strong.label 必須
            td.arrow_box
              | フリガナ
            td
-             = f.text_field :first_kana, class:"harf"
-             = f.text_field :last_kana, class:"harf"
+             = f.hidden_field :first_kana
+             = @worker.first_kana
+             = f.hidden_field :last_kana
+             = @worker.last_kana
          tr
            td
              strong.label 必須
@@ -29,56 +31,57 @@
              | 電話番号(ハイフンなし)
 
            td
-             = f.number_field :tel
+             = f.hidden_field :tel
+             = @worker.tel
          tr
            td
              strong.label 必須
            td.arrow_box
              | メールアドレス
            td
-             = f.email_field :mail
+             = f.hidden_field :mail
+             = @worker.mail
          tr
            td
              strong.label 必須
            td.arrow_box
              | 郵便番号（ハイフンなし）
            td
-             = f.text_field :postnumber
+             = f.hidden_field :postnumber
+             = @worker.postnumber
          tr
            td
              strong.label 必須
            td.arrow_box
              | 住所
            td
-             = f.text_field :address
-
-
+             = f.hidden_field :address
+             = @worker.address
          tr
            td
              strong.label 必須
            td.arrow_box
              | 経験
            td
-             =f.select(:experience,[ \
-             ["選択する","選択する"],      \
-             ["発信業務経験あり","発信業務経験あり"],      \
-             ["受電業務経験あり","発信業務経験あり"],      \
-             ["未経験","未経験"],      \
-             ])
+             = f.hidden_field :experience
+             = @worker.experience
+
          tr
            td
              strong.label 必須
            td.arrow_box
              | 商材（複数記載可）
            td
-             = f.text_field :item
+             = f.hidden_field :item
+             = @worker.item
          tr
            td
              strong.label 必須
            td.arrow_box
              | 年齢
            td
-             = f.number_field :ago
+             = f.hidden_field :ago
+             = @worker.ago
              | 才
          tr
            td
@@ -86,7 +89,8 @@
            td.arrow_box
              | 週稼働時間
            td
-             = f.number_field :worktime
+             = f.hidden_field :worktime
+             = @worker.worktime
              | 時間
          tr
            td
@@ -94,8 +98,9 @@
            td.arrow_box
              | 一言コメント（あれば）
            td
-             = f.text_area :comment
-             | 時間
+             = f.hidden_field :comment
+             = @worker.comment
+               | 時間
       br
       br
 
@@ -106,18 +111,18 @@
          col width="50%"
          tr
            td
-             strong.label.label-blue 任意
+             strong.label 必須
            td.arrow_box
              | 音声データ添付
            td
-             = f.file_field :data
-      p.small データ添付が出来ない場合、以下メールに添付しファイルをお送り下さい。
-      = mail_to "info@ri-plus.jp"
-
+             = f.hidden_field :data
+             = @worker.data
 
       br
       br
-      table.company
+
+  br
+  table.company
        colgroup
          col width="10%"
          col width="70%"
@@ -131,36 +136,44 @@
            td.arrow_box
              | 1時間あたり20Callを目標としてコール頂ける方が対象となりますが該当していますか？
            td
-             = f.check_box :other_1
+             = f.hidden_field :other_1
+             = @worker.other_1
          tr
            td
              strong.label 必須
            td.arrow_box
              | 1ヶ月あたり10時間以上稼働頂ける方が対象となりますが、該当していますか？（単発除く）
            td
-             = f.check_box :other_2
+             = f.hidden_field :other_2
+             = @worker.other_2
          tr
            td
              strong.label 必須
            td.arrow_box
              | 成果報酬発生はアポ獲得時となりますが、条件外や薄いアポイントの場合はカウントされない場合があります。
            td
-             = f.check_box :other_3
+             = f.hidden_field :other_3
+             = @worker.other_3
          tr
            td
              strong.label 必須
            td.arrow_box
              | 面接の代わりに採用を判断するため、実際のトークシミュレーションを音声データでお送り頂きます。
            td
-             = f.check_box :other_4
+             = f.hidden_field :other_4
+             = @worker.other_4
          tr
            td
              strong.label 必須
            td.arrow_box
              | その他約款に同意しますか？
            td
-             = f.check_box :other_5
+             = f.hidden_field :other_5
+             = @worker.other_5
 
          tr
            td colspan="3"
-             = f.submit "確認"
+             = f.submit "送信"
+
+br
+br

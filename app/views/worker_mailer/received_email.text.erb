@@ -1,0 +1,24 @@
+株式会社RiPlusへ求人応募がありました。
+
+--------------------------
+氏名: <%= @worker.first_name %><%= @worker.last_name %>(<%= @worker.first_kana %><%= @worker.last_kana %>)
+連絡先: <%= @worker.tel %>
+メールアドレス: <%= @worker.mail %>
+住所: <%= @worker.postnumber %><%= @worker.address %>
+経験: <%= @worker.experience %>
+商品名: <%= @worker.item %>
+年齢: <%= @worker.ago %>
+週稼働時間: <%= @worker.worktime %>
+一言: <%= @worker.comment %>
+音声データ: <%= @worker.data %>
+Q1.1時間あたり20Callを目標としてコール頂ける方が対象となりますが該当していますか？
+<%= @worker.other_1 %>
+Q2.1ヶ月あたり10時間以上稼働頂ける方が対象となりますが、該当していますか？（単発除く）
+<%= @worker.other_2 %>
+Q3.成果報酬発生はアポ獲得時となりますが、条件外や薄いアポイントの場合はカウントされない場合があります。
+<%= @worker.other_3 %>
+Q4.面接の代わりに採用を判断するため、実際のトークシミュレーションを音声データでお送り頂きます。
+<%= @worker.other_4 %>
+Q5.その他約款に同意しますか？
+<%= @worker.other_5 %>
+--------------------------

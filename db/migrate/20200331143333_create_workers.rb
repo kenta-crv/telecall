@@ -21,6 +21,14 @@ class CreateWorkers < ActiveRecord::Migration[5.2]
       t.string :store #支店
       t.string :account_number #口座番号
       t.string :transfer_name #振込名義
+
+      t.string :other_1
+      t.string :other_2
+      t.string :other_3
+      t.string :other_4
+      t.string :other_5
+
+      t.string :comment
       t.timestamps
     end
   end

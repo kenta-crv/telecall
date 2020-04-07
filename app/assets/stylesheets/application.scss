@@ -339,6 +339,10 @@ table.company {
       background: #f4f4f4;
 
       }
+
+  .harf {
+    width:45%;
+  }
 }
 
 
@@ -734,4 +738,20 @@ nav.globalMenuSp.active {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+
+.infobox {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  height: 20em;
+  /* 高さを制限(※) */
+  width: 700px;
+  overflow: scroll;
+  /* スクロールバーを表示(※) */
+  border: #000 3px border;
+  /* 枠線を追加 */
+  background-color: #fff;
+  /* 背景色を追加 */
 }

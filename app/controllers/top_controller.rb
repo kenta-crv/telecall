@@ -44,7 +44,7 @@ class TopController < ApplicationController
   def regular
   end
 
-  def foreign
+  def script
   end
 
   def telework

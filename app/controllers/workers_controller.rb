@@ -1,21 +1,37 @@
 class WorkersController < ApplicationController
+  before_action :authenticate_admin!, only: [:index, :show]
     def index
-      #@type = params[:type]
       @workers = Worker.order(created_at: "DESC").page(params[:page])
-    end
-
-    def show
-      @worker = Worker.find(params[:id])
     end
 
     def new
       @worker = Worker.new
+      render :action => 'new'
+    end
+
+    def confirm
+      @worker = Worker.new(worker_params)
+      if @worker.valid?
+        render :action =>  'confirm'
+      else
+        render :action => 'new'
+      end
+    end
+
+    def thanks
+      @worker = Worker.new(worker_params)
+      WorkerMailer.received_email(@worker).deliver
+      WorkerMailer.send_email(@worker).deliver
+    end
+
+    def show
+      #@worker = Worker.find(params[:id])
     end
 
     def create
       @worker = Worker.new(worker_params)
       if @worker.save
-        redirect_to workers_path
+        redirect_to workers_confirm_path
       else
         render 'new'
       end
@@ -64,7 +80,13 @@ class WorkersController < ApplicationController
         :account_number, #口座番号
         :transfer_name, #振込名義
 
-        :agree, #約款同意
+        :other_1,
+        :other_2,
+        :other_3,
+        :other_4,
+        :other_5,
+        
+        :comment
         )
     end
 end
