@@ -81,3 +81,5 @@ gem 'bootstrap-will_paginate'
 gem 'carrierwave'
 #ログイン
 gem 'devise'
+
+gem 'sitemap_generator'

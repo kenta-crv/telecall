@@ -8,10 +8,8 @@ Rails.application.routes.draw do
     get 'metal' => 'top#metal' #金属加工
     get 'marketing' => 'top#marketing' #デジタルマーケティング
   get 'business' => 'top#business'
-  get 'price' => 'top#price'
   get 'company' => 'top#company'
   get 'agent' => 'top#agent'
-  get 'review' => 'top#review'
   get 'recruit' => 'top#recruit'
     get 'recruit/parttime' => 'top#parttime'
     get 'recruit/regular' => 'top#regular'
