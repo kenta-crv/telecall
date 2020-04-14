@@ -38,18 +38,11 @@ ActiveRecord::Schema.define(version: 2020_03_31_143333) do
   create_table "workers", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.string "first_kana"
-    t.string "last_kana"
     t.string "tel"
     t.string "mail"
     t.string "postnumber"
     t.string "address"
-    t.string "experience"
-    t.string "item"
-    t.string "ago"
     t.string "worktime"
-    t.string "agree"
-    t.string "data"
     t.string "bank"
     t.string "store"
     t.string "account_number"
@@ -57,9 +50,6 @@ ActiveRecord::Schema.define(version: 2020_03_31_143333) do
     t.string "other_1"
     t.string "other_2"
     t.string "other_3"
-    t.string "other_4"
-    t.string "other_5"
-    t.string "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

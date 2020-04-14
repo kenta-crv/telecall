@@ -1,5 +1,5 @@
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "https://ri-plius.jp"
+SitemapGenerator::Sitemap.default_host = "https://ri-plus.jp"
 
 SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 

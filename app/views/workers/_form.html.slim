@@ -18,15 +18,7 @@
            td
              strong.label 必須
            td.arrow_box
-             | フリガナ
-           td
-             = f.text_field :first_kana, class:"harf"
-             = f.text_field :last_kana, class:"harf"
-         tr
-           td
-             strong.label 必須
-           td.arrow_box
-             | 電話番号(ハイフンなし)
+             | 電話番号(-なし)
 
            td
              = f.number_field :tel
@@ -41,7 +33,7 @@
            td
              strong.label 必須
            td.arrow_box
-             | 郵便番号（ハイフンなし）
+             | 郵便番号（-なし）
            td
              = f.text_field :postnumber
          tr
@@ -51,70 +43,36 @@
              | 住所
            td
              = f.text_field :address
-
-
          tr
            td
              strong.label 必須
            td.arrow_box
-             | 経験
+             | 銀行名
            td
-             =f.select(:experience,[ \
-             ["選択する","選択する"],      \
-             ["発信業務経験あり","発信業務経験あり"],      \
-             ["受電業務経験あり","発信業務経験あり"],      \
-             ["未経験","未経験"],      \
-             ])
+             = f.text_field :bank
+             | 銀行
          tr
            td
              strong.label 必須
            td.arrow_box
-             | 商材（複数記載可）
+             | 支店
            td
-             = f.text_field :item
+             = f.text_field :store
+             | 支店
          tr
            td
              strong.label 必須
            td.arrow_box
-             | 年齢
+             | 口座番号
            td
-             = f.number_field :ago
-             | 才
+             = f.number_field :account_number
          tr
            td
              strong.label 必須
            td.arrow_box
-             | 週稼働時間
+             | 口座名義
            td
-             = f.number_field :worktime
-             | 時間
-         tr
-           td
-             strong.label.label-blue 任意
-           td.arrow_box
-             | 一言コメント（あれば）
-           td
-             = f.text_area :comment
-             | 時間
-      br
-      br
-
-      table.company
-       colgroup
-         col width="10%"
-         col width="40%"
-         col width="50%"
-         tr
-           td
-             strong.label.label-blue 任意
-           td.arrow_box
-             | 音声データ添付
-           td
-             = f.file_field :data
-      p.small データ添付が出来ない場合、以下メールに添付しファイルをお送り下さい。
-      = mail_to "info@ri-plus.jp"
-
-
+             = f.text_field :transfer_name
       br
       br
       table.company
@@ -136,30 +94,16 @@
            td
              strong.label 必須
            td.arrow_box
-             | 1ヶ月あたり10時間以上稼働頂ける方が対象となりますが、該当していますか？（単発除く）
+             | 成果報酬発生はアポ獲得時となりますが、条件外や薄いアポイントの場合はカウントされない場合があります。
            td
              = f.check_box :other_2
          tr
            td
              strong.label 必須
            td.arrow_box
-             | 成果報酬発生はアポ獲得時となりますが、条件外や薄いアポイントの場合はカウントされない場合があります。
-           td
-             = f.check_box :other_3
-         tr
-           td
-             strong.label 必須
-           td.arrow_box
-             | 面接の代わりに採用を判断するため、実際のトークシミュレーションを音声データでお送り頂きます。
-           td
-             = f.check_box :other_4
-         tr
-           td
-             strong.label 必須
-           td.arrow_box
              | その他約款に同意しますか？
            td
-             = f.check_box :other_5
+             = f.check_box :other_3
 
          tr
            td colspan="3"

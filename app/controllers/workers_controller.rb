@@ -61,19 +61,11 @@ class WorkersController < ApplicationController
       params.require(:worker).permit(
         :first_name, #苗字
         :last_name, #名前
-        :first_kana, #ミョウジ
-        :last_kana, #ナマエ
+
         :tel, #電話番号
         :mail, #メールアドレス
         :postnumber, #郵便番号
         :address, #住所
-
-        :experience, #経験
-        :item, #商材名
-        :ago, #経験年数
-        :worktime, #週稼働時間
-
-        :data, #音声データ
 
         :bank, #銀行名
         :store, #支店
@@ -83,9 +75,8 @@ class WorkersController < ApplicationController
         :other_1,
         :other_2,
         :other_3,
-        :other_4,
-        :other_5,
-        
+
+
         :comment
         )
     end

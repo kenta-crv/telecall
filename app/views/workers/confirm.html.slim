@@ -18,16 +18,6 @@
            td
              strong.label 必須
            td.arrow_box
-             | フリガナ
-           td
-             = f.hidden_field :first_kana
-             = @worker.first_kana
-             = f.hidden_field :last_kana
-             = @worker.last_kana
-         tr
-           td
-             strong.label 必須
-           td.arrow_box
              | 電話番号(ハイフンなし)
 
            td
@@ -57,70 +47,41 @@
            td
              = f.hidden_field :address
              = @worker.address
-         tr
-           td
-             strong.label 必須
-           td.arrow_box
-             | 経験
-           td
-             = f.hidden_field :experience
-             = @worker.experience
 
          tr
            td
              strong.label 必須
            td.arrow_box
-             | 商材（複数記載可）
+             | 銀行名
            td
-             = f.hidden_field :item
-             = @worker.item
+             = f.hidden_field :bank
+             = @worker.bank
+             | 銀行
          tr
            td
              strong.label 必須
            td.arrow_box
-             | 年齢
+             | 支店
            td
-             = f.hidden_field :ago
-             = @worker.ago
-             | 才
+             = f.hidden_field :store
+             = @worker.store
+             | 支店
          tr
            td
              strong.label 必須
            td.arrow_box
-             | 週稼働時間
+             | 口座番号
            td
-             = f.hidden_field :worktime
-             = @worker.worktime
-             | 時間
-         tr
-           td
-             strong.label.label-blue 任意
-           td.arrow_box
-             | 一言コメント（あれば）
-           td
-             = f.hidden_field :comment
-             = @worker.comment
-               | 時間
-      br
-      br
-
-      table.company
-       colgroup
-         col width="10%"
-         col width="40%"
-         col width="50%"
+             = f.hidden_field :account_number
+             = @worker.account_number
          tr
            td
              strong.label 必須
            td.arrow_box
-             | 音声データ添付
+             | 口座名義
            td
-             = f.hidden_field :data
-             = @worker.data
-
-      br
-      br
-
+             = f.hidden_field :transfer_name
+             = @worker.transfer_name
   br
   table.company
        colgroup
@@ -142,7 +103,7 @@
            td
              strong.label 必須
            td.arrow_box
-             | 1ヶ月あたり10時間以上稼働頂ける方が対象となりますが、該当していますか？（単発除く）
+             | 成果報酬発生はアポ獲得時となりますが、条件外や薄いアポイントの場合はカウントされない場合があります。
            td
              = f.hidden_field :other_2
              = @worker.other_2
@@ -150,26 +111,10 @@
            td
              strong.label 必須
            td.arrow_box
-             | 成果報酬発生はアポ獲得時となりますが、条件外や薄いアポイントの場合はカウントされない場合があります。
+             | その他約款に同意しますか？
            td
              = f.hidden_field :other_3
              = @worker.other_3
-         tr
-           td
-             strong.label 必須
-           td.arrow_box
-             | 面接の代わりに採用を判断するため、実際のトークシミュレーションを音声データでお送り頂きます。
-           td
-             = f.hidden_field :other_4
-             = @worker.other_4
-         tr
-           td
-             strong.label 必須
-           td.arrow_box
-             | その他約款に同意しますか？
-           td
-             = f.hidden_field :other_5
-             = @worker.other_5
 
          tr
            td colspan="3"
