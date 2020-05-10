@@ -2,6 +2,10 @@ class TopController < ApplicationController
   def index
   end
 
+  def ritonal
+    render layout: "ritonaru"
+  end
+
   def mail
   end
 
