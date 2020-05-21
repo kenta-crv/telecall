@@ -9,7 +9,7 @@ Rails.application.configure do
   domain: 'ri-plus.jp',
   port: 587,
   user_name: 'info@ri-plus.jp',
-  password: 'z#6FrWYnp',
+  password: 'M#8hgUQXS',
   authentication: 'plain',
   enable_starttls_auto: true
   }
