@@ -62,7 +62,8 @@ ActiveRecord::Schema.define(version: 2020_05_04_073651) do
     t.string "mail"
     t.string "postnumber"
     t.string "address"
-    t.string "worktime"
+    t.string "week"
+    t.string "experience"
     t.string "bank"
     t.string "store"
     t.string "account_number"
@@ -70,6 +71,7 @@ ActiveRecord::Schema.define(version: 2020_05_04_073651) do
     t.string "other_1"
     t.string "other_2"
     t.string "other_3"
+    t.string "other_4"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

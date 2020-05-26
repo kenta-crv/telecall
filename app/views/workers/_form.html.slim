@@ -47,32 +47,21 @@
            td
              strong.label 必須
            td.arrow_box
-             | 銀行名
+             | 週予定稼働時間
            td
-             = f.text_field :bank
-             | 銀行
+             = f.text_field :week
+             | 時間
          tr
            td
              strong.label 必須
            td.arrow_box
-             | 支店
+             | テレアポ経験はありますか？
            td
-             = f.text_field :store
-             | 支店
-         tr
-           td
-             strong.label 必須
-           td.arrow_box
-             | 口座番号
-           td
-             = f.number_field :account_number
-         tr
-           td
-             strong.label 必須
-           td.arrow_box
-             | 口座名義
-           td
-             = f.text_field :transfer_name
+             = f.select(:experience,[\
+             ["選択する","選択する"],\
+             ["有り","有り"],\
+             ["無し","無し"],\
+             ])
       br
       br
       table.company
@@ -104,6 +93,13 @@
              | その他約款に同意しますか？
            td
              = f.check_box :other_3
+         tr
+           td
+             strong.label 必須
+           td.arrow_box
+             | 当社では面接を行わない代わりにサンプルトークを読んで頂き、音声データを添付しお送り頂きます。自動返信メールに内容記載しますが３日以内にお送り頂けますか？
+           td
+             = f.check_box :other_4
 
          tr
            td colspan="3"

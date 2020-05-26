@@ -7,7 +7,9 @@ class CreateWorkers < ActiveRecord::Migration[5.2]
       t.string :mail #メールアドレス
       t.string :postnumber #郵便番号
       t.string :address #住所
-      t.string :worktime #週稼働時間
+      t.string :week #週稼働時間
+      t.string :experience
+
 
       t.string :bank #銀行名
       t.string :store #支店
@@ -17,6 +19,7 @@ class CreateWorkers < ActiveRecord::Migration[5.2]
       t.string :other_1
       t.string :other_2
       t.string :other_3
+      t.string :other_4
 
       t.timestamps
     end

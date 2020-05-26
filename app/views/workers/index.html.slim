@@ -51,8 +51,13 @@ h1.headline
            | 住所
          td
            = f.text_field :address
-
-
+       tr
+         td
+           strong.label 必須
+         td.arrow_box
+           | 週予定稼働時間
+         td
+           = f.text_field :week
        tr
          td
            strong.label 必須
