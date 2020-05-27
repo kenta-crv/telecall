@@ -67,6 +67,9 @@ class WorkersController < ApplicationController
         :postnumber, #郵便番号
         :address, #住所
 
+        :week, #郵便番号
+        :experience, #住所
+
         :bank, #銀行名
         :store, #支店
         :account_number, #口座番号
@@ -75,9 +78,7 @@ class WorkersController < ApplicationController
         :other_1,
         :other_2,
         :other_3,
-
-
-        :comment
+        :other_4,
         )
     end
 end
