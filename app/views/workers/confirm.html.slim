@@ -56,16 +56,6 @@
              = f.hidden_field :week
              = @worker.week
              | 時間
-         tr
-           td
-             strong.label 必須
-           td.arrow_box
-             | テレアポ経験はありますか？
-           td
-             = f.hidden_field :experience
-             = @worker.experience
-             | 支店
-
   br
   table.company
        colgroup
@@ -99,15 +89,6 @@
            td
              = f.hidden_field :other_3
              = @worker.other_3
-         tr
-           td
-             strong.label 必須
-           td.arrow_box
-             | 当社では面接を行わない代わりにサンプルトークを読んで頂き、音声データを添付しお送り頂きます。自動返信メールに内容記載しますが３日以内にお送り頂けますか？
-           td
-             = f.hidden_field :other_4
-             = @worker.other_4
-
          tr
            td colspan="3"
              = f.submit "送信"
