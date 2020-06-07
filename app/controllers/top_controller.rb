@@ -15,6 +15,9 @@ class TopController < ApplicationController
   def movies
   end
 
+  def recruitment
+  end
+
   def metal
   end
 

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     get 'movies' => 'top#movies' #ムービーズ
     get 'ritonal' => 'top#ritonal' #リトナル
     get 'mail' => 'top#mail' #メールマーケティング
+    get 'recruitment' => 'top#recruitment' #メールマーケティング
     get 'metal' => 'top#metal' #金属加工
     get 'marketing' => 'top#marketing' #デジタルマーケティング
   get 'business' => 'top#business'
