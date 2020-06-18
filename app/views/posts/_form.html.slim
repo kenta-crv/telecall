@@ -1,4 +1,5 @@
 = form_for @post do |f|
+
    table.company
      tbody
       tr
@@ -24,6 +25,9 @@
       tr
         th.arrow_box 本文
       tr
-        td = text_area :post, :body, class:"post-body"
+        td = text_area :post, :body, id:"example"
       tr
         td = f.submit '投稿する'
+
+script
+  | var editor = new FroalaEditor('#example')

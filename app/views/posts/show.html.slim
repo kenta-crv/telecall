@@ -7,5 +7,5 @@ br
   .fr-view
 	  h1.headline-first  = @post.title
        - if @post.file?
-      .image_post  = image_tag @post.file.url
-	  p  = @post.body.html_safe
+        .image_post  = image_tag @post.file.url
+	  p#book_content  = @post.body.html_safe

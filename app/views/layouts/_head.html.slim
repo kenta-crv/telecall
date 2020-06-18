@@ -5,10 +5,13 @@ meta[name="viewport" content="width=device-width, initial-scale=1,0, initial-sca
 = csrf_meta_tags
 = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
 = stylesheet_link_tag rel="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-script[src="https://ajax.googleapis.com/js/jquery-3.3.1/slim.min.js"]
-script[src="https://ajax.googleapis.com/js/bootstrap.bundle.min.js"]
 script[src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"]
 = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+link[href="node_modules/froala-editor/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css"]
+script[type="text/javascript" src="node_modules/froala-editor/js/froala_editor.pkgd.min.js"]
+link[href="../css/froala_style.min.css" rel="stylesheet" type="text/css"]
+
 = display_meta_tags(default_meta_tags)
 = favicon_link_tag('favicon.ico')
 javascript:
@@ -22,4 +25,4 @@ script
 
 script[async src="https://www.googletagmanager.com/gtag/js?id=UA-154953897-2"]
 script
-  |  window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); ga('set', 'dimension1', dimensionValue); gtag('config', 'UA-154953897-2'); 
+  |  window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); ga('set', 'dimension1', dimensionValue); gtag('config', 'UA-154953897-2');
