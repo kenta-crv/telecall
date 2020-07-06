@@ -1,5 +1,10 @@
 class TopController < ApplicationController
+
   def index
+    @topics = Topic.order(created_at: "DESC").limit(3)
+  end
+
+  def apotakumi
   end
 
   def ritonal
@@ -36,7 +41,7 @@ class TopController < ApplicationController
   def company
   end
 
-  def agent
+  def privacy
   end
 
   def review
@@ -59,4 +64,14 @@ class TopController < ApplicationController
 
   def subcontracting
   end
+
+  def homework
+  end
+
+  def question
+  end
+
+  def tcare
+  end
+
 end

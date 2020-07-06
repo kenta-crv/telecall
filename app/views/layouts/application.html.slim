@@ -25,9 +25,9 @@ html
            li
              = link_to  '事業内容', '/business' , :class=>"col-md"
            li
-             = link_to  '代理店募集', '/agent' , :class=>"col-md"
+             = link_to  '記事一覧', '/posts' , :class=>"col-md"
            li
-             = link_to  '採用募集', '/recruit' , :class=>"col-md"
+             = link_to  'よくある質問', '/question' , :class=>"col-md"
            li
              = link_to  '会社概要', '/company' , :class=>"col-md"
            li
@@ -58,5 +58,7 @@ html
       .bread
         = render_breadcrumbs separator: ' > '
       = yield
+  br
+  br
   footer
      = render template: 'layouts/_footer.html.slim'

@@ -26,6 +26,8 @@ SitemapGenerator::Sitemap.create do
 
     add "recruits" , changefreq: 'daily', priority: 0.3
 
+
+
   # Put links creation logic here.
   #
   # The root path '/' and sitemap index file are added automatically for you.
@@ -39,13 +41,13 @@ SitemapGenerator::Sitemap.create do
   #
   # Examples:
   #
-  # Add '/articles'
-  #
-  #   add articles_path, :priority => 0.7, :changefreq => 'daily'
-  #
-  # Add all articles:
-  #
-  #   Article.find_each do |article|
-  #     add article_path(article), :lastmod => article.updated_at
-  #   end
+   #Add '/posts'
+
+     add posts_path, :priority => 0.7, :changefreq => 'daily'
+
+  # Add all posts:
+
+     Post.find_each do |post|
+       add post_path(post), :lastmod => post.updated_at
+     end
 end

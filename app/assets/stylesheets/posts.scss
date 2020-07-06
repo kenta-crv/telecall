@@ -45,9 +45,9 @@ $sub_color: #1481c8;
 	        }
 	    .post-description {
 	      	margin-top:10px;
-	        font-size:1rem;
-	    	color:gray;
-	    	font-weight:bold;
+	        font-size:1.7rem;
+	      	color:gray;
+	    	  font-weight:bold;
 	      	width:95%;
 	        }
 
@@ -102,18 +102,15 @@ $sub_color: #1481c8;
        font-weight:bold;
 	    }
 	 .headline-first:first-letter {
-       color:#666;
+       color:$main_color;
        font-size:140%;
        }
-    h2:first-letter {
-       color:#666;
-       font-size:120%;
-       }
+
     h2 {
 		padding: 0.6em 0.6em;/*文字の上下 左右の余白*/
 		color: #494949;/*文字色*/
 		background: #f4f4f4;/*背景色*/
-		border-left: solid 5px #666;/*左線*/
+		border-left: solid 5px $main_color;/*左線*/
 		border-bottom: solid 3px #d7d7d7;/*下線*/
 		text-align:left;
 		padding-left:30px;
@@ -122,15 +119,12 @@ $sub_color: #1481c8;
 		font-size:21px;
 		font-weight:bold;
     }
-    h3:first-letter {
-       color:#666;
-       font-size:120%;
-       }
+
     h3 {
 		padding: 0.6em 0.6em;/*文字の上下 左右の余白*/
 		color: #494949;/*文字色*/
 		background: #f4f4f4;/*背景色*/
-		border-left: solid 5px #666;/*左線*/
+		border-left: solid 5px $main_color;/*左線*/
 		border-bottom: solid 3px #d7d7d7;/*下線*/
 		text-align:left;
 		padding-left:30px;
@@ -155,8 +149,8 @@ $sub_color: #1481c8;
         display: inline-block;
         width: 45px;
         height: 2px;
-        border-top: solid 2px #666;
-        border-bottom: solid 2px #666;
+        border-top: solid 2px $main_color;
+        border-bottom: solid 2px $main_color;
         }
      h4:before {
        left:0;
@@ -165,9 +159,9 @@ $sub_color: #1481c8;
         right: 0;
         }
     h5 {
-       color: #666;
+       color: $main_color;
        margin-left:60px;
-       border: dotted #666 2px;/*ドット 色 太さ*/
+       border: dotted $main_color 2px;/*ドット 色 太さ*/
        padding: 0.5em 0.5em 0.5em 2em;
        line-height: 1.5;
        width:60%;
