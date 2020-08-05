@@ -12,8 +12,8 @@ class RecruitMailer < ActionMailer::Base
 
   def send_email(recruit)
     @recruit = recruit
-    mail to: recruit.email
-    mail(subject: 'アポ匠にお問い合わせ頂きありがとうございます｜株式会社Ri-Plus') do |format|
+    mail to: recruit.mail
+    mail(subject: '【重要】株式会社Ri-Plusにお問い合わせ頂きありがとうございます') do |format|
       format.text
     end
   end

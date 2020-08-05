@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_04_022915) do
+ActiveRecord::Schema.define(version: 2020_08_05_033749) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -22,6 +22,23 @@ ActiveRecord::Schema.define(version: 2020_07_04_022915) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "tel"
+    t.string "mail"
+    t.string "postnumber"
+    t.string "address"
+    t.string "week"
+    t.string "experience"
+    t.string "other_1"
+    t.string "other_2"
+    t.string "other_3"
+    t.string "other_4"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "estimates", force: :cascade do |t|
@@ -51,6 +68,25 @@ ActiveRecord::Schema.define(version: 2020_07_04_022915) do
     t.string "keyword"
     t.string "description"
     t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "recruits", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "tel"
+    t.string "mail"
+    t.string "postnumber"
+    t.string "address"
+    t.string "select_1"
+    t.string "select_2"
+    t.string "select_3"
+    t.string "remarks"
+    t.string "other_1"
+    t.string "other_2"
+    t.string "other_3"
+    t.string "other_4"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
