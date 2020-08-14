@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get 'case' => 'top#case' #成功事例
   get 'question' => 'top#question' #ナレッジリスト
   get 'recruit' => 'top#recruit' #求人リスト
+  get 'oneday' => 'top#oneday' #求人リスト
     get 'recruit/parttime' => 'top#parttime'
     get 'recruit/regular' => 'top#regular'
     get 'recruit/subcontracting' => 'top#subcontracting'

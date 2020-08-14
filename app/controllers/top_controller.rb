@@ -74,4 +74,7 @@ class TopController < ApplicationController
   def tcare
   end
 
+  def oneday
+  end
+
 end
