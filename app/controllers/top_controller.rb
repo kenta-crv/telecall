@@ -50,10 +50,10 @@ class TopController < ApplicationController
   def recruit
   end
 
-  def parttime
+  def parttime20200822
   end
 
-  def regular
+  def regular20200822
   end
 
   def script

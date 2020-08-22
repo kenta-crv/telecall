@@ -19,8 +19,8 @@ Rails.application.routes.draw do
   get 'question' => 'top#question' #ナレッジリスト
   get 'recruit' => 'top#recruit' #求人リスト
   get 'oneday' => 'top#oneday' #求人リスト
-    get 'recruit/parttime' => 'top#parttime'
-    get 'recruit/regular' => 'top#regular'
+    get 'recruit/parttime20200822' => 'top#parttime20200822'
+    get 'recruit/regular20200822' => 'top#regular20200822'
     get 'recruit/subcontracting' => 'top#subcontracting'
     get 'recruit/homework' => 'top#homework'
 
