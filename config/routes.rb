@@ -22,7 +22,7 @@ Rails.application.routes.draw do
     get 'recruit/parttime20200822' => 'top#parttime20200822'
     get 'recruit/regular20200822' => 'top#regular20200822'
     get 'recruit/subcontracting' => 'top#subcontracting'
-    get 'recruit/homework' => 'top#homework'
+    get 'recruit/homework20200831' => 'top#homework20200831'
 
   resources :topics
   resources :posts
