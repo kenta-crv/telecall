@@ -8,5 +8,5 @@ class Worker < ApplicationRecord
   validates :week, {presence: true} #住所
   validates :other_1, {presence: true}
   validates :other_2, {presence: true}
-  validates :other_3, {presence: true}
+  #validates :other_3, {presence: true}
 end
