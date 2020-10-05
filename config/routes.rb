@@ -17,12 +17,24 @@ Rails.application.routes.draw do
   get 'tcare' => 'top#tcare' #オリジナルマーケティング紹介
   get 'case' => 'top#case' #成功事例
   get 'question' => 'top#question' #ナレッジリスト
-  get 'recruit' => 'top#recruit' #求人リスト
   get 'oneday' => 'top#oneday' #求人リスト
-    get 'recruit/parttime20200822' => 'top#parttime20200822'
-    get 'recruit/regular20200822' => 'top#regular20200822'
-    get 'recruit/subcontracting' => 'top#subcontracting'
-    get 'recruit/homework' => 'top#homework'
+
+    get 'recruit' => 'recruit#recruit' #求人リスト
+    get 'recruit/parttime_shibuya' => 'recruit#parttime_shibuya'
+    get 'recruit/regular_shibuya' => 'recruit#regular_shibuya'
+    get 'recruit/parttime_shinjuku' => 'recruit#parttime_shinjuku'
+    get 'recruit/regular_shinjuku' => 'recruit#regular_shinjuku'
+    get 'recruit/regular_ikebukuro' => 'recruit#regular_ikebukuro'
+    get 'recruit/regular_ikebukuro' => 'recruit#regular_ikebukuro'
+    get 'recruit/parttime_ginza' => 'recruit#parttime_ginza'
+    get 'recruit/regular_ginza' => 'recruit#regular_ginza'
+    get 'recruit/regular_yokohama' => 'recruit#regular_yokohama'
+    get 'recruit/regular_yokohama' => 'recruit#regular_yokohama'
+    get 'recruit/regular_saitama' => 'recruit#regular_saitama'
+    get 'recruit/regular_saitama' => 'recruit#regular_saitama'
+
+    get 'recruit/subcontracting' => 'recruit#subcontracting'
+    get 'recruit/homework' => 'recruit#homework'
 
   resources :topics
   resources :posts

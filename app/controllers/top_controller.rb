@@ -47,25 +47,7 @@ class TopController < ApplicationController
   def review
   end
 
-  def recruit
-  end
-
-  def parttime20200822
-  end
-
-  def regular20200822
-  end
-
   def script
-  end
-
-  def telework
-  end
-
-  def subcontracting
-  end
-
-  def homework
   end
 
   def question
