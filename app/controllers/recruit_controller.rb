@@ -1,5 +1,4 @@
 class RecruitController < ApplicationController
-
     def recruit
     end
 
@@ -40,5 +39,8 @@ class RecruitController < ApplicationController
     end
 
     def regular_saitama
+    end
+
+    def outsourcing
     end
 end

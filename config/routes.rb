@@ -32,6 +32,7 @@ Rails.application.routes.draw do
     get 'recruit/regular_yokohama' => 'recruit#regular_yokohama'
     get 'recruit/regular_saitama' => 'recruit#regular_saitama'
     get 'recruit/regular_saitama' => 'recruit#regular_saitama'
+    get 'recruit/outsourcing' => 'recruit#outsourcing'
 
     get 'recruit/subcontracting' => 'recruit#subcontracting'
     get 'recruit/homework' => 'recruit#homework'
@@ -56,4 +57,8 @@ Rails.application.routes.draw do
   get 'recruits' => 'recruits#index'
   post 'recruits/confirm' => 'recruits#confirm'
   post 'recruits/thanks' => 'recruits#thanks'
+
+  get '/outsourcings' => 'outsourcings#index'
+  post 'outsourcings/confirm' => 'outsourcings#confirm'
+  post 'outsourcings/thanks' => 'outsourcings#thanks'
 end
