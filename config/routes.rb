@@ -33,6 +33,7 @@ Rails.application.routes.draw do
     get 'recruit/regular_saitama' => 'recruit#regular_saitama'
     get 'recruit/regular_saitama' => 'recruit#regular_saitama'
     get 'recruit/outsourcing' => 'recruit#outsourcing'
+    get 'recruit/appointer' => 'recruit#appointer'
 
     get 'recruit/subcontracting' => 'recruit#subcontracting'
     get 'recruit/homework' => 'recruit#homework'

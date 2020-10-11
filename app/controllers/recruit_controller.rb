@@ -43,4 +43,7 @@ class RecruitController < ApplicationController
 
     def outsourcing
     end
+
+    def appointer
+    end
 end
