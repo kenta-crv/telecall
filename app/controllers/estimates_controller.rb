@@ -16,6 +16,7 @@ class EstimatesController < ApplicationController
 
   def thanks
     @estimate = Estimate.new(estimate_params)
+    @estimate.save
     EstimateMailer.received_email(@estimate).deliver
     EstimateMailer.send_email(@estimate).deliver
   end

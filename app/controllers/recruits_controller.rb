@@ -17,6 +17,7 @@ class RecruitsController < ApplicationController
 
   def thanks
     @recruit = Recruit.new(recruit_params)
+    @recruit.save
     RecruitMailer.received_email(@recruit).deliver
     RecruitMailer.send_email(@recruit).deliver
   end

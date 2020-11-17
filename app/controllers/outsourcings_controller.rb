@@ -6,7 +6,6 @@ class OutsourcingsController < ApplicationController
 
   def confirm
     @outsourcing = Outsourcing.new(outsourcings_params)
-    #@outsourcings.subsidy = params[:outsourcings][:subsidy]
     if @outsourcing.valid?
       render :action =>  'confirm'
     else
@@ -17,6 +16,7 @@ class OutsourcingsController < ApplicationController
 
   def thanks
     @outsourcing = Outsourcing.new(outsourcings_params)
+    @outsourcing.save
     OutsourcingMailer.received_email(@outsourcing).deliver
     OutsourcingMailer.send_email(@outsourcing).deliver
   end

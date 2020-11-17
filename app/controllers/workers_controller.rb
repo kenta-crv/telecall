@@ -20,6 +20,7 @@ class WorkersController < ApplicationController
 
     def thanks
       @worker = Worker.new(worker_params)
+      @worker.save
       WorkerMailer.received_email(@worker).deliver
       WorkerMailer.send_email(@worker).deliver
     end
