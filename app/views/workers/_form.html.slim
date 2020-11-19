@@ -1,5 +1,5 @@
  h1.headline
-      | 求人応募申請フォーム
+      | 約款締結フォーム
  =form_for(@worker, url: { action: :confirm }) do |f|
       table.company
        colgroup
@@ -44,37 +44,5 @@
            td
              = f.text_field :address
          tr
-           td
-             strong.label 必須
-           td.arrow_box
-             | 週予定稼働時間
-           td
-             = f.text_field :week
-             | 時間
-      br
-      br
-      table.company
-       colgroup
-         col width="10%"
-         col width="70%"
-         col width="20%"
-         tr
-           th.arrow_box[colspan="3"]
-             | 約款同意確認
-         tr
-           td
-             strong.label 必須
-           td.arrow_box
-             | 1時間あたり20Callを目標としてコール頂ける方が対象となりますが該当していますか？
-           td
-             = f.check_box :other_1
-         tr
-           td
-             strong.label 必須
-           td.arrow_box
-             | 成果報酬発生はアポ獲得時となりますが、条件外や薄いアポイントの場合はカウントされない場合があります。
-           td
-             = f.check_box :other_2
-         tr
            td colspan="3"
-             = f.submit "確認"
+             = f.submit "約款に同意する"
