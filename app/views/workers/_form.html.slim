@@ -44,5 +44,33 @@
            td
              = f.text_field :address
          tr
+           td
+             strong.label 必須
+           td.arrow_box
+             | 銀行名
+           td
+             = f.text_field :bank
+         tr
+           td
+             strong.label 必須
+           td.arrow_box
+             | 支店
+           td
+             = f.text_field :store
+         tr
+           td
+             strong.label 必須
+           td.arrow_box
+             | 口座番号
+           td
+             = f.text_field :account_number
+         tr
+           td
+             strong.label 必須
+           td.arrow_box
+             | 振込名義
+           td
+             = f.text_field :transfer_name
+         tr
            td colspan="3"
              = f.submit "約款に同意する"

@@ -1,39 +1,22 @@
-この度は株式会社Ri-Plusに求人応募頂きありがとうございました。
+この度は株式会社RiPlusに業務委託契約に締結頂きありがとうございました。
 
-【今後の流れについて】
-株式会社Ri-Plusでは面接は一切行わない代わりに、実際にトークスクリプトを読み、録音頂いたデータを元に採用可否をしております。
-お手数では御座いますが、以下手順に沿ってデータ送信をお願いします。
+以下の内容にて承りました。
 
-❶トークスクリプトをダウンロード
-Webサイトより、『採用判断用トークスクリプト』のダウンロードをお願いします。
-https://ri-plus.jp/script
+今後、業務委託契約において互いの利益発展に協力出来ればと存じます。
 
-❷スムーズに読めるようになったら専用アプリをダウンロードし録音
-
-❸録音ファイルをmail@ri-plus.jpに送信
-
-以上簡単３STEP！３営業日以内に担当者からメールが入ります。採択の場合は日程を調整してコールスタートです！
-
-ご応募の程、よろしくお願い致します。
+引き続き、よろしくお願い致します。
 
 --------------------------
-氏名: <%= @worker.first_name %><%= @worker.last_name %>
-連絡先: <%= @worker.tel %>
-メールアドレス: <%= @worker.mail %>
-住所: <%= @worker.postnumber %><%= @worker.address %>
-
-週予定稼働時間：<%= @worker.week %>時間
-
-Q1.1時間あたり20Callを目標としてコール頂ける方が対象となりますが該当していますか？
-<%= @worker.other_1 %>
-Q2.成果報酬発生はアポ獲得時となりますが、条件外や薄いアポイントの場合はカウントされない場合があります。
-<%= @worker.other_2 %>
-Q3.その他約款に同意しますか？
-<%= @worker.other_3 %>
+氏名: <%= @outsourcing.first_name %><%= @outsourcing.last_name %>
+連絡先: <%= @outsourcing.tel %>
+メールアドレス: <%= @outsourcing.mail %>
+住所: <%= @outsourcing.postnumber %><%= @outsourcing.address %>
+口座情報：
+<%= @outsourcing.bank %> <%= @outsourcing.store %> <%= @outsourcing.account_number %> <%= @outsourcing.transfer_name %>
 --------------------------
+
 
 株式会社Ri-Plus アポ匠
-電話番号：03-6712-7024
 Mail：info@ri-plus.jp
 URL：https://ri-plus.jp
 所在地：〒150-0032東京都渋谷区鶯谷町19-19 第三叶ビル303号室

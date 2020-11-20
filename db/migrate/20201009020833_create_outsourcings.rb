@@ -9,7 +9,7 @@ class CreateOutsourcings < ActiveRecord::Migration[5.2]
       t.string :address #住所
       t.string :age #年齢
       t.string :remarks #事務経験内容を記載してください。
-      
+
       t.string :other_1 #長期で稼働を行う事が出来ますか？
       t.string :other_2 #日々責任を持って稼働を行えますか？
       t.date :other_3 #いつから稼働開始可能ですか？
