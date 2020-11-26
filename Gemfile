@@ -75,7 +75,7 @@ gem "jquery-rails"
 gem 'kaminari'
 gem 'annotate'
 gem 'will_paginate'
-gem 'bootstrap-will_paginate'
+#gem 'bootstrap-will_paginate'
 #リッチエディタ
 gem "font-awesome-rails"
 #画像アップロード

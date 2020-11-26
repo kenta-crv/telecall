@@ -54,8 +54,6 @@ GEM
     bindex (0.8.1)
     bootsnap (1.4.6)
       msgpack (~> 1.0)
-    bootstrap-will_paginate (1.0.0)
-      will_paginate
     breadcrumbs_on_rails (4.0.0)
       rails (>= 5.0)
     builder (3.2.4)
@@ -258,7 +256,6 @@ PLATFORMS
 DEPENDENCIES
   annotate
   bootsnap (>= 1.1.0)
-  bootstrap-will_paginate
   breadcrumbs_on_rails
   byebug
   capybara (>= 2.15)

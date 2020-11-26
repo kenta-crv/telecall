@@ -22,23 +22,12 @@ Rails.application.routes.draw do
     get 'recruit' => 'recruit#recruit' #求人リスト
     get 'recruit/parttime_shibuya' => 'recruit#parttime_shibuya'
     get 'recruit/regular_shibuya' => 'recruit#regular_shibuya'
-    get 'recruit/parttime_shinjuku' => 'recruit#parttime_shinjuku'
-    get 'recruit/regular_shinjuku' => 'recruit#regular_shinjuku'
-    get 'recruit/regular_ikebukuro' => 'recruit#regular_ikebukuro'
-    get 'recruit/regular_ikebukuro' => 'recruit#regular_ikebukuro'
-    get 'recruit/parttime_ginza' => 'recruit#parttime_ginza'
-    get 'recruit/regular_ginza' => 'recruit#regular_ginza'
-    get 'recruit/regular_yokohama' => 'recruit#regular_yokohama'
-    get 'recruit/regular_yokohama' => 'recruit#regular_yokohama'
-    get 'recruit/regular_saitama' => 'recruit#regular_saitama'
-    get 'recruit/regular_saitama' => 'recruit#regular_saitama'
     get 'recruit/outsourcing' => 'recruit#outsourcing'
     get 'recruit/appointer' => 'recruit#appointer'
 
     get 'recruit/subcontracting' => 'recruit#subcontracting'
     get 'recruit/homework' => 'recruit#homework'
-
-  resources :topics
+    
   resources :posts
 
   get 'script' => 'top#script'
