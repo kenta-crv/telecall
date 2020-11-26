@@ -54,9 +54,9 @@ h1.headline
             = f.number_field :age
         tr
           td
-            strong.label 必須
+            strong.label.label-blue 任意
           td.arrow_box
-            | 事務経験内容を記載してください
+            | （※事務の方）事務経験内容を記載してください
           td
             = f.text_area :remarks
 
@@ -94,9 +94,9 @@ h1.headline
             = f.date_field :other_3
         tr
           td
-            strong.label 必須
+            strong.label.label-blue 任意
           td.arrow_box
-            | MACPCを使用出来、Pages/Numbers/Keynoteを利用出来ますか？
+            | （※事務の方）MACPCを使用出来、Pages/Numbers/Keynoteを利用出来ますか？
           td
             = f.check_box :other_4
         tr
