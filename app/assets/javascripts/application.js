@@ -10,23 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //= require froala_editor.min.js
-//= require plugins/align.min.js
-//= require plugins/char_counter.min.js
-//= require plugins/code_beautifier.min.js
-//= require plugins/code_view.min.js
-//= require plugins/emoticons.min.js
-//= require plugins/entities.min.js
-//= require plugins/font_family.min.js
-//= require plugins/font_size.min.js
-//= require plugins/fullscreen.min.js
-//= require plugins/url.min.js
-//= require languages/ja.js
+//= require plugins/paragraph_format.min.js
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-//= require jquery
-//= require jquery_ujs
 
 $(function() {
     $('.navToggle').click(function() {
