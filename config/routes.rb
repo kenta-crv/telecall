@@ -24,10 +24,8 @@ Rails.application.routes.draw do
     get 'recruit/regular_shibuya' => 'recruit#regular_shibuya'
     get 'recruit/outsourcing' => 'recruit#outsourcing'
     get 'recruit/appointer' => 'recruit#appointer'
+    get 'recruit/officework' => 'recruit#officework'
 
-    get 'recruit/subcontracting' => 'recruit#subcontracting'
-    get 'recruit/homework' => 'recruit#homework'
-    
   resources :posts
 
   get 'script' => 'top#script'

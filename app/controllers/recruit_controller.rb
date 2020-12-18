@@ -5,7 +5,7 @@ class RecruitController < ApplicationController
     def subcontracting
     end
 
-    def homework
+    def officewwork
     end
 
     def regular_shibuya
