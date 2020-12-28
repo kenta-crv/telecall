@@ -1,7 +1,9 @@
 class ContactController < ApplicationController
   def index
-    @contact = Contact.new
-    render :action => 'index'
+    redirect_to "https://mobile-cti.net/contact",
+    target: ["_blank"]
+    #@contact = Contact.new
+    #render :action => 'index'
   end
 
   def confirm
