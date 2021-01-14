@@ -57,13 +57,65 @@
              = @outsourcing.age
          tr
            td
-             strong.label.label-blue 任意
+             strong.label.label-blue 必須
            td.arrow_box
              | 事務経験内容を記載してください
            td
              = f.hidden_field :remarks
              = @outsourcing.remarks
-             | 時間
+
+  br
+  br
+  table.company
+        colgroup
+          col width="10%"
+          col width="20%"
+          col width="35%"
+          col width="35%"
+          tr
+            th.arrow_box[colspan="4"]
+              | 面接日時
+              br
+              small
+               | 初回は５分ほどの電話面談となります。
+               br
+               | 面接日時は平日10:00~17:00迄の間で設定可能です。担当者と予定を調整するため、幅を持って誤入力ください。
+          tr
+            td
+              strong.label 必須
+            td.arrow_box
+              | 第一候補
+            td
+              = f.hidden_field :one_first_date
+              = @outsourcing.one_first_date
+              | 〜
+            td
+              = f.hidden_field :one_end_date
+              = @outsourcing.one_end_date
+          tr
+            td
+              strong.label 必須
+            td.arrow_box
+              | 第二候補
+            td
+              = f.hidden_field :second_first_date
+              = @outsourcing.second_first_date
+              | 〜
+            td
+              = f.hidden_field :second_end_date
+              = @outsourcing.second_end_date
+          tr
+            td
+              strong.label 必須
+            td.arrow_box
+              | 第三候補
+            td
+              = f.hidden_field :third_first_date
+              = @outsourcing.third_first_date
+              | 〜
+            td
+              = f.hidden_field :third_end_date
+              = @outsourcing.third_end_date
   br
   table.company
        colgroup
@@ -97,14 +149,6 @@
            td
              = f.hidden_field :other_3
              = @outsourcing.other_3
-         tr
-           td
-             strong.label 必須
-           td.arrow_box
-             | MACPCを使用出来、Pages/Numbers/Keynoteを利用出来ますか？
-           td
-             = f.hidden_field :other_4
-             = @outsourcing.other_4
          tr
            td colspan="3"
              = f.submit "送信"

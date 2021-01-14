@@ -10,5 +10,10 @@ class Recruit < ApplicationRecord
   validates :remarks, {presence: true} #
   validates :other_1, {presence: true}
   validates :other_2, {presence: true}
-  validates :other_3, {presence: true}
+  validates :one_first_date, {presence: true}
+  validates :one_end_date, {presence: true}
+  validates :second_first_date, {presence: true}
+  validates :second_end_date, {presence: true}
+  validates :third_first_date, {presence: true}
+  validates :third_end_date, {presence: true}
 end

@@ -42,6 +42,12 @@ class RecruitsController < ApplicationController
       :other_2,
       :other_3,
       :other_4,
+      :one_first_date,
+      :one_end_date,
+      :second_first_date,
+      :second_end_date,
+      :third_first_date,
+      :third_end_date
       )
   end
 end

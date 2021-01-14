@@ -54,13 +54,58 @@ h1.headline
             = f.number_field :age
         tr
           td
-            strong.label.label-blue 任意
+            strong.label 必須
           td.arrow_box
-            | （※事務の方）事務経験内容を記載してください
+            | 事務経験内容を記載してください
           td
             = f.text_area :remarks
 
-
+     br
+     br
+     table.company
+      colgroup
+        col width="10%"
+        col width="20%"
+        col width="35%"
+        col width="35%"
+        tr
+          th.arrow_box[colspan="4"]
+            | 面接日時
+            br
+            small
+             | 初回は５分ほどの電話面談となります。
+             br
+             | 面接日時は平日10:00~17:00迄の間で設定可能です。担当者と予定を調整するため、幅を持って誤入力ください。
+        tr
+          td
+            strong.label 必須
+          td.arrow_box
+            | 第一候補
+          td
+            = f.datetime_field :one_first_date
+            | 〜
+          td
+            = f.datetime_field :one_end_date
+        tr
+          td
+            strong.label 必須
+          td.arrow_box
+            | 第二候補
+          td
+            = f.datetime_field :second_first_date
+            | 〜
+          td
+            = f.datetime_field :second_end_date
+        tr
+          td
+            strong.label 必須
+          td.arrow_box
+            | 第三候補
+          td
+            = f.datetime_field :third_first_date
+            | 〜
+          td
+            = f.datetime_field :third_end_date
      br
      br
      table.company
@@ -92,13 +137,6 @@ h1.headline
             | いつから稼働開始可能ですか？
           td
             = f.date_field :other_3
-        tr
-          td
-            strong.label.label-blue 任意
-          td.arrow_box
-            | （※事務の方）MACPCを使用出来、Pages/Numbers/Keynoteを利用出来ますか？
-          td
-            = f.check_box :other_4
         tr
           td colspan="3"
             = f.submit "確認"

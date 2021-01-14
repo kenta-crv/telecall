@@ -11,11 +11,13 @@
 稼働開始希望日：<%= @recruit.select_3 %>
 テレアポ業務稼働経験を記載してください：<%= @recruit.remarks %>
 
+面接希望日時第一候補：<%= @recruit.one_first_date %>〜<%= @recruit.one_end_date %>
+面接希望日時第二候補：<%= @recruit.second_first_date %>〜<%= @recruit.second_end_date %>
+面接希望日時第三候補：<%= @recruit.third_first_date %>〜<%= @recruit.third_end_date %>
+
 Q1.1時間あたり20Callを目標としてコール頂ける方が対象となりますが該当していますか？
 <%= @recruit.other_1 %>
 Q2.成果報酬発生はアポ獲得時となりますが、条件外や薄いアポイントの場合はカウントされない場合があります。
 <%= @recruit.other_2 %>
-Q3.面接に代わり音声データを３日以内に送付頂けますか？
-<%= @recruit.other_3 %>
 
 --------------------------

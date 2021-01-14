@@ -6,7 +6,13 @@ class Outsourcing < ApplicationRecord
   validates :postnumber, {presence: true}
   validates :address, {presence: true}
   validates :age, {presence: true}
-
+  validates :remarks, {presence: true}
+  validates :one_first_date, {presence: true}
+  validates :one_end_date, {presence: true}
+  validates :second_first_date, {presence: true}
+  validates :second_end_date, {presence: true}
+  validates :third_first_date, {presence: true}
+  validates :third_end_date, {presence: true}
   validates :other_1, {presence: true}
   validates :other_2, {presence: true}
   validates :other_3, {presence: true}

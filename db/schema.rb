@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_12_011628) do
+ActiveRecord::Schema.define(version: 2021_01_14_033501) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -71,6 +71,12 @@ ActiveRecord::Schema.define(version: 2020_11_12_011628) do
     t.string "other_4"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "one_first_date"
+    t.datetime "one_end_date"
+    t.datetime "second_first_date"
+    t.datetime "second_end_date"
+    t.datetime "third_first_date"
+    t.datetime "third_end_date"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -101,6 +107,12 @@ ActiveRecord::Schema.define(version: 2020_11_12_011628) do
     t.string "other_4"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "one_first_date"
+    t.datetime "one_end_date"
+    t.datetime "second_first_date"
+    t.datetime "second_end_date"
+    t.datetime "third_first_date"
+    t.datetime "third_end_date"
   end
 
   create_table "releases", force: :cascade do |t|

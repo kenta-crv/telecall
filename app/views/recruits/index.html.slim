@@ -52,9 +52,9 @@ h1.headline
             | 閲覧した求人
           td = f.select(:select_1, [ \
               ["選択する","選択する"],      \
-              ["テレフォンアポインター（正社員）","テレフォンアポインター（正社員）"],      \
-              ["テレフォンアポインター（アルバイト）","テレフォンアポインター（アルバイト）"],      \
-              ["テレフォンアポインター（業務委託）","テレフォンアポインター（業務委託）"],      \
+              ["テレフォンアポインター（正社員）※出社が可能な方のみ","テレフォンアポインター（正社員）※出社が可能な方のみ"],      \
+              ["テレフォンアポインター（アルバイト）※出社が可能な方のみ","テレフォンアポインター（アルバイト）※出社が可能な方のみ"],      \
+              ["テレフォンアポインター（業務委託）※全国応募可能","テレフォンアポインター（業務委託）※全国応募可能"],      \
               ["事務員","事務員"],      \
               ])
         tr
@@ -79,7 +79,52 @@ h1.headline
             | テレアポ業務稼働経験を記載してください
           td
             = f.text_area :remarks
-
+     br
+     br
+     table.company
+      colgroup
+        col width="10%"
+        col width="20%"
+        col width="35%"
+        col width="35%"
+        tr
+          th.arrow_box[colspan="4"]
+            | 面接日時
+            br
+            small
+             | 初回は５分ほどの電話面談となります。
+             br
+             | 面接日時は平日10:00~17:00迄の間で設定可能です。担当者と予定を調整するため、幅を持って誤入力ください。
+        tr
+          td
+            strong.label 必須
+          td.arrow_box
+            | 第一候補
+          td
+            = f.datetime_field :one_first_date
+            | 〜
+          td
+            = f.datetime_field :one_end_date
+        tr
+          td
+            strong.label 必須
+          td.arrow_box
+            | 第二候補
+          td
+            = f.datetime_field :second_first_date
+            | 〜
+          td
+            = f.datetime_field :second_end_date
+        tr
+          td
+            strong.label 必須
+          td.arrow_box
+            | 第三候補
+          td
+            = f.datetime_field :third_first_date
+            | 〜
+          td
+            = f.datetime_field :third_end_date
 
      br
      br
@@ -90,7 +135,7 @@ h1.headline
         col width="20%"
         tr
           th.arrow_box[colspan="3"]
-            | 約款同意確認
+            | 同意確認
         tr
           td
             strong.label 必須
@@ -105,13 +150,7 @@ h1.headline
             | 成果報酬発生はアポ獲得時となりますが、条件外や薄いアポイントの場合はカウントされない場合があります。
           td
             = f.check_box :other_2
-        tr
-          td
-            strong.label 必須
-          td.arrow_box
-            | 面接に代わり音声データを３日以内に送付頂けますか？
-          td
-            = f.check_box :other_3
+
         tr
           td colspan="3"
             = f.submit "確認"
