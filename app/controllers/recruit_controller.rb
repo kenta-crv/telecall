@@ -5,7 +5,7 @@ class RecruitController < ApplicationController
     def subcontracting
     end
 
-    def officewwork
+    def officew
     end
 
     def regular_shibuya
