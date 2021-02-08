@@ -1,8 +1,8 @@
 class ContactMailer < ActionMailer::Base
-  default from: "info@ri-plus.jp"
+  default from: "mail@ri-plus.jp"
   def received_email(contact)
     @contact = contact
-    mail to: "info@ri-plus.jp"
+    mail to: "mail@ri-plus.jp"
     mail(subject: '株式会社Ri-Plusよりお問い合わせがありました') do |format|
       format.text
     end
