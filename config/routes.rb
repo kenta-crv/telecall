@@ -20,8 +20,8 @@ Rails.application.routes.draw do
   get 'oneday' => 'top#oneday' #求人リスト
 
     get 'recruit' => 'recruit#recruit' #求人リスト
-    get 'recruit/parttime_shibuya' => 'recruit#parttime_shibuya'
-    get 'recruit/regular_shibuya' => 'recruit#regular_shibuya'
+    get 'recruit/parttime' => 'recruit#parttime'
+    get 'recruit/regular' => 'recruit#regular'
     get 'recruit/outsourcing' => 'recruit#outsourcing'
     get 'recruit/appointer' => 'recruit#appointer'
     get 'recruit/office' => 'recruit#office'
