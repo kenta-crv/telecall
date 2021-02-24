@@ -3,15 +3,10 @@ class TopController < ApplicationController
   def index
   end
 
-  def apotakumi
-  end
-
   def ritonal
     render layout: "ritonaru"
   end
 
-  def mail
-  end
 
   def engilance
   end
