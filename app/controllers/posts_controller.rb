@@ -1,15 +1,18 @@
 class PostsController < ApplicationController
-before_action :authenticate_admin!, except: [:index, :show]
+  before_action :authenticate_admin!, except: [:index, :show]
+  add_breadcrumb "記事一覧", :posts_path
   def index
     @posts = Post.order(created_at: "DESC").page(params[:page])
   end
 
   def show
     @post = Post.find(params[:id])
+    add_breadcrumb @post.title
   end
 
   def new
     @post = Post.new
+    add_breadcrumb "新規記事投稿", new_post_path
   end
 
   def create
@@ -23,6 +26,7 @@ before_action :authenticate_admin!, except: [:index, :show]
 
   def edit
     @post = Post.find(params[:id])
+    add_breadcrumb "記事編集", edit_post_path
   end
 
   def destroy

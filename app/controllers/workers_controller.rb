@@ -6,11 +6,14 @@ class WorkersController < ApplicationController
 
     def new
       @worker = Worker.new
+      add_breadcrumb "応募フォーム", workers_new_path
       render :action => 'new'
     end
 
     def confirm
       @worker = Worker.new(worker_params)
+      add_breadcrumb "応募フォーム", workers_confirm_path
+      add_breadcrumb "確認画面"
       if @worker.valid?
         render :action =>  'confirm'
       else
@@ -23,6 +26,9 @@ class WorkersController < ApplicationController
       @worker.save
       WorkerMailer.received_email(@worker).deliver
       WorkerMailer.send_email(@worker).deliver
+      add_breadcrumb "応募フォーム", workers_confirm_path
+      add_breadcrumb "確認画面"
+      add_breadcrumb "送信完了"
     end
 
     def show

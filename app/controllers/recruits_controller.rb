@@ -2,6 +2,7 @@ class RecruitsController < ApplicationController
   def index
     @recruit = Recruit.new
     render :action => 'index'
+    add_breadcrumb "応募フォーム", recruits_path
   end
 
   def confirm
@@ -12,7 +13,8 @@ class RecruitsController < ApplicationController
     else
       render :action => 'index'
     end
-    # binding.pry
+    add_breadcrumb "応募フォーム", recruits_path
+    add_breadcrumb "確認画面"
   end
 
   def thanks
@@ -20,6 +22,9 @@ class RecruitsController < ApplicationController
     @recruit.save
     RecruitMailer.received_email(@recruit).deliver
     RecruitMailer.send_email(@recruit).deliver
+    add_breadcrumb "応募フォーム", recruits_path
+    add_breadcrumb "確認画面"
+    add_breadcrumb "送信完了"
   end
 
   private

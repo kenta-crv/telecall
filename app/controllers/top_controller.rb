@@ -1,11 +1,10 @@
 class TopController < ApplicationController
-
   def index
   end
 
-  def ritonal
-    render layout: "ritonaru"
-  end
+#  def ritonal
+#    render layout: "ritonaru"
+#  end
 
 
   def engilance
@@ -14,43 +13,40 @@ class TopController < ApplicationController
   def movies
   end
 
-  def recruitment
+  def lp
   end
 
-  def metal
-  end
+  #def metal
+  #end
 
-  def marketing
-  end
+  #def marketing
+  #end
 
   def business
+    add_breadcrumb "事業内容", :business_path
   end
 
-  def price
-  end
+  #def price
+  #end
 
-  def president
-  end
+  #def president
+  #end
 
   def company
+    add_breadcrumb "会社概要", :company_path
   end
 
   def privacy
+    add_breadcrumb "プライバシーポリシー", :privacy_path
   end
 
-  def review
-  end
-
-  def script
-  end
+  #def review
+  #end
 
   def question
-  end
-
-  def tcare
+    add_breadcrumb "よくある質問", :question_path
   end
 
   def oneday
   end
-
 end

@@ -1,17 +1,19 @@
 class OutsourcingsController < ApplicationController
   def index
     @outsourcing = Outsourcing.new
+    add_breadcrumb "応募フォーム", outsourcings_path
     render :action => 'index'
   end
 
   def confirm
     @outsourcing = Outsourcing.new(outsourcings_params)
+    add_breadcrumb "応募フォーム", outsourcings_path
+    add_breadcrumb "確認画面"
     if @outsourcing.valid?
       render :action =>  'confirm'
     else
       render :action => 'index'
     end
-    # binding.pry
   end
 
   def thanks
@@ -19,6 +21,9 @@ class OutsourcingsController < ApplicationController
     @outsourcing.save
     OutsourcingMailer.received_email(@outsourcing).deliver
     OutsourcingMailer.send_email(@outsourcing).deliver
+    add_breadcrumb "応募フォーム", outsourcings_path
+    add_breadcrumb "確認画面"
+    add_breadcrumb "送信完了"
   end
 
   private

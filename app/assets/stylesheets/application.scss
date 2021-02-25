@@ -1135,3 +1135,15 @@ dd {
        text-align:left;
          }
  }
+
+p.width{width:90%;}
+
+/*パンくず*/
+.bread {
+  text-align:left;
+  margin-left:10px;
+  margin-top:10px;
+  position: absolute;/*絶対配置*/
+  top: 130;
+  font-size:13px;
+}

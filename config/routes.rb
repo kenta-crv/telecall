@@ -6,11 +6,10 @@ Rails.application.routes.draw do
     get 'apotakumi' => 'top#apotakumi' #エンジランス
     get 'engilance' => 'top#engilance' #エンジランス
     get 'movies' => 'top#movies' #ムービーズ
-    get 'ritonal' => 'top#ritonal' #リトナル
-    get 'mail' => 'top#mail' #メールマーケティング
-    get 'recruitment' => 'top#recruitment' #メールマーケティング
-    get 'metal' => 'top#metal' #金属加工
-    get 'marketing' => 'top#marketing' #デジタルマーケティング
+    #get 'ritonal' => 'top#ritonal' #リトナル
+    get 'lp' => 'top#lp' #メールマーケティング
+    #get 'metal' => 'top#metal' #金属加工
+    #get 'marketing' => 'top#marketing' #デジタルマーケティング
   get 'business' => 'top#business' #事業内容
   get 'company' => 'top#company'  #会社概要
   get 'privacy' => 'top#privacy' #プライバシーポリシー
