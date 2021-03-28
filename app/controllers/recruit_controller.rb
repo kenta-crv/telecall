@@ -2,6 +2,7 @@ class RecruitController < ApplicationController
   add_breadcrumb "求人一覧", :recruit_path
 
     def recruit
+      @prefectures = Prefecture.all
     end
 
     def office

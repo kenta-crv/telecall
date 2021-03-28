@@ -6,7 +6,6 @@ class TopController < ApplicationController
 #    render layout: "ritonaru"
 #  end
 
-
   def engilance
   end
 
@@ -48,5 +47,8 @@ class TopController < ApplicationController
   end
 
   def oneday
+  end
+
+  def whats
   end
 end

@@ -21,7 +21,6 @@
 
  /*ヘッダーのベース設定*/
 header {
-width:100%;
 background-color:white;
 position: sticky;
 top: 0;
@@ -305,17 +304,17 @@ footer {
   }
 
 
-    .box1 {
-     padding: 1rem 4.5rem 0.3rem;
-     display:inline-block;
-     text-align:center;
-     background: red;
-           p {
-           color: #FFF;/*文字色*/
-           font-weight: bold;
-           font-size:2.0vw;
-             }
-      }
+.box1 {
+   padding: 1rem 4.5rem 0.3rem;
+   display:inline-block;
+   text-align:center;
+   background: red;
+         p {
+         color: #FFF;/*文字色*/
+         font-weight: bold;
+         font-size:2.0vw;
+         }
+}
 
 /*中央寄せ*/
 .center {
@@ -420,9 +419,12 @@ table.company {
 
                                                /*  Top Wrapper  */
 .top-wrapper {
-  padding-bottom: 70px;
-  position:relative;
-  text-align:center;
+  margin:0 40px 0px;
+  text-align:left;
+   .float-image{
+     float:left;
+     margin:0 20px 20px 0px;
+   }
                                     /*タイトル*/
        .heading {
            text-align:center;
@@ -433,7 +435,8 @@ table.company {
             font-weight:bold;
             }
         p {
-            font-size:2vw;
+          font-size:16px;
+          line-height:2.0;
             }
         strong {
             color: $main_color;
@@ -495,51 +498,8 @@ table.company {
     width:90%;
 }
 
-/*number parts big font*/
-.wide {
-  font-size:3.5rem;
-  color: #FCC100;
-  text-shadow:2px 2px 2px #000;
-}
-/*bold*/
-.bold {
-  font-weight:bold;
-  font-size:3rem;
-  color:black;
-}
 
-.headline {
-  padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
-  color: #494949;/*文字色*/
-  background: #f4f4f4;/*背景色*/
-  border-left: solid 5px $main_color;/*左線*/
-  border-bottom: solid 3px #d7d7d7;/*下線*/
-  text-align:left;
-  padding-left:30px;
-  margin:30px auto;
-	width:95%;
-	font-size:21px;
-	font-weight:bold;
-  }
 
-.both-set {
-  margin:0 30px;
-  font-size:12px;
-  color:#666;
-}
-
-.top-wrapper {
-  margin:0 40px -50px;
-  text-align:left;
-   .float-image{
-     float:left;
-     margin:0 20px 20px 0px;
-   }
-   p{
-     font-size:16px;
-     line-height:2.0;
-   }
-}
 
 /* 黒板風　タイトル　3 */
 .kokuban-t3 {
@@ -608,42 +568,6 @@ table.company {
   font-weight:bold;
 }
 
-.font-height {
-  line-height:3.0vw;
-  margin:0 40px;
-  width:95%;
-}
-
-.font-height-2 {
-  font-size:0.5vw;
-  margin:0 30px;
-}
-
-.business-wrapper {
-  text-align:left;
-  margin:0 30px;
-  padding-left:20px;
-  h3 {
-    font-size:21px;
-    color:$main_color;
-    font-weight:bold;
-  }
-}
-
-.red {
-  color: red;
-}
-
-.font-height {
-  line-height:3.0vw;
-  margin:0 30px;
-}
-
-.font-height-2 {
-  font-size:0.5vw;
-  margin:0 30px;
-}
-
 .label {
   background: red;
 }
@@ -651,23 +575,6 @@ table.company {
 .label-blue {
   background: blue;
 }
-
-
-.call-flow {
-  text-align:center;
-  h5 {
-    font-size:24px;
-    color: black;
-    font-weight:bold;
-  }
-  .col-sm-6 {
-    padding:0 40px;
-  }
-  p {
-    font-size:12px;
-  }
-}
-
 }
 
 
@@ -873,11 +780,6 @@ dd {
 }
 
 
-.center {
-  text-align:center;
-  margin:0 auto ;
-}
-
 .cp_qa *, .cp_qa *:after, .cp_qa *:before {
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -1040,28 +942,6 @@ dd {
     color: #FFFFFF;
 }
 
-.tops-wrapper {
-	margin:50px 10px;
-	text-align:center;
-	p {
-		line-height:2.5;
-		font-size:18px;
-		text-align:left;
-		margin:50px;
-	    }
-	bold {
-		font-weight:bold;
-	    }
-	span   {
-        color:#0076BA;
-        font-size:45px;
-        text-decoration: underline;
-        font-weight:bold;
-        }
-}
-
-
-
 /*posts show*/
 #post-detail{
 	.headline-first {
@@ -1146,4 +1026,15 @@ p.width{width:90%;}
   position: absolute;/*絶対配置*/
   top: 130;
   font-size:13px;
+}
+
+.business-wrapper {
+  text-align:left;
+  margin:0 30px;
+  padding-left:20px;
+  h3 {
+    font-size:21px;
+    color:$main_color;
+    font-weight:bold;
+  }
 }
