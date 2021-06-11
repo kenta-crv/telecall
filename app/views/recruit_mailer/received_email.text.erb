@@ -4,20 +4,13 @@
 氏名: <%= @recruit.first_name %><%= @recruit.last_name %>
 連絡先: <%= @recruit.tel %>
 メールアドレス: <%= @recruit.mail %>
-住所: <%= @recruit.postnumber %><%= @recruit.address %>
+住所: <%= @recruit.address %>
 
 閲覧した求人：<%= @recruit.select_1 %>
-週稼働時間（アルバイトの場合）：<%= @recruit.select_2 %>時間
-稼働開始希望日：<%= @recruit.select_3 %>
-テレアポ業務稼働経験を記載してください：<%= @recruit.remarks %>
+週稼働時間：<%= @recruit.select_2 %>時間
 
 面接希望日時第一候補：<%= @recruit.one_first_date %>〜<%= @recruit.one_end_date %>
 面接希望日時第二候補：<%= @recruit.second_first_date %>〜<%= @recruit.second_end_date %>
 面接希望日時第三候補：<%= @recruit.third_first_date %>〜<%= @recruit.third_end_date %>
-
-Q1.1時間あたり20Callを目標としてコール頂ける方が対象となりますが該当していますか？
-<%= @recruit.other_1 %>
-Q2.成果報酬発生はアポ獲得時となりますが、条件外や薄いアポイントの場合はカウントされない場合があります。
-<%= @recruit.other_2 %>
 
 --------------------------

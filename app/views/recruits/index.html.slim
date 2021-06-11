@@ -35,13 +35,6 @@ h1.headline
           td
             strong.label 必須
           td.arrow_box
-            | 郵便番号（-なし）
-          td
-            = f.text_field :postnumber
-        tr
-          td
-            strong.label 必須
-          td.arrow_box
             | 住所
           td
             = f.text_field :address
@@ -59,26 +52,12 @@ h1.headline
               ])
         tr
           td
-            strong.label.label-blue 任意
+            strong.label 必須
           td.arrow_box
             | 週稼働時間（パート/業務委託者は必須）
           td
             = f.number_field :select_2
             | 時間
-        tr
-          td
-            strong.label 必須
-          td.arrow_box
-            | 稼働開始希望日
-          td
-            = f.date_field :select_3
-        tr
-          td
-            strong.label 必須
-          td.arrow_box
-            | テレアポ業務稼働経験を記載してください
-          td
-            = f.text_area :remarks
      br
      br
      table.company
@@ -92,9 +71,9 @@ h1.headline
             | 面接日時
             br
             small
-             | 初回は５分ほどの電話面談となります。
+             | 初回は10分ほどの電話面談となります。
              br
-             | 面接日時は平日10:00~17:00迄の間で設定可能です。担当者と予定を調整するため、幅を持ってご入力ください。
+             | 面接日時は平日09:30~16:45迄の間で設定可能です。担当者と予定を調整するため、幅を持ってご入力ください。
         tr
           td
             strong.label 必須
@@ -135,21 +114,13 @@ h1.headline
         col width="20%"
         tr
           th.arrow_box[colspan="3"]
-            | 同意確認
+            | 応募条件確認
         tr
-          td
-            strong.label 必須
           td.arrow_box
-            | 1時間あたり20Callを目標としてコール頂ける方が対象となりますが該当していますか？
-          td
-            = f.check_box :other_1
+            | インターネット環境・インターネットリテラシーをお持ちの方が対象となります。
         tr
-          td
-            strong.label 必須
           td.arrow_box
-            | 成果報酬発生はアポ獲得時となりますが、条件外や薄いアポイントの場合はカウントされない場合があります。
-          td
-            = f.check_box :other_2
+            | 半年以上稼働出来る方が対象となります。
 
         tr
           td colspan="3"

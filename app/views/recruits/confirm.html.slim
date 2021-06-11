@@ -37,14 +37,6 @@ h1.headline
            td
              strong.label 必須
            td.arrow_box
-             | 郵便番号（ハイフンなし）
-           td
-             = f.hidden_field :postnumber
-             = @recruit.postnumber
-         tr
-           td
-             strong.label 必須
-           td.arrow_box
              | 住所
            td
              = f.hidden_field :address
@@ -67,24 +59,6 @@ h1.headline
              = f.hidden_field :select_2
              = @recruit.select_2
              | 時間
-         tr
-          td
-            strong.label 必須
-          td.arrow_box
-            | 稼働開始希望日
-          td
-            = f.hidden_field :select_3
-            = @recruit.select_3
-            | 時間
-         tr
-          td
-            strong.label 必須
-          td.arrow_box
-            | テレアポ業務稼働経験を記載してください
-          td
-            = f.hidden_field :remarks
-            = @recruit.remarks
-            | 時間
 
   br
   br
@@ -97,11 +71,6 @@ h1.headline
           tr
             th.arrow_box[colspan="4"]
               | 面接日時
-              br
-              small
-               | 初回は５分ほどの電話面談となります。
-               br
-               | 面接日時は平日10:00~17:00迄の間で設定可能です。担当者と予定を調整するため、幅を持ってご入力ください。
           tr
             td
               strong.label 必須
@@ -138,34 +107,9 @@ h1.headline
             td
               = f.hidden_field :third_end_date
               = @recruit.third_end_date
-  br
-  table.company
-       colgroup
-         col width="10%"
-         col width="70%"
-         col width="20%"
-         tr
-           th.arrow_box[colspan="3"]
-             | 約款同意確認
-         tr
-           td
-             strong.label 必須
-           td.arrow_box
-             | 1時間あたり20Callを目標としてコール頂ける方が対象となりますが該当していますか？
-           td
-             = f.hidden_field :other_1
-             = @recruit.other_1
-         tr
-           td
-             strong.label 必須
-           td.arrow_box
-             | 成果報酬発生はアポ獲得時となりますが、条件外や薄いアポイントの場合はカウントされない場合があります。
-           td
-             = f.hidden_field :other_2
-             = @recruit.other_2
-         tr
-           td colspan="3"
-             = f.submit "送信"
+          tr
+            td[colspan="4"]
+              = f.submit "送信"
 
 br
 br
