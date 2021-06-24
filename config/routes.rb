@@ -33,8 +33,8 @@ Rails.application.routes.draw do
 
 
     get 'recruit' => 'recruit#recruit' #求人リスト
-    get 'recruit/parttime2' => 'recruit#parttime2'
-    get 'recruit/regular2' => 'recruit#regular2'
+    get 'recruit/parttime' => 'recruit#parttime'
+    get 'recruit/regular' => 'recruit#regular'
     get 'recruit/outsourcing' => 'recruit#outsourcing'
     get 'recruit/appointer2' => 'recruit#appointer2'
     get 'recruit/office' => 'recruit#office'
