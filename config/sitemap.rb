@@ -6,10 +6,6 @@ SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 SitemapGenerator::Sitemap.create do
 
     add "/", changefreq: 'daily', priority: 1.0
-    add "engilance" , changefreq: 'daily', priority: 0.8 #エンジランス
-    add "movies" , changefreq: 'daily', priority: 0.8  #ムービーズ
-    add "mail" , changefreq: 'daily', priority: 0.8  #メールマーケティング
-    add "metal" , changefreq: 'daily', priority: 0.8  #金属加工
     add "marketing" , changefreq: 'daily', priority: 0.8  #デジタルマーケティング
     add "business" , changefreq: 'daily', priority: 0.8
     add "company" , changefreq: 'daily', priority: 0.8
@@ -18,8 +14,6 @@ SitemapGenerator::Sitemap.create do
     add "recruit/parttime" , changefreq: 'daily', priority: 0.7
     add "recruit/regular" , changefreq: 'daily', priority: 0.7
     add "recruit/subcontracting" , changefreq: 'daily', priority: 0.7
-
-    add "workers/new" , changefreq: 'daily', priority: 0.3
 
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     add "/contact" , changefreq: 'daily', priority: 0.3
