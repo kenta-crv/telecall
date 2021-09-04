@@ -2,18 +2,14 @@ class TopController < ApplicationController
   def index
   end
 
-#  def ritonal
-#    render layout: "ritonaru"
-#  end
+  #def engilance
+  #end
 
-  def engilance
-  end
+  #def movies
+  #end
 
-  def movies
-  end
-
-  def lp
-  end
+  #def lp
+  #end
 
   #def metal
   #end
@@ -46,9 +42,9 @@ class TopController < ApplicationController
     add_breadcrumb "よくある質問", :question_path
   end
 
-  def oneday
-  end
+  #def oneday
+  #end
 
-  def whats
-  end
+  #def whats
+  #end
 end
