@@ -63,4 +63,6 @@ Rails.application.routes.draw do
   get '/outsourcings' => 'outsourcings#index'
   post 'outsourcings/confirm' => 'outsourcings#confirm'
   post 'outsourcings/thanks' => 'outsourcings#thanks'
+
+  get '*path', controller: 'application', action: 'render_404'
 end
