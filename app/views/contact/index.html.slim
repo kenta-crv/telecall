@@ -64,9 +64,12 @@
         td
           strong.label 必須
         td.arrow_box
-          | 件名
+          | 本文
         td
           = f.text_area :message
       tr
         td colspan="3"
           = f.submit "確認"
+          br
+          small
+            | （※営業のお問い合わせはお断りしております。）

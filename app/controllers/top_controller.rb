@@ -2,6 +2,9 @@ class TopController < ApplicationController
   def index
   end
 
+  def human
+  end
+
   #def engilance
   #end
 
