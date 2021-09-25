@@ -5,11 +5,11 @@ class RecruitController < ApplicationController
       add_breadcrumb "事務アルバイト求人"
     end
 
-    def regular
+    def regular3
       add_breadcrumb "テレアポ正社員求人"
     end
 
-    def parttime
+    def parttime3
       add_breadcrumb "テレアポアルバイト求人"
     end
 
