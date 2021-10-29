@@ -22,6 +22,17 @@ html
            li
              = link_to  'トップ', '/' , class: "col-md"
            li
+             = link_to  'サービス紹介' , :class=>"col-md"
+             ul.sub-menu-nav
+              li
+               = link_to "独自マーケティング手法","#",class:"white"
+              li
+               = link_to "料金について","/price",class:"white"
+              li
+               = link_to "取引フロー","#",class:"white"
+              li
+               = link_to "過去の実績","#",class:"white"
+           li
              = link_to  '事業内容', '/business' , :class=>"col-md"
            li
              = link_to  '記事一覧', '/posts' , :class=>"col-md"

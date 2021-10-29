@@ -55,7 +55,7 @@ z-index:10;
     }
     #dropmenu li{
      position: relative;
-     width: 15%;
+     width: 14%;
      float: left;
      text-align: center;
     }
@@ -1057,4 +1057,9 @@ p.width{width:90%;}
     color:$main_color;
     font-weight:bold;
   }
+}
+
+h3 {
+  background: linear-gradient(transparent 70%, #a7d6ff 70%);
+  margin:0 30px;
 }

@@ -5,20 +5,23 @@ SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 
 SitemapGenerator::Sitemap.create do
 
-    add "/", changefreq: 'daily', priority: 1.0
-    add "marketing" , changefreq: 'daily', priority: 0.8  #デジタルマーケティング
-    add "business" , changefreq: 'daily', priority: 0.8
-    add "company" , changefreq: 'daily', priority: 0.8
-    add "agent" , changefreq: 'daily', priority: 0.5
-    add "recruit" , changefreq: 'daily', priority: 0.7
-    add "recruit/parttime" , changefreq: 'daily', priority: 0.7
-    add "recruit/regular" , changefreq: 'daily', priority: 0.7
-    add "recruit/subcontracting" , changefreq: 'daily', priority: 0.7
+    add "/", changefreq: 'monthly', priority: 1.0
+    add "/marketing" , changefreq: 'monthly', priority: 0.8  #デジタルマーケティング
+    add "/business" , changefreq: 'monthly', priority: 0.8
+    add "/company" , changefreq: 'monthly', priority: 0.8
+    add "/agent" , changefreq: 'monthly', priority: 0.5
+    add "/price" , changefreq: 'monthly', priority: 0.5
+    add "/question" , changefreq: 'monthly', priority: 0.5
+    add "/privacy" , changefreq: 'monthly', priority: 0.5
+    add "/recruit" , changefreq: 'monthly', priority: 0.7
+    add "recruit/parttime" , changefreq: 'monthly', priority: 0.7
+    add "recruit/regular" , changefreq: 'monthly', priority: 0.7
+    add "recruit/subcontracting" , changefreq: 'monthly', priority: 0.7
 
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-    add "/contact" , changefreq: 'daily', priority: 0.3
+    add "/contact" , changefreq: 'monthly', priority: 0.3
 
-    add "recruits" , changefreq: 'daily', priority: 0.3
+    add "recruits" , changefreq: 'monthly', priority: 0.3
 
 
 
@@ -37,7 +40,7 @@ SitemapGenerator::Sitemap.create do
   #
    #Add '/posts'
 
-     add posts_path, :priority => 0.7, :changefreq => 'daily'
+     add posts_path, :priority => 0.7, :changefreq => 'monthly'
 
   # Add all posts:
 

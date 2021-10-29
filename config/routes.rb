@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     #get 'engilance' => 'top#engilance' #エンジランス
     #get 'movies' => 'top#movies' #ムービーズ
     #get 'ritonal' => 'top#ritonal' #リトナル
-    #get 'lp' => 'top#lp' #メールマーケティング
+  get 'lp' => 'top#lp' #LPページ
     #get 'metal' => 'top#metal' #金属加工
     #get 'marketing' => 'top#marketing' #デジタルマーケティング
   get 'human' => 'top#human' #事業内容
