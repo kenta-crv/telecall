@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
+  layout "froala"
   before_action :authenticate_admin!, except: [:index, :show]
   add_breadcrumb "記事一覧", :posts_path
+
   def index
     @posts = Post.order(created_at: "DESC").page(params[:page])
   end

@@ -11,7 +11,6 @@
 // about supported directives.
 //= require activestorage
 //= require turbolinks
-//= require_tree .
 
 $(function() {
     $('.navToggle').click(function() {
