@@ -27,6 +27,9 @@ class TopController < ApplicationController
   def price
   end
 
+  def flow
+  end
+
   #def president
   #end
 

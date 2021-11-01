@@ -426,6 +426,18 @@ table.company {
 		margin:50px;
 	    }
 
+
+  h3 {
+    background: linear-gradient(transparent 70%, #a7d6ff 70%);
+    margin:50px 30px 40px;
+    text-align:left;
+    font-weight:bold;
+    padding-left:20px;
+    @media screen and ( max-width:479px ){
+      font-size: 14px;
+    }
+  }
+
 	bold {
 		font-weight:bold;
 	    }
@@ -1008,7 +1020,11 @@ p.width{width:90%;}
   }
 }
 
-h3 {
-  background: linear-gradient(transparent 70%, #a7d6ff 70%);
-  margin:0 30px;
-}
+
+  h3 {
+    background: linear-gradient(transparent 70%, #a7d6ff 70%);
+    margin:50px 30px 40px;
+    @media screen and ( max-width:479px ){
+      font-size: 14px;
+    }
+  }
