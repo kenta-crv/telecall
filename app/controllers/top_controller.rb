@@ -5,8 +5,8 @@ class TopController < ApplicationController
   def human
   end
 
-  #def engilance
-  #end
+  def transaction
+  end
 
   #def movies
   #end

@@ -19,17 +19,19 @@ Rails.application.routes.draw do
   get 'question' => 'top#question' #ナレッジリスト
   get 'oneday' => 'top#oneday' #求人リスト
 
+
   get 'whats' => 'top#whats' #アポ匠とは
   get 'original' => 'top#original' #オリジナルマーケティング
   get 'price' => 'top#price' #料金について
-  get 'success' => 'top#success' #成功事例
-  get 'success_people' => 'top#success_people' #人材会社成功事例
-  get 'success_ads' => 'top#success_ads' #広告企業成功事例
-  get 'success_consulting' => 'top#success_consulting' #コンサルティング会社成功事例
-  get 'failed' => 'top#failed' #失敗事例
-  get 'failed_agents' => 'top#failed_agents' #代理店募集失敗事例
-  get 'failed_hp' => 'top#failed_hp' #HP制作会社失敗事例
-  get 'failed_it' => 'top#failed_it' #HP制作会社失敗事例
+  get 'transaction' => 'top#transaction' #料金について
+  get 'review' => 'top#review' #成功事例
+  #get 'success_people' => 'top#success_people' #人材会社成功事例
+  #get 'success_ads' => 'top#success_ads' #広告企業成功事例
+  #get 'success_consulting' => 'top#success_consulting' #コンサルティング会社成功事例
+  #get 'failed' => 'top#failed' #失敗事例
+  #get 'failed_agents' => 'top#failed_agents' #代理店募集失敗事例
+  #get 'failed_hp' => 'top#failed_hp' #HP制作会社失敗事例
+  #get 'failed_it' => 'top#failed_it' #HP制作会社失敗事例
   get 'flow' => 'top#flow' #HP制作会社失敗事例
 
 
