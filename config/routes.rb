@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     #get 'ritonal' => 'top#ritonal' #リトナル
   get 'lp' => 'top#lp' #LPページ
     #get 'metal' => 'top#metal' #金属加工
-    #get 'marketing' => 'top#marketing' #デジタルマーケティング
+  get 'marketing' => 'top#marketing' #デジタルマーケティング
   get 'human' => 'top#human' #事業内容
   get 'business' => 'top#business' #事業内容
   get 'company' => 'top#company'  #会社概要

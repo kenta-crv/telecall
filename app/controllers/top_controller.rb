@@ -17,8 +17,8 @@ class TopController < ApplicationController
   #def metal
   #end
 
-  #def marketing
-  #end
+  def marketing
+  end
 
   def business
     add_breadcrumb "事業内容", :business_path
