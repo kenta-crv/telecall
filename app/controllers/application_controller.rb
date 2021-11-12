@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  add_breadcrumb 'ホーム', :root_url
+  add_breadcrumb '株式会社Ri-Plus『アポ匠』ホーム', :root_url
   before_action :set_host
 
   # 例外処理

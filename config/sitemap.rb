@@ -6,17 +6,18 @@ SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 SitemapGenerator::Sitemap.create do
 
     add "/", changefreq: 'monthly', priority: 1.0
-    add "/marketing" , changefreq: 'monthly', priority: 0.8  #デジタルマーケティング
+    add "/marketing" , changefreq: 'monthly', priority: 0.8
     add "/business" , changefreq: 'monthly', priority: 0.8
-    add "/company" , changefreq: 'monthly', priority: 0.8
-    add "/agent" , changefreq: 'monthly', priority: 0.5
+    add "/company" , changefreq: 'monthly', priority: 0.5
     add "/price" , changefreq: 'monthly', priority: 0.5
+    add "/flow" , changefreq: 'monthly', priority: 0.5
+    add "/review" , changefreq: 'monthly', priority: 0.5
     add "/question" , changefreq: 'monthly', priority: 0.5
     add "/privacy" , changefreq: 'monthly', priority: 0.5
     add "/recruit" , changefreq: 'monthly', priority: 0.7
-    add "recruit/parttime" , changefreq: 'monthly', priority: 0.7
-    add "recruit/regular" , changefreq: 'monthly', priority: 0.7
-    add "recruit/subcontracting" , changefreq: 'monthly', priority: 0.7
+    add "recruit/parttime3" , changefreq: 'monthly', priority: 0.7
+    add "recruit/regular3" , changefreq: 'monthly', priority: 0.7
+    add "recruit/appointer2" , changefreq: 'monthly', priority: 0.7
 
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     add "/contact" , changefreq: 'monthly', priority: 0.3
