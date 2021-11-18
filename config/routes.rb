@@ -43,6 +43,7 @@ Rails.application.routes.draw do
     get 'recruit/office' => 'recruit#office'
 
   resources :posts
+  resources :columns
   resources :prefectures
 
   get 'script' => 'top#script'

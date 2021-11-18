@@ -1,0 +1,27 @@
+- set_meta_tags  title: 'テレアポ代行のノウハウ知ろう｜株式会社Ri-Plus'
+- set_meta_tags  description: 'テレアポ代行のノウハウや選び方、基礎知識を紹介しています。'
+
+.tops-wrapper
+  .row
+    .col-sm-12
+      h1.headline
+        | 新着記事
+      - @columns.each do |column|
+        .row
+          .col-sm-5
+            = image_tag column.file_1.to_s, width:"100%", class:"column-space"
+          .col-sm-7.column-base
+            .column-title
+              = link_to column.title, column_path(column)
+            .column-description
+              = column.description.html_safe
+              - if admin_signed_in?
+                = link_to '編集  ', edit_column_path(column), class: 'command'
+                = link_to '  削除',
+                 			            	column_path(column),
+                 			            	method: :delete,
+                 			            	class: 'command',
+                 			            	data: { confirm: '本当に削除しますか？'}
+        br
+        hr
+      = paginate @columns

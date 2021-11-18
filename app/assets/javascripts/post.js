@@ -11,7 +11,6 @@
 // about supported directives.
 //= require froala_editor.min.js
 //= require plugins/paragraph_format.min.js
-
 //= require_tree .
 
 $(function() {
