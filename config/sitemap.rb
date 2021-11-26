@@ -41,11 +41,16 @@ SitemapGenerator::Sitemap.create do
   #
    #Add '/posts'
 
-     add posts_path, :priority => 0.7, :changefreq => 'monthly'
+     add posts_path, :priority => 0.7, :changefreq => 'weekly'
+     add columns_path, :priority => 0.7, :changefreq => 'weekly'
 
   # Add all posts:
 
      Post.find_each do |post|
        add post_path(post), :lastmod => post.updated_at
+     end
+
+     Column.find_each do |column|
+       add column_path(column), :lastmod => column.updated_at
      end
 end

@@ -250,6 +250,71 @@ footer {
       }
  }
 
+ .columns-wrapper {
+ 	margin:0 25px;
+ 	text-align:left;
+   @media screen and ( max-width:479px ){
+     margin:0px;
+   }
+
+   h1 {
+     font-size: 36px;
+     font-weight:bold;
+     text-align:center;
+     margin:40px 0 70px;
+     @media screen and ( max-width:479px ){
+       font-size: 21px;
+       margin:20px 10px 30px;
+       line-height:35px;
+     }
+   }
+
+
+   h1:first-letter {
+     font-size: 120%;
+     color: $main_color;
+   }
+
+   h2 {
+     padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
+     color: #555;/*文字色*/
+     font-size:28px;
+     font-weight:bold;
+     background: #f4f4f4;/*背景色*/
+     border-left: solid 5px $main_color;/*左線*/
+     border-bottom: solid 3px #d7d7d7;/*下線*/
+     margin:50px 30px 40px;
+     @media screen and ( max-width:479px ){
+       font-size: 16px;
+       line-height:30px;
+     }
+   }
+
+   h3 {
+     background: linear-gradient(transparent 70%, #a7d6ff 70%);
+     margin:50px 30px 40px;
+     @media screen and ( max-width:479px ){
+       font-size: 14px;
+     }
+   }
+
+   p {
+     line-height:2.5;
+     font-size:18px;
+     text-align:left;
+     margin:15px 40px;
+     @media screen and ( max-width:479px ){
+       font-size: 11px;
+       margin:0 30px;
+     }
+   }
+ }
+
+ .image_column {
+   text-align:center;
+   margin:30px 0 50px;
+ }
+
 
 /*中央寄せ*/
 .center {
