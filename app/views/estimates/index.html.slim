@@ -9,7 +9,7 @@
 
   .tops-wrapper
     h1.headline-first
-      span> お見積もり
+      span> お見積もり依頼
       | フォーム
     br
     table.company
@@ -52,62 +52,24 @@
           strong.label 必須
         td.arrow_box
           | URL
-        td = f.text_field :url
+        td = f.url_field :url
       tr
         td
           strong.label 必須
         td.arrow_box
-          | アポ取りを行う商材
-        td = f.text_field :business
-      tr
-        td
-          strong.label 必須
-        td.arrow_box
-          | 月間アポ希望件数
-          br
-          | (最低20件〜)
-        td = f.number_field :number
-      tr
-        td
-          strong.label 必須
-        td.arrow_box
-          | 開始時期
+          | 件名
           br
           |(2ヶ月以内開始希望のみ受付中)
-        td = f.select(:start, [ \
+        td = f.select(:business, [ \
             ["選択する","選択する"],      \
-            ["即開始希望","即開始希望"],      \
-            ["1ヶ月以内","1ヶ月以内"],      \
-            ["2ヶ月以内","2ヶ月以内"]      \
+            ["お見積もり依頼","お見積もり依頼"],      \
+            ["その他","その他"],      \
             ])
       tr
         td
           strong.label.label-blue 任意
         td.arrow_box
-          | ターゲット先業種
-        td = f.text_field :target_industry
-      tr
-        td
-          strong.label.label-blue 任意
-        td.arrow_box
-          | ターゲット先人数規模
-        td = f.text_field :target_employment
-      tr
-        td
-          strong.label 必須
-        td.arrow_box
-          | 商材ファイル添付
-          br
-          |(最低１つ添付)
-        td
-           = f.file_field :document_1
-           = f.file_field :document_2
-           = f.file_field :document_3
-      tr
-        td
-          strong.label.label-blue 任意
-        td.arrow_box
-          | その他商材に関する情報
+          | 本文
         td = f.text_field :remarks
       tr
         td colspan="3"

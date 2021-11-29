@@ -64,59 +64,15 @@ br
         td
           strong.label 必須
         td.arrow_box
-          | アポ取りを行う商材
+          | 件名
         td
           = f.hidden_field :business
           = @estimate.business
       tr
         td
-          strong.label 必須
-        td.arrow_box
-          | 月間アポ希望件数
-        td
-          = f.hidden_field :number
-          = @estimate.number
-      tr
-        td
-          strong.label 必須
-        td.arrow_box
-          | 開始時期
-        td
-          = f.hidden_field :start
-          = @estimate.start
-      tr
-        td
           strong.label.label-blue 任意
         td.arrow_box
-          | ターゲット先業種
-        td
-          = f.hidden_field :target_industry
-          = @estimate.target_industry
-      tr
-        td
-          strong.label.label-blue 任意
-        td.arrow_box
-          | ターゲット先人数規模
-        td
-          = f.hidden_field :target_employment
-          = @estimate.target_employment
-      tr
-        td
-          strong.label 必須
-        td.arrow_box
-          | 商材ファイル添付
-        td
-          = f.hidden_field :document_1
-          = @estimate.document_1.to_s
-          = f.hidden_field :document_2
-          = @estimate.document_2.to_s
-          = f.hidden_field :document_3
-          = @estimate.document_3.to_s
-      tr
-        td
-          strong.label.label-blue 任意
-        td.arrow_box
-          | その他商材に関する情報
+          | 本文
         td
           = f.hidden_field :remarks
           = @estimate.remarks

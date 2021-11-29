@@ -8,8 +8,8 @@ class TopController < ApplicationController
   def transaction
   end
 
-  #def movies
-  #end
+  def cost
+  end
 
   #def lp
   #end

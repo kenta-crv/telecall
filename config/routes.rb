@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     #get 'movies' => 'top#movies' #ムービーズ
     #get 'ritonal' => 'top#ritonal' #リトナル
   get 'lp' => 'top#lp' #LPページ
-    #get 'metal' => 'top#metal' #金属加工
+  get 'cost' => 'top#cost' #金属加工
   get 'marketing' => 'top#marketing' #デジタルマーケティング
   get 'human' => 'top#human' #事業内容
   get 'business' => 'top#business' #事業内容

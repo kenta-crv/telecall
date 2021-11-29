@@ -1,5 +1,4 @@
 class EstimatesController < ApplicationController
-  layout 'ritonaru'
   def index
     @estimate = Estimate.new
     render :action => 'index'
@@ -30,16 +29,8 @@ class EstimatesController < ApplicationController
       :mail, #メールアドレス
       :address, #住所
       :url, #URL
-
-      :business, #アポ希望ビジネス
-      :number, #月間獲得件数
-      :start, #開始時期
-      :target_industry, #ターゲット業種
-      :target_employment, #ターゲット人数規模
-      :document_1, #資料１
-      :document_2, #資料２
-      :document_3, #資料３
-      :remarks #事業内容その他
+      :business, #内容
+      :remarks #本文
     )
   end
 end
