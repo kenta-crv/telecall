@@ -11,7 +11,8 @@ class TopController < ApplicationController
   def cost
   end
 
-  #def lp
+  #
+  #ef lp
   #end
 
   #def metal
@@ -30,8 +31,8 @@ class TopController < ApplicationController
   def flow
   end
 
-  #def president
-  #end
+  def movies
+  end
 
   def company
     add_breadcrumb "会社概要", :company_path

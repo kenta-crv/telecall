@@ -166,6 +166,15 @@ footer {
   margin-right:-15px;
 }
 
+.back-image-lp {
+  background-image: url('base2.webp');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  padding-bottom:50px;
+  margin-top:-22px;
+  margin-right:-15px;
+}
 
 .back-image-home {
   background-image: url('subbase.webp');
@@ -249,6 +258,68 @@ footer {
           color:red;
       }
  }
+
+ .back-image-it {
+background-image: url('baset.png');
+background-size: 100%;
+background-repeat: no-repeat;
+vertical-align: middle;
+padding-bottom:50px;
+margin-top:-22px;
+margin-right:-15px;
+}
+.back-image-lp {
+  text-align:center;
+    .box2 {
+     padding: 1vw 4.5vw 0.3vw;
+     display:inline-block;
+     background:red;
+           p {
+           color: #FFF;/*文字色*/
+           font-weight: bold;
+           font-size:2.0vw;
+             }
+      }
+      .face-1 {
+          font-size:3.5vw;
+          font-weight:bold;
+          margin-top:30px;
+          color:#327BEE;
+          text-shadow: 2px 2px 2px #fff, -2px 2px 2px #fff, 2px -2px 2px #fff, -2px -2px 2px #fff, 2px 2px 2px #fff, -2px 2px 2px #fff, 2px -2px 2px #fff, -2px -2px 2px #fff;
+      }
+      .face-2 {
+          font-size:3.6vw;
+          font-weight:bold;
+      }
+      .face-3 {
+          font-size:8.0vw;
+          font-weight:bold;
+          color: #004D7F;
+          text-shadow: 3px 3px 3px #fff, -3px 3px 3px #fff, 3px -3px 3px #fff, -3px -3px 3px #fff, 3px 3px 3px #fff, -3px 3px 3px #fff, 3px -3px 3px #fff, -3px -3px 3px #fff;
+      }
+      .face-4 {
+          font-size:2.0vw;
+          font-weight:bold;
+          text-shadow: 1px 1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff, -1px -1px 1px #fff, 1px 1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff, -1px -1px 1px #fff;
+          line-height:4.0vw;
+      }
+      .face-price {
+          font-size:5.0vw;
+          font-weight:bold;
+          color:orange;
+          margin:-10px 0 -25px;
+          padding-left:50px;
+          margin-top:20px;
+          text-shadow: 1px 1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff, -1px -1px 1px #fff, 1px 1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff, -1px -1px 1px #fff;
+          margin-bottom:0px;
+      }
+      .face-conversion {
+          font-size:3.0vw;
+          font-weight:bold;
+          color:red;
+      }
+ }
+
 
  .columns-wrapper {
  	margin:0 25px;

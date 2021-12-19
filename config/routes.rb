@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
     #get 'apotakumi' => 'top#apotakumi' #エンジランス
     #get 'engilance' => 'top#engilance' #エンジランス
-    #get 'movies' => 'top#movies' #ムービーズ
+  get 'movies' => 'top#movies' #ムービーズ
     #get 'ritonal' => 'top#ritonal' #リトナル
   get 'lp' => 'top#lp' #LPページ
   get 'cost' => 'top#cost' #金属加工
