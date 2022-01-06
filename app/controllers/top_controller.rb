@@ -1,5 +1,13 @@
 class TopController < ApplicationController
   def index
+    @top = Top.new
+  end
+
+  def download
+    @top = Top.new(top_params)
+    @top.save
+    TopMailer.received_email(@top).deliver
+    TopMailer.send_email(@top).deliver
   end
 
   def human
@@ -54,4 +62,14 @@ class TopController < ApplicationController
 
   #def whats
   #end
+  private
+  def top_params
+    params.require(:top).permit(
+    :company, #会社名
+    :name,  #代表者名
+    :tel, #電話番号
+    :email, #メールアドレス
+    :service
+    )
+  end
 end

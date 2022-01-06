@@ -4,11 +4,11 @@
 /#トップ
 .back-image.back-image-app
   .row
-     .col-xs-1
-     .col-xs-7.face-1
+     .col-xs-6.col-xs-12.face-1
+        br
         |  ITプログラミング × 独自マーケティング分析
         br
-        |  業界最高峰のリストでテレマーケティング代行なら
+        |  業界最高峰のリストで成果報酬テレアポ代行なら
         br
           .face-2
             |  『アポ匠』
@@ -20,28 +20,65 @@
                 | 円~
               .box2.hidden-xs
                 p
-                  | 平均テレアポ代行獲得率1.5~5％
+                  | 平均テレアポ代行獲得率1.5~8％
 
               .face-price
                br.visible-xs
                br.visible-xs
-     .col-xs-4.hidden-xs
-        .box1
-          p
-            | 完全成果報酬制採用
+     .col-sm-6.col-xs-12
+       = form_for(@top, url: { action: :download }) do |f|
+       br
+       table.download
+        col[width="10%"]
+        col[width="35%"]
+        col[width="55%"]
+        tr
+         th.title.center[colspan="3"]
+           | 資料ダウンロード
+        tr
+         td
+          strong.label 必須
+         td 会社名
+         td
+           = text_field :company, placeholder:"（例）株式会社Ri-Plus"
+        tr
+         td
+          strong.label 必須
+         td 担当者名
+         td
+           = text_field :name, placeholder:"（例）山田　太郎"
+        tr
+         th
+          strong.label 必須
+         th 電話番号
+         td = text_field :tel, placeholder:"（例）00-0000-0000"
+        tr
+         th
+          strong.label 必須
+         th メールアドレス
+         td = email_field :email, placeholder:"（例）abc@abc.com"
+        tr
+         th
+          strong.label 必須
+         th 検討しているサービス
+         td= text_field :service, placeholder:"（例）人材紹介業"
+        tr
+         th.center[colspan="3"]
+           = submit_tag "資料請求", class:"btn btn-danger", width:"100%"
+
 
 br
 .row
   .col-sm-12.center
     =link_to "/contact", :target=>["_blank"]   do
-      =image_tag 'question.webp', width: '50%', class: 'center', alt: "成果報酬制の成果報酬制テレアポ代行に関するお問い合わせ電話番号、メールアドレス"
+      =image_tag 'question.webp', width: '60%', class: 'center', alt: "成果報酬制の成果報酬制テレアポ代行に関するお問い合わせ電話番号、メールアドレス"
 
 br
 hr.line
-br
-br
-
-= video_tag("/videos/movie.mp4", :controls => true,  :width=> "50%", :alt => "株式会社Ri-Plus『アポ匠』成果報酬制テレアポ代行プロモーション動画")
+.tops-wrapper
+  h2.headline
+   | まずは株式会社Ri-Plus『アポ匠』の案内動画をご覧下さい！
+= video_tag("/videos/movie.mp4", :controls => true,  :width=> "70%", :alt => "株式会社Ri-Plus『アポ匠』成果報酬制テレアポ代行プロモーション動画")
 
 br
 br
@@ -54,43 +91,189 @@ br
        | テレアポ代行ならアポ匠！業界最高峰のリスト
        br
        | だからできる完全成果報酬制！
+.tops-wrapper
+  h2.headline
+   | テレアポ代行実績のご案内
 
-
-/# Comparison
-table.company.center
-  col[width="20%"]
-  col[width="30%"]
-  col[width="20%"]
-  col[width="30%"]
-  tbody
-    tr
-      th.arrow_box
-        | テレアポ代行実績
-      th.arrow_box
-        |
-      th.arrow_box.price
-        |
-      th.arrow_box.price
-        |
-    tr
-      th.arrow_box
-        | 人材紹介・派遣
-      td.price
-        | テレアポ率3~10%続々
-      th.arrow_box
-        | マーケティング・IT系
-      td.price
-        | テレアポ率5~12.5%
-    tr
-      th.arrow_box
-        | 国の制度活用事業
-      td.price
-        | 累計アポ数1000件超
-      th.arrow_box
-        | 引越会社コンサル
-      td.price
-        | 月間アポ数1000件
-
+.row
+ .col-xs-6
+   table.review.left
+     col[width="30%"]
+     col[width="70%"]
+     tbody
+       tr
+         th.title[colspan="2"]
+          .center
+           | 外国人人材紹介会社アポ代行の事例
+       tr
+         th.font-middle
+           | ターゲット
+         td
+           | 工場職にアプローチ
+       tr
+         th.font-middle
+           | リスト
+         td
+           | 求人サイトよりターゲット条件のみを1週間に1度独自に抽出
+       tr
+         th.font-middle
+           | 月間アポ数
+         td.red
+           | 20件~60件
+       tr
+         th.font-middle
+           | 求人取得率
+         td.red
+           | 80~95%
+ .col-xs-6
+   table.review.right
+     col[width="30%"]
+     col[width="70%"]
+     tbody
+       tr
+         th.title[colspan="2"]
+          .center
+           | 人材派遣会社アポ代行の事例
+       tr
+         th.font-middle
+           | ターゲット
+         td
+           | 全国の全業種にアプローチ
+       tr
+         th.font-middle
+           | リスト
+         td
+           | 求人サイトよりターゲット条件のみを1週間に1度独自に抽出
+       tr
+         th.font-middle
+           | 月間アポ数
+         td.red
+           | 20件
+       tr
+         th.font-middle
+           | 契約率
+         td.red
+           | 90%前後
+br
+.row
+ .col-xs-6
+   table.review.left
+     col[width="30%"]
+     col[width="70%"]
+     tbody
+       tr
+         th.title[colspan="2"]
+          .center
+           | 特定技能・技能実習生アポ代行の事例
+       tr
+         th.font-middle
+           | ターゲット
+         td
+           | 介護職や工場にアプローチ
+       tr
+         th.font-middle
+           | リスト
+         td
+           | 求人サイトよりターゲット条件のみを1週間に1度独自に抽出
+       tr
+         th.font-middle
+           | 月間アポ数
+         td.red
+           | 40件~80件
+       tr
+         th.font-middle
+           | 特記
+         td.red
+           | 業界でも非常に難しいと言われる技能実習生アポで多数成果が出ております。
+ .col-xs-6
+   table.review.right
+     col[width="30%"]
+     col[width="70%"]
+     tbody
+       tr
+         th.title[colspan="2"]
+          .center
+           | システム会社アポ代行の事例
+       tr
+         th.font-middle
+           | ターゲット
+         td
+           | 物流業界における専門システム
+       tr
+         th.font-middle
+           | リスト
+         td
+           | 検索サイトより全国の物流工場を抽出
+       tr
+         th.font-middle
+           | 月間アポ数
+         td.red
+           | 10~20件
+       tr
+         th.font-middle
+           | 特記
+         td.red
+           | システム関連はターゲットを明確にし、適切なトークスクリプトを構築することでアポを量産可能です。
+br
+.row
+ .col-xs-6
+   table.review.left
+     col[width="30%"]
+     col[width="70%"]
+     tbody
+       tr
+         th.title[colspan="2"]
+          .center
+           | サイト登録斡旋アポ代行の事例
+       tr
+         th.font-middle
+           | ターゲット
+         td
+           | 全国の全業種にアプローチ
+       tr
+         th.font-middle
+           | リスト
+         td
+           | 求人サイトよりターゲット条件のみを1週間に1度独自に抽出
+       tr
+         th.font-middle
+           | 月間アポ数
+         td.red
+           | 15件
+       tr
+         th.font-middle
+           | 特記
+         td.red
+           | 他社で結果が出ない中弊社に依頼頂き、過去統計を元にリスト条件をセグメントした結果、わずか2日で目標件数達成
+ .col-xs-6
+   table.review.right
+     col[width="30%"]
+     col[width="70%"]
+     tbody
+       tr
+         th.title[colspan="2"]
+          .center
+           | Web広告掲載斡旋アポ代行の事例
+       tr
+         th.font-middle
+           | ターゲット
+         td
+           | 特定地域のサービス業
+       tr
+         th.font-middle
+           | リスト
+         td
+           | インターネットサイトに力を入れる企業のみをITプログラムで選別
+       tr
+         th.font-middle
+           | 月間アポ数
+         td.red
+           | 50件
+       tr
+         th.font-middle
+           | 特記
+         td.red
+           | 他社で結果が出ない中弊社に依頼頂き、過去統計を元にリスト条件をセグメントした結果、わずか2日で目標件数達成
 
 br
 hr.line
@@ -109,7 +292,7 @@ br
 .row
   .col-sm-12.center
     =link_to "/contact", :target=>["_blank"]   do
-      =image_tag 'question.webp', width: '50%', class: 'center', alt: "成果報酬制テレアポ代行に関するお問い合わせ電話番号、メールアドレス"
+      =image_tag 'question.webp', width: '60%', class: 'center', alt: "成果報酬制テレアポ代行に関するお問い合わせ電話番号、メールアドレス"
 
 br
 hr.line
@@ -124,14 +307,14 @@ br
   br
   br
   h6.heading
-    | いくら商品は良くても対象とする顧客がいなければ商売は絶対に成り立ちません。アポ匠のテレマーケティング・テレアポ代行はその買い手を効率よく探すツールとして、過去から注目を集めているアポイントメント手法です。
+    | いくら商品は良くても対象とする顧客がいなければ商売は絶対に成り立ちません。テレアポと言う手段は、毎月の営業訪問をするためのアポイントメント数を一定件数定期的に確保できるため、安定した売上を立てることが出来ます。
   .row
     .col-sm-1
     br
     br
-    .col-sm-4.center.visible-xs
+    .col-sm-4.center
       = image_tag "distress.webp"
-    br
+
     .col-sm-7
        p
          strong
@@ -153,6 +336,9 @@ br
            | ☑︎
          |  これから業務を拡大していきたくて成果報酬でテレアポ代行会社を検討している
          b.h4
+         strong
+           | ☑︎
+         |  過去にテレアポ代行を依頼したが上手く行かなかった。
 
 br
 hr.line
@@ -171,7 +357,7 @@ br
 .row
   .col-sm-12.center
     =link_to "/contact", :target=>["_blank"]   do
-      =image_tag 'question.webp', width: '50%', class: 'center', alt: "成果報酬制テレアポ代行に関するお問い合わせ電話番号、メールアドレス"
+      =image_tag 'question.webp', width: '60%', class: 'center', alt: "成果報酬制テレアポ代行に関するお問い合わせ電話番号、メールアドレス"
 
 br
 hr.line
@@ -181,65 +367,96 @@ br
 .top-wrapper
   h2.heading
     strong
-      | 事前にご理解下さい
+      | 事前にご確認下さい
   br
   br
   h6.heading
-    | アポ匠ではお客様と良好な関係を結ぶことが互いのシナジーを産むと考えております。そのため弊社が取引可能な企業様を失礼ながら事前にご確認下さいませ。特に右側に位置する企業様は弊社ではなく別の企業様とお取引された方がテレアポ代行で結果を出せる場合が御座います。
+    | アポ匠ではお客様と良好な関係を結ぶことが互いのシナジーを産むと考えております。そのため『アポ匠』がテレアポ代行で取引可能な企業様を失礼ながら事前にご確認下さいませ。特に右側に位置する企業様は弊社ではなく別の企業様とお取引された方がテレアポ代行で結果を出せる場合が御座います。
+  br
+  br
   .row
     .col-sm-6
-       p
-         strong
-           | ◎
-         |  中小企業へのテレフォンアポイント代行を希望される企業様
-         br
-         b.h4
-         strong
-           | ◎
-         |  ターゲットやニーズが明確で得意な企業を把握している
-         br
-         b.h4
-         strong
-           | ◎
-         |  テレアポ代行に理解があり、双方で売上アップに向けて取り組める
-         br
-         b.h4
-         strong
-           | ◎
-         |  アポ匠のテレマーケティング分析を活用頂ける企業様
-         br
-         b.h4
-         strong
-           | ◎
-         |  BtoBのコール依頼
-         b.h4
+     .cp_qa.cp_qa1
+       .cp_actab
+         input#cp_tabfour01[type="checkbox" name="tabs"]
+         label[for="cp_tabfour01"]
+           | 中小企業へのテレフォンアポイント代行を希望される企業様
+         .cp_actab-content
+           p
+             | 『アポ匠』は、多数のリストから綿密なセグメントを行った上で、潜在顧客に対するリストへのテレアポを得意としております。
+     .cp_qa.cp_qa1
+       .cp_actab
+         input#cp_tabfour02[type="checkbox" name="tabs"]
+         label[for="cp_tabfour02"]
+           | ターゲットやニーズが明確で得意な企業を把握している
+         .cp_actab-content
+           p
+             | テレアポでアポを獲得するにはいくつかのコツやノウハウが必要となります。アプローチする商材のターゲットを定め、ニーズをしっかりと伝えることで良質なアポイントを提供することが可能となります。
+     .cp_qa.cp_qa1
+       .cp_actab
+         input#cp_tabfour03[type="checkbox" name="tabs"]
+         label[for="cp_tabfour03"]
+           | テレアポ代行の業務範囲を理解頂ける
+         .cp_actab-content
+           p
+             | 基本的なテレアポとは、『商談するためのアポイント取り』となり、『腹８分目程度』の内容に抑えることで良質なアポイントを獲得することが出来ます。
+     .cp_qa.cp_qa1
+       .cp_actab
+         input#cp_tabfour04[type="checkbox" name="tabs"]
+         label[for="cp_tabfour04"]
+           | テレマーケティング分析を活用頂ける企業様
+         .cp_actab-content
+           p
+             | 『アポ匠』は、ヒアリングを元にテレアポに特化したターゲット選定を決定し、ITプログラミング技術によりリストを抽出することで、アポの最大化を行っております。
+     .cp_qa.cp_qa1
+       .cp_actab
+         input#cp_tabfour05[type="checkbox" name="tabs"]
+         label[for="cp_tabfour05"]
+           | BtoBのコール依頼
+         .cp_actab-content
+           p
+             | 『アポ匠』は法人向けのテレアポ代行サービスとなっております。
     .col-sm-6
-       p
-         strong
-           | ×
-         |  従業員数500名以上や資本金億単位の企業様向けのテレアポ代行
-         br
-         b.h4
-         strong
-           | ×
-         |  ターゲットやニーズが不明確な商材のテレアポ代行
-         br
-         b.h4
-         strong
-           | ×
-         |  テレアポ代行に対して過剰な条件を求める企業様
-         br
-         b.h4
-         strong
-           | ×
-         |  決まったリストやトークスクリプトへテレアポ代行を依頼される場合
-         br
-         b.h4
-         strong
-           | ×
-         |  BtoCの成果報酬制テレアポコール依頼
-         b.h4
-
+     .cp_qa.cp_qa2
+       .cp_actab
+         input#cp_tabfour06[type="checkbox" name="tabs"]
+         label[for="cp_tabfour06"]
+           | 大手企業に対するテレアポ代行
+         .cp_actab-content
+           p
+             | 大手企業のテレアポは、基本的に担当者名が分かる場合もしくは取引履歴がない場合、担当者にお話することすら出来ない場合が多く、当社では依頼を承っておりません。
+     .cp_qa.cp_qa2
+       .cp_actab
+         input#cp_tabfour07[type="checkbox" name="tabs"]
+         label[for="cp_tabfour07"]
+           | ターゲットやニーズが不明確な商材のテレアポ代行
+         .cp_actab-content
+           p
+             | テレアポ代行は、ターゲットやニーズが不明確な場合、『頑張れば』アポを取ることは出来ますが、非常に精度が低くなる傾向が高いです。お客様満足度の観点より、『アポ匠』ではターゲットやニーズが不明確な場合、取引をお断りする場合がございます。
+     .cp_qa.cp_qa2
+       .cp_actab
+         input#cp_tabfour08[type="checkbox" name="tabs"]
+         label[for="cp_tabfour08"]
+           | テレアポ代行に対して過剰な条件を求める企業様
+         .cp_actab-content
+           p
+             | テレアポ代行に対して、明らかに獲得範囲を狭める条件やヒアリングを希望されたり、営業商談で話すべき内容を依頼される場合、テレアポの本質からは逸脱してしまうためお取引を承ることが出来ない場合がございます。
+     .cp_qa.cp_qa2
+       .cp_actab
+         input#cp_tabfour09[type="checkbox" name="tabs"]
+         label[for="cp_tabfour09"]
+           | 決まったリストにテレアポ代行を依頼される場合（※既存顧客ハウスリストは可）
+         .cp_actab-content
+           p
+             | 『アポ匠』は、リストマーケティングに強みを持つ企業のため、アポ匠が精度が高いと判断出来ないリストは取引をお断りする場合がございます。
+     .cp_qa.cp_qa2
+       .cp_actab
+         input#cp_tabfour10[type="checkbox" name="tabs"]
+         label[for="cp_tabfour10"]
+           | BtoCの成果報酬制テレアポコール依頼
+         .cp_actab-content
+           p
+             | 『アポ匠』は法人向けのテレアポ代行サービスとなっておりますため、個人向けテレアポ代行は承っておりません。
 br
 hr.line
 br
@@ -247,7 +464,7 @@ br
 /# push font
 h2.push
    span
-     | 取れる根拠があるから成果報酬！アポ匠の
+     | 取れる根拠があるから成果報酬型！アポ匠の
      br
      | 独自マーケティング『TCARE』とは？
 
@@ -264,7 +481,7 @@ br
   br
   br
   h6.heading
-    | 独自マーケティング理論を唱えるアポ匠は、分析や市場調査に非常に特化しています。このマーケティングとテレフォンアポイントを組み合わせることにより、非常に効果的なアポイント獲得を可能とします。
+    | 独自マーケティング理論を唱えるアポ匠は、マーケティング分析や市場調査に非常に強みを持っております。このマーケティングとテレフォンアポイントを組み合わせることにより、質の高い高精度な正解報酬テレアポ代行が可能となっております。
   br
   br
   .row
@@ -286,7 +503,7 @@ br
   br
   br
   h6.heading
-    | 『テレアポはコールするだけ』ではありません。しっかりした選定の元、御社の商材を欲しがるであろうターゲットを選定することにより、契約に繋がりやすいアポ獲得を狙います。
+    | 『テレアポはコールするだけ』ではありません。しっかりしたターゲット選定を行うことで、実はかける必要がない企業リスト枠と言うものが浮き彫りになってきます。当社ではそんなターゲット外リストと、御社の商材を欲しがるであろう潜在顧客ターゲットを選別することで、契約に繋がりやすいアポ獲得を狙います。
   br
   br
   .row
@@ -308,7 +525,7 @@ br
   br
   br
   h6.heading
-    | 通常のテレアポ代行リストはリスト会社から購入するのが一般的。しかし弊社では、ITプログラマーが一つ一つのサイトからリストを抽出し、更に貴社の見込みになるであろうリストを徹底的に厳選した見込みリストを作り出します。これにより大幅なアポ率アップを叶えます。
+    | 通常のテレアポ代行リストはリスト会社から購入したり、自社で保有するリストを使い回すのが一般的。しかしアポ匠では、ITプログラマーが一つ一つのサイトからプログラミング技術を駆使してリストを抽出し、更に貴社の見込みになるであろうリストを徹底的に厳選した見込みリストを作り出します。テレアポで大事なのは営業力と言いますが、営業力を使うことは精度の低いアポイントを産むきっかけとなります。アポ匠は、『営業力を使わずとも獲得できるリストマーケティング』をコンセプトに運営しております。
   br
   br
   .row
@@ -330,7 +547,7 @@ br
   br
   br
   h6.heading
-    | アポ匠にお問い合わせ頂くお客様の他社からの乗り換えで一番多いのがアポ品質の改善を求めて。弊社では押し営業で獲得せず、心理学を取り入れた『相手から会いたいと思わせるトーク』を活用するため、『話だけ』のアポは非常に少ない傾向にあります。
+    | アポ匠にお問い合わせ頂くお客様の他社からの乗り換えで一番多いのが、『アポ品質』の改善をお求めになる企業様。これは先述にも述べましたが、『営業力で獲得した押し営業スタイル』によって引き起こされるもの。無理矢理に取ったアポイントは商談姿勢ができておらず、契約に直結しません。アポ匠では、精度の高いリストと共に、心理学を取り入れた『相手から会いたいと思わせるトーク』を活用するため、『商談姿勢の高いアポイントメントが入ってくる』と取引先様からもご好評頂いております。
   br
   br
   .row
@@ -338,7 +555,6 @@ br
    .col-sm-6
      = image_tag "usp5.webp", width:"100%", alt: "テレアポ代行『アポ匠』の心理学トーク"
    .col-sm-3
-
 
 br
 hr.line
@@ -352,7 +568,7 @@ br
   br
   br
   h6.heading
-    | アポ匠はITプログラミングとマーケティングに特化しているテレアポ代行となりますが、それだけに頼ることは致しません。経験豊富なアポインター集団がデータ分析と共に体感を修正要素に取り入れることで、高い修正能力を誇ります。
+    | アポ匠はITプログラミングとマーケティングに特化しているテレアポ代行となるため常に検証を行い、アポイント獲得における最大化を求め続けます。しかし、当社はITの力はあくまでデータ上のもので完璧ではないと考えております。アポ匠では経験豊富なアポインター集団が、データ分析と共に実際に電話先の方と話して感じた情報を元にしてPDCAを組んでおり、ITと人材の双方から検証・修正を行っております。
   br
   br
   .row
@@ -365,27 +581,6 @@ br
 hr.line
 br
 
-.top-wrapper
-  h2.heading
-    |  テレアポ代行だけでない
-    strong
-      |  メールマーケティングの達人
-  br
-  br
-  h6.heading
-    | アポ匠はただのテレアポ会社ではないので、電話以外の手段でもアポイントを獲得致します。反応率5%を叩き出すことも珍しくない洗礼されたコピーライティングで成果報酬アポ代行件数を更に引き上げます。
-  br
-  br
-  .row
-   .col-sm-3
-   .col-sm-6
-     = image_tag "usp7.webp", width:"100%", alt: "成果報酬制テレアポ代行『アポ匠』のメールマーケティングサポート"
-   .col-sm-3
-
-
-br
-hr.line
-br
 
 .top-wrapper
   h2.heading
@@ -413,7 +608,7 @@ br
 .row
   .col-sm-12.center
     =link_to "/contact", :target=>["_blank"]   do
-      =image_tag 'question.webp', width: '50%', class: 'center', alt: "成果報酬制テレアポ代行に関するお問い合わせ電話番号、メールアドレス"
+      =image_tag 'question.webp', width: '60%', class: 'center', alt: "成果報酬制テレアポ代行に関するお問い合わせ電話番号、メールアドレス"
 
 br
 hr.line
@@ -430,67 +625,91 @@ br
   h6.heading
     | アポ匠のテレアポ代行をお申し込み頂くにあたり当社に頂く費用をご案内しております。初期費用や月額費用は基本的に頂かない、分かりやすい料金体系となっております。
 
-table.company.center
-  col[width="20%"]
-  col[width="30%"]
+br
+br
+
+table.price
+  thead
+    tr
+      th.c3
+        |
+      th.c3
+        | Trial Plan
+        br
+      th.c3
+        | Easy Plan
+        br
+      th.c2
+        | Standard Plan
+        br
   tbody
     tr
-      th.arrow_box.price colspan="4"
-        | 料金
-        small
-         |(※カッコ内はキャンペーンのためお問い合わせ下さい)
+      th.c3
+        |  初期費用
+      td.c3.black
+        |  50,000円〜
+      td.c3.black
+        |  50,000円〜
+      td.c2.red
+        |  0円〜
     tr
-      th.arrow_box
-        | 初期費用
-      td
-        span.price
-           |  0円
-      th.arrow_box
-        | コール費用
-      td.price
-        span
-           | 0円
+      th.c3
+        |  スクリプト構築費
+      td.c3.black
+        |  39,800円
+      td.c3.black
+        |  0円〜
+      td.c2.red
+        |  0円〜
     tr
-      th.arrow_box
-        | 契約期間
-      td.price
-        span
-           | 6ヶ月~
-      th.arrow_box
-        | 受付件数
-      td.price
-        span
-           | 10件〜
+      th.c3
+        |  リスト構築費
+      td.c3.black
+        |  1リスト15円~
+      td.c3.black
+        |  0円〜
+      td.c2.red
+        |  0円〜
     tr
-      th.arrow_box
-        | スクリプト構築費
-      td
-        span.price
-           | 0円
-      th.arrow_box
-        | リスト構築費
-      td.price
-        span
-           | 0円〜
+      th.c3
+        |  契約期間
+      td.c3.black
+        |  3ヶ月~
+      td.c3.black
+        |  3ヶ月~
+      td.c2.red
+        |  6ヶ月~
     tr
-      th.arrow_box
-        | テレアポ代行アポ単価
-      td.price colspan="3"
-        span
-           | 商材により平均1.8~3.0万円（詳しくはお問い合わせ）
+      th.c3
+        |  最低アポ受付件数
+      td.c3.black
+        |  10件〜
+      td.c3.black
+        |  15件〜
+      td.c2.red
+        |  20件〜
+    tr
+      th.c3
+        |  契約期間
+      td.c3
+        button
+          = link_to "お見積もり", "/contact"
+      td.c3
+        button
+          = link_to "お見積もり", "/contact"
+      td.c2
+        button
+          = link_to "お見積もり", "/contact"
 
-.center
-  small
-    | ※1 基本的な費用を明記しております。テレアポ代行費用は難易度により費用は異なります。
-    | ※2 ご依頼頂く件数等により金額はアポ単価は変動する場合があります。
 
+br
 br
 
 /# inquiry image
 .row
   .col-sm-12.center
     =link_to "/contact", :target=>["_blank"]   do
-      =image_tag 'question.webp', width: '50%', class: 'center', alt: "テレアポ代行『アポ匠』のマーケティング分析"
+      =image_tag 'question.webp', width: '60%', class: 'center', alt: "テレアポ代行『アポ匠』のマーケティング分析"
 
 br
 hr.line
@@ -507,74 +726,67 @@ br
   h6.heading
     | アポ匠と他社様とテレアポ代行比較して条件の違いをご案内させて頂きます。（弊社調査基準）
 
-table.company.center
-  col[width="25%"]
-  col[width="25%"]
-  col[width="25%"]
-  col[width="25%"]
+br
+br
+table.price
+  thead
+    tr
+      th.c3
+        |
+      th.c3
+        | テレアポ代行A社
+        br
+      th.c3
+        | テレアポ代行B社
+        br
+      th.c2
+        | テレアポ代行『アポ匠』
+        br
   tbody
     tr
-      th.arrow_box
-        | 同一商材・同一条件
-      th.arrow_box
-        | テレアポ代行A社
-      th.arrow_box
-        | テレアポ代行B社
-      th.arrow_box
-        | アポ匠
-
+      th.c3
+        |  初期費用
+      td.c3.black
+        |  300,000円〜
+      td.c3.black
+        |  50,000円〜
+      td.c2.red
+        |  0円〜
     tr
-      th.arrow_box
-        | 初期費用
-      td.arrow_box
-       span
-           | 100,000円~
-      td.arrow_box
-       span
-           | 0円
-      td.price
-        span
-           | 0円〜
+      th.c3
+        |  月額費用
+      td.c3.black
+        |  30,000円
+      td.c3.black
+        |  50,000円〜
+      td.c2.red
+        |  0円〜
     tr
-      th.arrow_box
-        | 月額費用
-      td.arrow_box
-           | 0円
-      td.arrow_box
-        | 0円
-      td.price
-        span
-           | 0円~
+      th.c3
+        |  リスト抽出
+      td.c3.black
+        |  保有リスト活用
+      td.c3.black
+        |  保有リスト活用
+      td.c2.red
+        |  ITプログラムで抽出
     tr
-      th.arrow_box
-        | 最低アポ件数
-      td.arrow_box
-           | 20件~
-      td.arrow_box
-        | 30件〜
-      td.price
-        span
-           | 10件〜
-        small
-           |(※期間限定)
-    tr
-      th.arrow_box
-        | アポ単価（成果報酬）
-      td.arrow_box
-           | 30,000円
-      td.arrow_box
-        | 30,000円
-      td.price
-        span
-         | 22,000円
-
+      th.c3
+        |  アポ単価
+      td.c3.black
+        |  30,000円〜
+      td.c3.black
+        |  20,000円
+      td.c2.red
+        |  18,000円〜
+br
 br
 
 /# inquiry image
 .row
   .col-sm-12.center
     =link_to "/contact", :target=>["_blank"]   do
-      =image_tag 'question.webp', width: '50%', class: 'center', alt: "成果報酬制テレアポ代行に関するお問い合わせ電話番号、メールアドレス"
+      =image_tag 'question.webp', width: '60%', class: 'center', alt: "成果報酬制テレアポ代行に関するお問い合わせ電話番号、メールアドレス"
 
 br
 hr.line
@@ -589,27 +801,45 @@ br
   br
   br
   h6.heading
-    | アポ匠の成果報酬テレアポ代行をお申し込みを頂く場合の流れをご案内しております。基本的には４STEPで完了する形となり、継続的にご依頼頂く場合については基本的に行なって頂く業務はありません。（ご不明点は03-6712-7024迄）
+    | アポ匠の成果報酬テレアポ代行をお申し込みを頂く場合の流れをご案内しております。基本的には４STEPで完了する形となります。
 
-.row
- .col-md-6
-   .kokuban-t3
-    span.title-t3> ❶お申し込み後にヒアリング審査（約１週間以内）
-    | お申し込み後、アポ匠担当者よりご連絡させて頂き、当社よりテレアポ代行を行うサービスのヒアリングを行います。アポ匠にて価格を検討し、テレアポ一件獲得あたりの成果報酬単価や進め方についての相談を行わせて頂きます。
- .col-md-6
-   .kokuban-t3
-    span.title-t3> ❷トークスクリプトやリストの作成
-    | ヒアリングの情報を元に市場調査を行なった後、実際に弊社でトークスクリプトの作成を行います。リストについてもご依頼頂く場合、リスト選定についてもこの段階で行います。
-.row
- .col-md-6
-   .kokuban-t3
-    span.title-t3> ❸テレアポ代行獲得予測件数に基づき費用のご入金（初回のお客様のみ）
-    | 初回のお客様については成果報酬テレアポ代行費用の先払いをお願いしております。ご入金が弊社に確認出来た時点で、弊社スタッフの方で順次対象リストに対して電話を開始致します。
- .col-md-6
-   .kokuban-t3
-    span.title-t3> ❹実際にテレアポ代行コールの開始
-    | アポ匠より実際に企業様へのテレアポ代行コールを行います。コールを行う中でトークスクリプトやリストの修正が必要な場合、修正をしながら最大限の成約を確保出来るトークを構築します。
+br
+br
 
+ul.flow.center
+  li
+    dl
+      dt
+        span.icon
+          | STEP.01
+        | お見積もりの算出
+      dd.center
+        | まずはお問い合わせフォームからご連絡ください。その後アポ匠担当者よりご連絡させて頂き、当社よりテレアポ代行を行うにあたり単価を算出させて頂くヒアリングを行います。料金に同意いただける場合、お申し込みへお進みください。
+  li
+    dl
+      dt
+        span.icon
+          | STEP.02
+        | トークスクリプトやリストの作成
+      dd.center
+        | ご契約後、ヒアリングの情報を元に弊社でトークスクリプトの作成を行います。また、リストについても同時に作成を行い、最短でご契約より５営業日で開始が可能となります。
+
+  li
+    dl
+      dt
+        span.icon
+          | STEP.03
+        | 稼働開始
+      dd.center
+        | 準備が完了し、リストが仕上がった段階で『アポ匠』のテレアポ代行サービスが開始となります。コールを行う中でトークスクリプトやリストの修正が必要な場合、修正をしながら最大限の成約を確保出来るよう、随時PDCAを行いながら取り組みます。
+  li
+    dl
+      dt
+        span.icon
+          | STEP.04
+        | 獲得件数のみを後払い
+      dd.center
+        | 毎月月末段階で締め、獲得した件数のみを翌月にお支払いいただきます。
 
 br
 hr.line
@@ -628,4 +858,4 @@ br
 .row
   .col-sm-12.center
     =link_to "/contact", :target=>["_blank"]   do
-      =image_tag 'question.webp', width: '50%', class: 'center', alt: "成果報酬制テレアポ代行に関するお問い合わせ電話番号、メールアドレス"
+      =image_tag 'question.webp', width: '60%', class: 'center', alt: "成果報酬制テレアポ代行に関するお問い合わせ電話番号、メールアドレス"

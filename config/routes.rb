@@ -60,6 +60,8 @@ Rails.application.routes.draw do
   post '/confirm' => 'contact#confirm'
   post '/thanks' => 'contact#thanks'
 
+  post '/download' => 'top#download'
+
   get 'recruits' => 'recruits#index'
   post 'recruits/confirm' => 'recruits#confirm'
   post 'recruits/thanks' => 'recruits#thanks'

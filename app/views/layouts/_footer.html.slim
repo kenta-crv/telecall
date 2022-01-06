@@ -6,33 +6,67 @@ br
 .row
   .col-sm-12.center
     =link_to "/contact", :target=>["_blank"]   do
-      =image_tag 'question.webp', width: '50%', class: 'center', alt: "成功報酬制テレアポ代行に関するお問い合わせ電話番号、メールアドレス"
+      =image_tag 'question.webp', width: '60%', class: 'center', alt: "成功報酬制テレアポ代行に関するお問い合わせ電話番号、メールアドレス"
 br
 footer
   .heading.underline
     | 弊社サービスページ
-  ul
-    li
+  .row.left
+    .col-sm-1
+    .col-sm-2
       = link_to "トップページ", "/"
-    li
+      br
+      br
       = link_to "事業内容", "/business"
-    li
-      = link_to  '記事一覧', '/categories'
-  ul
-    li
-      = link_to  'メールマーケティング代行', '/mail'
-    li
-      = link_to  '動画制作', '/movies'
-    li
-      = link_to  '求人一覧', '/recruit'
-    li
-      = link_to  '求人応募', '/workers/new'
-  ul
-    li
+      br
+      br
+      = link_to  '記事一覧', '/posts'
+      br
+      br
+      = link_to  '記事一覧2', '/columns'
+
+    .col-sm-4
+      = link_to "メールマーケティング『Okurite』", "https://okurite.jp", target:"_blank"
+      br
+      br
+      = link_to "リストマーケティング『TCARE』", "https://tcare.pro", target:"_blank"
+      br
+      br
+      = link_to "コール課金テレマーケティング『リノバス』", "https://app-sc.jp", target:"_blank"
+      br
+      br
+      = link_to "動画マーケティング『ムービーズ』", "https://ri-plus.jp/movies", target:"_blank"
+      br
+      br
+      = link_to "工場専門求人サービス『ファクトル』", "https://factoru.jp", target:"_blank"
+      br
+      br
+      = link_to "社会保険適正化サービス", "https://factoru.jp/cost", target:"_blank"
+    .col-sm-2
+      = link_to  'お申し込みの流れ', '/flow'
+      br
+      br
+      = link_to  'マーケティング手法', '/marketing'
+      br
+      br
+      = link_to  '料金案内', '/price'
+      br
+      br
       = link_to  'よくある質問', '/question'
-    li
+      br
+      br
+      = link_to  '実績', '/revieww'
+      br
+      br
+      = link_to  '取引基準', '/transaction'
+    .col-sm-2
+      = link_to  '求人一覧', '/recruit'
+      br
+      br
       = link_to  '会社概要', '/company'
-    li
+      br
+      br
       = link_to  '問い合わせフォーム', '/contact'
-    li
+      br
+      br
       = link_to  'プライバシーポリシー', '/privacy'
