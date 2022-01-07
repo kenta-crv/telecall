@@ -26,7 +26,12 @@
                br.visible-xs
                br.visible-xs
      .col-sm-6.col-xs-12
-       = form_for(@top, url: { action: :download }) do |f|
+     = form_for(@top, url: { action: :download }) do |f|
+       - if @top.errors.any?
+         strong 入力内容にエラーがあります
+         ul
+           - @top.errors.each do |attr, msg|
+             li= msg
        br
        table.download
         col[width="10%"]
@@ -40,31 +45,31 @@
           strong.label 必須
          td 会社名
          td
-           = text_field :company, placeholder:"（例）株式会社Ri-Plus"
+           = f.text_field :company
         tr
          td
           strong.label 必須
          td 担当者名
          td
-           = text_field :name, placeholder:"（例）山田　太郎"
+           = f.text_field :name
         tr
          th
           strong.label 必須
          th 電話番号
-         td = text_field :tel, placeholder:"（例）00-0000-0000"
+         td = f.text_field :tel
         tr
          th
           strong.label 必須
          th メールアドレス
-         td = email_field :email, placeholder:"（例）abc@abc.com"
+         td = f.email_field :email
         tr
          th
           strong.label 必須
          th 検討しているサービス
-         td= text_field :service, placeholder:"（例）人材紹介業"
+         td= f.text_field :service
         tr
          th.center[colspan="3"]
-           = submit_tag "資料請求", class:"btn btn-danger", width:"100%"
+           = f.submit "資料請求", class:"btn btn-danger", width:"100%"
 
 
 br
@@ -790,6 +795,97 @@ br
 
 br
 hr.line
+br
+
+.top-wrapper
+  h2.heading
+    strong
+      | よくある質問
+    | （FAQ）
+  br
+  br
+  h6.heading
+    | アポ匠でお申し込みにおける『よくある質問』の一覧を明記しております。
+  br
+  br
+  .cp_qa
+    .cp_actab.left
+      input#cp_tabfour031[type="checkbox" name="tabs"]
+      label[for="cp_tabfour031"]
+        | テレアポ代行とテレマーケティング代行は何が違うのですか？
+      .cp_actab-content
+        p
+          | テレアポ代行は一般的にリスト会社からリストを購入したり、自社の保有するリストから業種抽出し、架電を行うことが一般的です。また、営業力を駆使してアポイントメントを獲得する傾向があります。アポ匠は『テレマーケティング代行』を生業としており、営業力でアプローチするのではなく、事前のマーケティング分析やターゲット選定により、高品質なリストを独自プログラミング手法により抽出し、コールを行います。違いとして、質の高いリストに対してアプローチするアポ匠のテレマーケティング代行は、常に高い見込みに対してのみアプローチすることが出来るため、アポイントの商談率が高く、かつ営業時の成約率が比較的高くなる傾向があります。
+    .cp_actab.left
+      input#cp_tabfour032[type="checkbox" name="tabs"]
+      label[for="cp_tabfour032"]
+        | 得意な業界を教えてください。
+      .cp_actab-content
+        p
+          | アポ匠は人材紹介会社や広告・IT関係の企業様を最も得意としています。理由として、テレマーケティング代行で分析を行うことにより、潜在顧客の見える化が出来るため、高い見込み客に対してアプローチすることが出来ます。
+    .cp_actab.left
+      input#cp_tabfour001[type="checkbox" name="tabs"]
+      label[for="cp_tabfour001"]
+        | 対応していないサービス・商材は？
+      .cp_actab-content
+        p
+          | 成果報酬プランでご利用頂く場合、『FC加盟店募集』『通信商材』『BtoCサービスの全て』『ホームページ制作やアプリ開発』等は潜在ニーズを探ることができず、受付対象外とさせて頂いております。該当する商材は、テレアポを行っても宝探しのような架電となってしまい、当社の強みを生かせないためです。
+    .cp_actab.left
+      input#cp_tabfour002[type="checkbox" name="tabs"]
+      label[for="cp_tabfour002"]
+        | 不得意な業界・商材を教えてください。
+      .cp_actab-content
+        p
+          | 株式会社Ri-Plus『アポ匠』では、『ターゲットが不明確』な業界へのアプローチやサービスは不得意としており、対応致しておりません。アポ匠は独自のマーケティング手法を駆使することでアポ獲得をサポートするため、ターゲットが明確でない場合、企業ニーズにアプローチしづらく、成果も出しづらくなっております。
+    .cp_actab.left
+      input#cp_tabfour033[type="checkbox" name="tabs"]
+      label[for="cp_tabfour033"]
+        | 結果が出やすいのはどんな会社ですか？
+      .cp_actab-content
+        p
+          | アポ匠がテレアポの代行を行う結果が出やすい会社はズバリ、『ターゲット選定がしっかり出来ている会社』です。テレアポ代行は、『ニーズに対して適切なトークアプローチ』するロジックを組むことで、アポイントが獲得出来ます。このようなターゲットが決まっている会社は非常に結果が出やすいです。逆に、ターゲットが曖昧な企業様の場合、弊社では失敗リスクが高いため契約をお断りしております。
+    .cp_actab.left
+      input#cp_tabfour034[type="checkbox" name="tabs"]
+      label[for="cp_tabfour034"]
+        | 単価はいくらなの？
+      .cp_actab-content
+        p
+          | アポ匠の単価は完全成果報酬制となっており、1件あたり18,000円〜お受付けしております。取引企業様の平均としては18,000~25,000円程度がおおよその相場感となっており、事前の見積もり相談で単価を決定しております。尚、詳細の料金については以下ページにも掲載しておりますので、ご覧下さいませ。
+          br
+          br
+          = link_to "アポ匠 料金のご案内","/price", class:"btn btn-primary"
+    .cp_actab.left
+      input#cp_tabfour035[type="checkbox" name="tabs"]
+      label[for="cp_tabfour035"]
+        | 単価はどうやって決めているの？
+      .cp_actab-content
+        p
+          | 一概に同じではありませんが、おおよそマーケティング調査を行なった上で、ニーズ確認・エリア規模・ターゲット数・アウトバウンドでの発信可能率・コール先規模・担当者コネクト率・想定成約率・長期的目線の想定成約率と様々な指標より導き出した適性単価をご案内しております。単価算出の参考については下記ページにてご案内しております。
+          br
+          br
+          = link_to "アポ匠 料金のご案内","/price", class:"btn btn-primary"
+    .cp_actab.left
+      input#cp_tabfour036[type="checkbox" name="tabs"]
+      label[for="cp_tabfour036"]
+        | うちのリストにかけて貰いたいんだけど？
+      .cp_actab-content
+        p
+          | 大変申し訳ございませんが、基本的にアポ匠では、弊社でマーケティング分析を承ることが出来ない取引は行なっておりません。尚、当社のマーケティングリストを抽出するのと同等以上の成果が見込める場合には一部お受付させていただく場合も御座います。
+    .cp_actab.left
+      input#cp_tabfour037[type="checkbox" name="tabs"]
+      label[for="cp_tabfour037"]
+        | アポが取れた場合、都度電話頂くことはできますか？
+      .cp_actab-content
+        p
+          | 大変申し訳ございませんが、アポ匠では取引間のミス防止の観点よりメッセージ上でのみアポイント報告をさせていただいております。具体的にはビジネスチャットツールslackをご利用いただき、都度アポイント報告を致します。
+
+
+br
+hr.line
+br
+
+
+br
 br
 
 
