@@ -22,7 +22,6 @@ Rails.application.routes.draw do
 
   get 'whats' => 'top#whats' #アポ匠とは
   get 'original' => 'top#original' #オリジナルマーケティング
-  get 'price' => 'top#price' #料金について
   get 'transaction' => 'top#transaction' #料金について
   get 'review' => 'top#review' #成功事例
   #get 'success_people' => 'top#success_people' #人材会社成功事例

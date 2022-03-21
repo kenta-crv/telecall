@@ -33,9 +33,6 @@ class TopController < ApplicationController
     add_breadcrumb "事業内容", :business_path
   end
 
-  def price
-  end
-
   def flow
   end
 
