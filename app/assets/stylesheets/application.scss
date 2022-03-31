@@ -589,7 +589,7 @@ table.right {margin:5px 50px 5px 0px;}
               font-weight:bold;
           }
         }
-        h6 {
+        p.heading {
             line-height:2.0em;
             font-size:1.5vw;
             margin:0 70px;
@@ -1397,4 +1397,18 @@ p.width{width:90%;}
 
 .three_column{
   margin:0 20px;
+
+  .headline {
+  		padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
+  		color: #494949;/*文字色*/
+  		background: #f4f4f4;/*背景色*/
+  		border-left: solid 5px #7db4e6;/*左線*/
+  		border-bottom: solid 3px #d7d7d7;/*下線*/
+  		text-align:left;
+  		padding-left:30px;
+  		margin:30px auto;
+  		width:95%;
+  		font-size:21px;
+  		font-weight:bold;
+  	    }
 }
