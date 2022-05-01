@@ -10,6 +10,9 @@ class TopController < ApplicationController
     TopMailer.send_email(@top).deliver
   end
 
+  def document
+  end
+
   def human
   end
 
@@ -18,13 +21,6 @@ class TopController < ApplicationController
 
   def cost
   end
-
-  #
-  #ef lp
-  #end
-
-  #def metal
-  #end
 
   def marketing
   end
@@ -47,18 +43,10 @@ class TopController < ApplicationController
     add_breadcrumb "プライバシーポリシー", :privacy_path
   end
 
-  #def review
-  #end
-
   def question
     add_breadcrumb "よくある質問", :question_path
   end
 
-  #def oneday
-  #end
-
-  #def whats
-  #end
   private
   def top_params
     params.require(:top).permit(
