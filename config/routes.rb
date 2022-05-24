@@ -18,7 +18,8 @@ Rails.application.routes.draw do
   get 'case' => 'top#case' #成功事例
   get 'question' => 'top#question' #ナレッジリスト
   get 'oneday' => 'top#oneday' #求人リスト
-  get 'document' => 'top#document' #求人リスト
+  get 'document' => 'top#document' #Okurite資料ダウンロード
+  get 'syumatu' => 'top#syumatu' #シューマツ資料ダウンロード
 
 
   get 'whats' => 'top#whats' #アポ匠とは

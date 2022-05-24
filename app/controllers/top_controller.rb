@@ -10,6 +10,9 @@ class TopController < ApplicationController
     TopMailer.send_email(@top).deliver
   end
 
+  def syumatu
+  end
+
   def document
   end
 
