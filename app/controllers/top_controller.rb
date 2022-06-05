@@ -13,6 +13,12 @@ class TopController < ApplicationController
   def syumatu
   end
 
+  def google
+  end
+
+  def instagram
+  end
+
   def document
   end
 

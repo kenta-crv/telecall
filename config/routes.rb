@@ -6,7 +6,8 @@ Rails.application.routes.draw do
     #get 'apotakumi' => 'top#apotakumi' #エンジランス
     #get 'engilance' => 'top#engilance' #エンジランス
   get 'movies' => 'top#movies' #ムービーズ
-    #get 'ritonal' => 'top#ritonal' #リトナル
+  get 'instagram' => 'top#instagram' #インスタグラム
+  get 'google' => 'top#google' #インスタグラム
   get 'lp' => 'top#lp' #LPページ
   get 'cost' => 'top#cost' #金属加工
   get 'marketing' => 'top#marketing' #デジタルマーケティング
@@ -60,6 +61,10 @@ Rails.application.routes.draw do
   get '/contact' => 'contact#index'
   post '/confirm' => 'contact#confirm'
   post '/thanks' => 'contact#thanks'
+
+  get 'inquiries/contact' => 'inquiries#index'
+  post 'inquiries/confirm' => 'inquiries#confirm'
+  post 'inquiries/thanks' => 'inquiries#thanks'
 
   post '/download' => 'top#download'
 
