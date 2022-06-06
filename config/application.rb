@@ -23,7 +23,7 @@ module Bookkeeping
     domain: 'ri-plus.jp',
     port: 587,
     user_name: 'info@ri-plus.jp',
-    password: 'aF5ZG3c#S',
+    password: 'Zu#uTv8cp',
     authentication: 'plain',
     enable_starttls_auto: true
     }
