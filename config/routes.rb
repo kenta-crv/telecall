@@ -62,6 +62,9 @@ Rails.application.routes.draw do
   post '/confirm' => 'contact#confirm'
   post '/thanks' => 'contact#thanks'
 
+  get 'documents/uber' => 'documents#uber'
+  post 'documents/uber_d' => 'documents#uber_d'
+
   get 'inquiries/contact' => 'inquiries#index'
   post 'inquiries/confirm' => 'inquiries#confirm'
   post 'inquiries/thanks' => 'inquiries#thanks'
