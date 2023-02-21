@@ -63,7 +63,8 @@ class TopController < ApplicationController
     :name,  #代表者名
     :tel, #電話番号
     :email, #メールアドレス
-    :service
+    :service,
+    :check
     )
   end
 end

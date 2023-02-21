@@ -82,6 +82,10 @@ class WorkersController < ApplicationController
         :account_number, #口座番号
         :transfer_name, #振込名義
 
+        :emergency_tel,
+        :emergency_name,
+        :emergency_pattern,
+
         :other_1,
         :other_2,
         :other_3,

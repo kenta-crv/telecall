@@ -44,5 +44,26 @@ h2.headline
           td
             = f.text_field :address
         tr
+          td
+            strong.label 必須
+          td.arrow_box
+            | 緊急連絡先
+          td
+            = f.text_field :emergency_tel
+        tr
+          td
+            strong.label 必須
+          td.arrow_box
+            | 緊急連絡先の方のお名前
+          td
+            = f.text_field :emergency_name
+        tr
+          td
+            strong.label 必須
+          td.arrow_box
+            | 続柄
+          td
+            = f.text_field :emergency_pattern
+        tr
           td colspan="3"
             = f.submit "約款に同意する"

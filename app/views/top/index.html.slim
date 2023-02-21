@@ -66,8 +66,14 @@
         tr
          th
           strong.label 必須
-         th 検討しているサービス
+         th テレアポ希望の商材
          td= f.text_field :service
+        tr
+         th
+          strong.label 必須
+         th 
+          | チェックしてください
+         td= f.check_box :check
         tr
          th.center[colspan="3"]
            = f.submit "テレアポ代行資料の請求", class:"btn btn-danger", width:"100%"
