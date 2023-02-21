@@ -22,8 +22,8 @@ module Bookkeeping
     address: 'smtp3.gmoserver.jp',
     domain: 'ri-plus.jp',
     port: 587,
-    user_name: 'mail@ri-plus.jp',
-    password: 'pgkgbTnx#6',
+    user_name: 'info@ri-plus.jp',
+    password: 'Gm4S#AdyQ',
     authentication: 'plain',
     enable_starttls_auto: true
     }
