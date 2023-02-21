@@ -59,7 +59,7 @@ class TopController < ApplicationController
   private
   def top_params
     params.require(:top).permit(
-    :company, #会社名
+    :co, #会社名
     :name,  #代表者名
     :tel, #電話番号
     :email, #メールアドレス

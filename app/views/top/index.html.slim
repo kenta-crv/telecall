@@ -46,7 +46,7 @@
           strong.label 必須
          td 会社名
          td
-           = f.text_field :company
+           = f.text_field :co
         tr
          td
           strong.label 必須
@@ -73,7 +73,7 @@
           strong.label 必須
          th 
           | チェックしてください
-         td= f.check_box :check
+         td= f.check_box :check, {checked: false}, true, false
         tr
          th.center[colspan="3"]
            = f.submit "テレアポ代行資料の請求", class:"btn btn-danger", width:"100%"
