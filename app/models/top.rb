@@ -4,5 +4,5 @@ class Top < ApplicationRecord
   validates :tel, {presence: true}
   validates :email, {presence: true}
   validates :service, {presence: true}
-  validates :check, inclusion: [true, false]
+  validates :check, {presence: true}
 end

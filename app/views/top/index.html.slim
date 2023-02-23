@@ -31,7 +31,7 @@
            - @top.errors.each do |attr, msg|
              li= msg
        br
-       table.download
+       /table.download
         col[width="10%"]
         col[width="35%"]
         col[width="55%"]
@@ -72,8 +72,13 @@
          th
           strong.label 必須
          th 
-          | チェックしてください
-         td= f.check_box :check, {checked: false}, true, false
+          | 導入期間
+         td= f.select(:check, [ \
+            ["すぐにでも","すぐにでも"],      \
+            ["1ヶ月以内","1ヶ月以内"],      \
+            ["3ヶ月以内","3ヶ月以内"],      \
+            ["未定","未定"],      \
+            ], include_blank: true, required: true )
         tr
          th.center[colspan="3"]
            = f.submit "テレアポ代行資料の請求", class:"btn btn-danger", width:"100%"
