@@ -3,6 +3,10 @@ class TopController < ApplicationController
     @top = Top.new
   end
 
+  def lp 
+    @top = Top.new
+  end
+
   def download
     @top = Top.new(top_params)
     @top.save
