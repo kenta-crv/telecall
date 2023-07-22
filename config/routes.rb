@@ -37,12 +37,12 @@ Rails.application.routes.draw do
   get 'flow' => 'top#flow' #HP制作会社失敗事例
 
 
-    get 'recruit' => 'recruit#recruit' #求人リスト
-    get 'recruit/parttime3' => 'recruit#parttime3'
-    get 'recruit/regular3' => 'recruit#regular3'
-    get 'recruit/outsourcing' => 'recruit#outsourcing'
-    get 'recruit/appointer2' => 'recruit#appointer2'
-    get 'recruit/office' => 'recruit#office'
+    #get 'recruit' => 'recruit#recruit' #求人リスト
+    #get 'recruit/parttime3' => 'recruit#parttime3'
+    #get 'recruit/regular3' => 'recruit#regular3'
+    #get 'recruit/outsourcing' => 'recruit#outsourcing'
+    #get 'recruit/appointer2' => 'recruit#appointer2'
+    #get 'recruit/office' => 'recruit#office'
 
   resources :posts
   resources :columns
