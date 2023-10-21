@@ -46,6 +46,7 @@ Rails.application.routes.draw do
 
   resources :posts
   resources :columns
+  resources :jobs
   resources :prefectures
 
   get 'script' => 'top#script'

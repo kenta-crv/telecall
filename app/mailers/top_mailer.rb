@@ -1,10 +1,10 @@
 class TopMailer < ActionMailer::Base
-  default from: "mail@ri-plus.jp"
-  #default to: "mail@ri-plus.jp"
+  default from: "info@ri-plus.jp"
+  #default to: "info@ri-plus.jp"
 
   def received_email(top)
     @top = top
-    mail to: "mail@ri-plus.jp"
+    mail to: "info@ri-plus.jp"
     mail(subject: 'アポ匠資料がダウンロードされました。') do |format|
       format.text
     end

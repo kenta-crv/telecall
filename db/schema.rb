@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_21_162516) do
+ActiveRecord::Schema.define(version: 2023_07_30_080506) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -136,6 +136,31 @@ ActiveRecord::Schema.define(version: 2023_02_21_162516) do
     t.string "document_2"
     t.string "document_3"
     t.string "remarks"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "jobs", force: :cascade do |t|
+    t.string "status"
+    t.string "occupation"
+    t.string "chachcopy"
+    t.string "category"
+    t.string "location"
+    t.string "employment"
+    t.string "salary_low"
+    t.string "salary_high"
+    t.string "salary_category"
+    t.string "work_content"
+    t.string "work_appeal"
+    t.string "work_demand"
+    t.string "work_time"
+    t.string "work_vacation"
+    t.string "work_location"
+    t.string "work_access"
+    t.string "work_treatment"
+    t.string "work_other"
+    t.string "tag_1"
+    t.string "tag_2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
