@@ -48,6 +48,9 @@ class TopController < ApplicationController
   def movies
   end
 
+  def share
+  end
+
   def company
     add_breadcrumb "会社概要", :company_path
   end

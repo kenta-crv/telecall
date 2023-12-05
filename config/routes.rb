@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   get 'oneday' => 'top#oneday' #求人リスト
   get 'document' => 'top#document' #Okurite資料ダウンロード
   get 'syumatu' => 'top#syumatu' #シューマツ資料ダウンロード
-
+  get 'share' => 'top#share' #社外周知
 
   get 'whats' => 'top#whats' #アポ匠とは
   get 'original' => 'top#original' #オリジナルマーケティング
