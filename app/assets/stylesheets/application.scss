@@ -533,6 +533,28 @@ table.review {
 table.left {margin:5px 0px 5px 50px;}
 table.right {margin:5px 50px 5px 0px;}
 
+  /* レスポンシブ時にテーブルの幅を85%に設定 */
+  @media (max-width: 768px) {
+    .table-responsive {
+      width: 85%;
+      margin: auto;
+    }
+  }
+
+  /* レスポンシブ時にtdの文字サイズを大きくする */
+  @media (max-width: 768px) {
+    .table-responsive .review td {
+      font-size: 15px !important; /* 優先度を上げる */
+
+    }
+  }
+
+  @media (max-width: 768px) {
+    .table-responsive .review th {
+      font-size: 15px !important; /* 優先度を上げる */
+
+    }
+  }
 
 /* firefox */
 @-moz-document url-prefix() {
