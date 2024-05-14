@@ -61,20 +61,26 @@ class ContractsController < ApplicationController
   
     def update
       @contract = Contract.find(params[:id])
+    
       if @contract.update(contract_params)
-        # agreeが「同意しました」に更新された場合のみメールを送信
+        # conclusion.html.slimからの送信で、かつ同意が得られた場合
         if @contract.agree == "同意しました"
+          # メール送信処理
           ContractMailer.contract_received_email(@contract).deliver_now
           ContractMailer.contract_send_email(@contract).deliver_now
           flash[:notice] = "契約が完了しました"
           redirect_to info_contract_path(@contract)
+        # edit.html.slimからの送信、またはconclusion.html.slimからの送信でも同意が得られなかった場合
         else
-          redirect_to conclusion_contract_path(@contract), notice: "契約に同意してください。"
+          redirect_to info_contract_path(@contract)
         end
       else
+        # 更新が失敗した場合の処理
         render :edit
       end
     end
+    
+    
   
     def send_mail
       @contract = Contract.find(params[:id])
