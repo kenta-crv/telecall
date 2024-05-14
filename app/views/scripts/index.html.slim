@@ -1,0 +1,24 @@
+- set_meta_tags  title: ''
+- set_meta_tags  description: ''
+
+- set_meta_tags noindex: true
+
+.row
+  br
+  br
+  table.company
+    tr
+      th 会社名
+      th 入力可否
+    - @scripts.each do |script|
+     - contract = script.contract # scriptに紐づくcontractを取得
+     tr
+       td
+        = link_to contract.company, contract_script_path(contract_id: contract.id, id: script.id)
+       td = script.id ? "入力済" : "未入力"
+
+  br
+  hr.line
+  br
+  = paginate(@scripts)
+

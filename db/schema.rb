@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_07_30_080506) do
+ActiveRecord::Schema.define(version: 2024_05_08_052827) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -92,6 +92,16 @@ ActiveRecord::Schema.define(version: 2023_07_30_080506) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "comments", force: :cascade do |t|
+    t.integer "contract_id", null: false
+    t.string "status"
+    t.datetime "next"
+    t.string "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contract_id"], name: "index_comments_on_contract_id"
+  end
+
   create_table "contacts", force: :cascade do |t|
     t.string "company"
     t.string "name"
@@ -100,6 +110,28 @@ ActiveRecord::Schema.define(version: 2023_07_30_080506) do
     t.string "address"
     t.string "subject"
     t.string "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contracts", force: :cascade do |t|
+    t.string "company"
+    t.string "name"
+    t.string "tel"
+    t.string "email"
+    t.string "address"
+    t.string "period"
+    t.string "message"
+    t.string "initial_cost"
+    t.string "contract_period"
+    t.string "unit_price"
+    t.string "maximum_number"
+    t.string "approach_area"
+    t.string "approach_industry"
+    t.string "post_title"
+    t.string "president_name"
+    t.string "agree"
+    t.string "contract_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -234,6 +266,32 @@ ActiveRecord::Schema.define(version: 2023_07_30_080506) do
     t.datetime "second_end_date"
     t.datetime "third_first_date"
     t.datetime "third_end_date"
+  end
+
+  create_table "scripts", force: :cascade do |t|
+    t.integer "contract_id", null: false
+    t.string "sales_manager"
+    t.string "contact_number"
+    t.string "infomation"
+    t.string "hearing_1"
+    t.string "hearing_2"
+    t.string "hearing_3"
+    t.string "question_1"
+    t.string "answer_1"
+    t.string "question_2"
+    t.string "answer_2"
+    t.string "question_3"
+    t.string "answer_3"
+    t.string "question_4"
+    t.string "answer_4"
+    t.string "question_5"
+    t.string "answer_5"
+    t.string "question_6"
+    t.string "answer_6"
+    t.string "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contract_id"], name: "index_scripts_on_contract_id"
   end
 
   create_table "topics", force: :cascade do |t|

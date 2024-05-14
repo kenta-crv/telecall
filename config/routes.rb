@@ -27,27 +27,31 @@ Rails.application.routes.draw do
   get 'original' => 'top#original' #オリジナルマーケティング
   get 'transaction' => 'top#transaction' #料金について
   get 'review' => 'top#review' #成功事例
-  #get 'success_people' => 'top#success_people' #人材会社成功事例
-  #get 'success_ads' => 'top#success_ads' #広告企業成功事例
-  #get 'success_consulting' => 'top#success_consulting' #コンサルティング会社成功事例
-  #get 'failed' => 'top#failed' #失敗事例
-  #get 'failed_agents' => 'top#failed_agents' #代理店募集失敗事例
-  #get 'failed_hp' => 'top#failed_hp' #HP制作会社失敗事例
-  #get 'failed_it' => 'top#failed_it' #HP制作会社失敗事例
   get 'flow' => 'top#flow' #HP制作会社失敗事例
-
-
-    #get 'recruit' => 'recruit#recruit' #求人リスト
-    #get 'recruit/parttime3' => 'recruit#parttime3'
-    #get 'recruit/regular3' => 'recruit#regular3'
-    #get 'recruit/outsourcing' => 'recruit#outsourcing'
-    #get 'recruit/appointer2' => 'recruit#appointer2'
-    #get 'recruit/office' => 'recruit#office'
 
   resources :posts
   resources :columns
   resources :jobs
   resources :prefectures
+
+  resources :scripts, only: [:index]
+
+  resources :contracts do
+    resource :comments
+    resource :script #1:1
+    collection do
+      post :confirm
+      post :thanks
+    end
+    member do
+      post :send_mail
+      get "info" #案内
+      get "conclusion"
+      get "payment" 
+      get "calendar"
+    end
+  end
+
 
   get 'script' => 'top#script'
   get 'workers/new' => 'workers#new'

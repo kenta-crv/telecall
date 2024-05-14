@@ -891,10 +891,11 @@ nav.globalMenuSp.active {
 
 
 .infobox {
+  text-align:left;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50px;
-  height: 15em;
+  margin-bottom: 0px;
+  height: 40em;
   /* 高さを制限(※) */
   width: 80%;
   overflow: scroll;
@@ -1432,4 +1433,81 @@ p.width{width:90%;}
 
 .three_column{
   margin:0 20px;
+}
+
+
+.organize {
+  text-align:left;
+  margin:15px 0 ;
+
+  a {
+    text-decoration: none;
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+    margin-top:auto;
+    margin-top:8px;
+    a:hover {
+      background-color: rgba(255,255,255,0.1);
+    }
+}
+
+  a {
+    text-decoration: none;
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+    margin-top:auto;
+    margin-top:8px;
+    a:hover {
+      background-color: rgba(255,255,255,0.1);
+    }
+  }
+
+
+}
+
+
+
+.btn_round_grad{
+  background: linear-gradient(to top, rgba(0, 50, 100, 1), rgba(0, 60, 110, 1) 20%,  rgba(0, 150, 200, 1));
+  padding: 12px 20px;
+  border: 2px solid rgba(0, 80, 130, 1);
+  border-radius: 100px;
+  color: #fff !important;
+  margin-right:30px; 
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn_round_grad:hover{
+  color: #fff !important;
+  background: linear-gradient(to top, rgba(0, 60, 110, 1), rgba(0, 70, 120, 1) 15%,  rgba(0, 160, 210, 1));
+}
+
+.btn_round_grad:active{
+  color: #fff !important;
+  background: linear-gradient(to bottom, rgba(0, 60, 110, 1), rgba(0, 70, 120, 1) 15%,  rgba(0, 160, 210, 1));
+  transform: scale(0.95);
+}
+
+.contract{
+  .text {
+    font-weight:normal;
+    font-size:14px;
+    line-height:24px;
+    text-align:left;
+    margin:0 50px;
+  }
+  table {
+    text-align:center;
+    width:90%;
+    margin:0 50px;
+    border-collapse:  collapse; /* セルの線を重ねる */
+    th,td {
+      border: solid 1px;  /* 枠線指定 */
+      padding: 10px;      /* 余白指定 */
+    }
+  }
+  
 }

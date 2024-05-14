@@ -1,0 +1,187 @@
+- set_meta_tags noindex: true
+.tops-wrapper
+ br
+ h2.headline  基本情報
+ table.company
+       colgroup
+         col width="10%"
+         col width="20%"
+         col width="70%"
+       tr
+        td.label-cell
+          strong.label 必須
+        td.arrow-box-cell
+          | 会社名
+        td.responsive-cell
+         .input-container
+          = @contract.company
+       tr
+        td.label-cell
+          strong.label 必須
+        td.arrow-box-cell
+          | ご担当者様名
+        td.responsive-cell
+         .input-container
+          = @contract.name
+       tr
+        td.label-cell
+          strong.label 必須
+        td.arrow-box-cell
+          | 電話番号
+        td.responsive-cell
+         .input-container
+          = @contract.tel
+       tr
+        td.label-cell
+          strong.label 必須
+        td.arrow-box-cell
+          | 所在地
+        td.responsive-cell
+         .input-container
+          = @contract.address
+       tr
+        td.label-cell
+          strong.label 必須
+        td.arrow-box-cell
+          | メールアドレス
+        td.responsive-cell
+         .input-container
+          = @contract.email
+       tr
+        td.label-cell
+          strong.label 必須
+        td.arrow-box-cell
+          | 発注予定時期
+        td.responsive-cell
+         .input-container
+          = @contract.period
+       tr
+        td.label-cell
+          strong.label.label-blue 任意
+        td.arrow-box-cell
+          | 備考・要望
+        td.responsive-cell
+         .input-container
+          = @contract.message
+       tr
+        td
+          strong.label 必須
+        td
+          |代表取締役
+        td
+          = @contract.president_name
+       tr
+        td
+          strong.label 必須
+        td
+          |役職
+        td
+          = @contract.job_title
+       tr
+        td
+          strong.label 必須
+        td
+          |契約の同意
+        td
+          = @contract.agree
+       tr
+        td
+          strong.label 必須
+        td
+          |契約日
+        td
+          = @contract.contract_date
+        tr
+         td
+           strong.label 必須
+         td
+           |初期費用
+         td
+           = @contract.initial_cost
+        tr
+         td
+           strong.label 必須
+         td
+           |契約期間
+         td
+           = @contract.contract_period
+        tr
+         td
+           strong.label 必須
+         td
+           |単価
+         td
+           = @contract.unit_price
+        tr
+         td
+           strong.label 必須
+         td
+           |最大件数
+         td
+           = @contract.maximum_number
+        tr
+         td
+           strong.label 必須
+         td
+           |アプローチエリア
+         td
+           = @contract.approach_area
+        tr
+         td
+           strong.label 必須
+         td
+           |アプローチエリア
+         td
+           = @contract.approach_area
+        tr
+         td
+           strong.label 必須
+         td
+           |アプローチ業種
+         td
+           = @contract.approach_industry
+.actions_container style="text-align: center; margin-bottom: 30px;"
+  = link_to "契約へ進む", info_contract_path(@contract), class: "btn btn-primary"
+  - if admin_signed_in?
+   = link_to "削除する", contract_path(@contract), class: "btn btn-danger", method: :delete, data: { confirm: '本当に削除しますか？' }, style: "margin-left: 10px;"
+   = link_to "一覧に戻る", contracts_path, class: "btn btn-default"
+
+- if admin_signed_in?
+ = form_for [@contract, @contract.comments.build] do |f|
+  table.company[width="100%"]
+    col[width="25%"]
+    col[width="25%"]
+    col[width="25%"]
+    tbody
+      tr
+          th
+            | ステータス
+          th
+            | 次回営業日
+          th
+            | コメント
+
+      tr
+          td
+            = f.text_field :status
+          td
+            = f.datetime_field :next
+          td
+            = f.text_area :body
+      tr
+        th[colspan="3"]
+         .center
+          = f.submit
+ table.company[width="100%"]
+  - if @contract.comments.any?
+    tbody
+     - @contract.comments.each do |comment|
+       tr
+        td
+          = comment.status
+        td
+          = comment.next
+        td
+          = comment.body
+        td
+          = link_to "編集", edit_contract_comments_path(@contract, comment), _blank: "target"
