@@ -41,36 +41,54 @@
           = text_area :script, :hearing_2
       tr
         th.arrow_box
+         -if admin_signed_in?
+          = text_field :script, :question_1
+         -else 
           = @script.question_1
       tr 
         td
           = text_area :script, :answer_1
       tr
         th.arrow_box
+         -if admin_signed_in?
+          = text_field :script, :question_2
+         -else 
           = @script.question_2
       tr 
         td
           = text_area :script, :answer_2
       tr
         th.arrow_box
+         -if admin_signed_in?
+          = text_field :script, :question_3
+         -else 
           = @script.question_3
       tr 
         td
           = text_area :script, :answer_3
       tr
         th.arrow_box
+         -if admin_signed_in?
+          = text_field :script, :question_4
+         -else 
           = @script.question_4
       tr 
         td
           = text_area :script, :answer_4
       tr
         th.arrow_box
+         -if admin_signed_in?
+          = text_field :script, :question_5
+         -else 
           = @script.question_5
       tr 
         td
           = text_area :script, :answer_5
       tr
         th.arrow_box
+         -if admin_signed_in?
+          = text_field :script, :question_6
+         -else 
           = @script.question_6
       tr 
         td
