@@ -86,3 +86,4 @@ gem 'devise'
 gem 'sitemap_generator'
 
 gem 'wysiwyg-rails'
+gem 'dotenv-rails', groups: [:development, :test]
