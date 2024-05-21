@@ -43,15 +43,17 @@ class ScriptsController < ApplicationController
     end
 
     def destroy
-      @script = Script.find(params[:id])
+      @contract = Contract.find(params[:contract_id])
+      @script = @contract.script
       @script.destroy
-      redirect_to scripts_path, alert: "削除しました"
+      redirect_to contract_scripts_path(@contract), alert: "削除しました"
     end
   
     def update
-      @script = Script.find(params[:id])
+      @contract = Contract.find(params[:contract_id])
+      @script = @contract.script
       if @script.update(script_params)
-        redirect_to script_path(@script), alert: "更新しました"
+        redirect_to info_contract_path(@contract), alert: "更新しました"
       else
         render 'edit'
       end
