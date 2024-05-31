@@ -90,7 +90,20 @@
         td
           |契約日
         td
-          = @contract.contract_date
+         - if @contract.contract_date.present?
+           - contract_date = Date.parse(@contract.contract_date)
+           = contract_date.strftime("%Y年%m月%d日")
+
+       tr
+        td
+          strong.label 必須
+        td
+          |開始日
+        td
+          - if @contract.start_day.present?
+            = @contract.start_day.strftime("%Y年%m月%d日")
+
+       - if admin_signed_in?
         tr
          td
            strong.label 必須

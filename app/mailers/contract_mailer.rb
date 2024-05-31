@@ -4,6 +4,7 @@ class ContractMailer < ActionMailer::Base
     @contract = contract
     mail from: contract.email
     mail to: "info@ri-plus.jp"
+    mail cc: "kamon@ri-plus.jp"
     mail(subject: '株式会社Ri-Plusにお問い合わせがありました') do |format|
       format.text
     end
@@ -31,5 +32,29 @@ class ContractMailer < ActionMailer::Base
     mail(subject: '『アポ匠』をご契約いただきありがとうございます。') do |format|
       format.text
     end
+  end
+
+  def received_first_email(contract)
+    @contract = contract
+    @contract_url = "https://ri-plus.jp/contracts/#{contract.id}"
+    mail(to: "okuyama@ri-plus.jp", subject: "【#{@contract.company}】契約発行通知")
+  end
+
+  def send_first_email(contract)
+    @contract = contract
+    @contract_url = "https://ri-plus.jp/contracts/#{contract.id}"
+    mail(from:"info@ri-plus.jp", to: @contract.email, subject: "契約締結のご案内")
+  end
+
+  def received_start_email(contract)
+    @contract = contract
+    @contract_url = "https://ri-plus.jp/contracts/#{contract.id}"
+    mail(to: "okuyama@ri-plus.jp", subject: "【#{@contract.company}】開始日発行通知")
+  end
+
+  def send_start_email(contract)
+    @contract = contract
+    @contract_url = "https://ri-plus.jp/contracts/#{contract.id}"
+    mail(from:"info@ri-plus.jp", to: @contract.email, subject: "株式会社Ri-Plus業務開始日のご案内")
   end
 end

@@ -45,10 +45,12 @@ Rails.application.routes.draw do
     end
     member do
       post :send_mail
+      post :send_mail_start #開始日の送信
       get "info" #案内
       get "conclusion"
       get "payment" 
       get "calendar"
+      get "start"
     end
   end
 

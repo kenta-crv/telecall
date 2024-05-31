@@ -64,3 +64,56 @@
  br
  hr.line
  br
+
+
+
+- if admin_signed_in?
+ .tops-wrapper
+  br
+  h2.headline  管理者フロー
+  br/
+  .row.organize
+   .col-xs-1 
+   .col-xs-3.btn.btn-primary.btn-lg
+    = link_to "取引情報の入力", edit_contract_path(@contract)
+   .col-xs-7
+    | 今回の契約情報の入力を行なってください。
+    br/
+    .red 
+     | ※約款に同意した後に当作業は行わないでください。
+  br
+  hr.line
+  br
+
+  .row.organize
+    .col-xs-1 
+    .col-xs-3.btn.btn-primary.btn-lg
+     - if @contract.script.present?
+      = link_to "作成済"
+     - else
+      = link_to "スクリプト作成", new_contract_script_path(@contract)
+    .col-xs-7
+     | トークスクリプトの作成をするにあたり必要な事前情報を入力してください。
+  br
+  hr.line
+  br
+
+  .row.organize 
+   .col-xs-1 
+   .col-xs-3.btn.btn-primary.btn-lg
+     = link_to "契約書を発行する", send_mail_contract_path(@contract), method: :post, data: { confirm: "企業様へ契約依頼のメールを送信しますか？" } 
+   .col-xs-7
+     | ①②の登録が完了したら、企業様へ契約依頼のメール送信を行います。
+  br
+  hr.line
+  br
+
+  .row.organize 
+   .col-xs-1 
+   .col-xs-3.btn.btn-primary.btn-lg
+     = link_to "契約日を連絡", start_contract_path(@contract)
+   .col-xs-7
+     | 契約締結・入金が完了しましたら、契約日を送信します。契約日を送信するタイミングでは⓪〜④までの情報が問題がないか必ず各種確認し、その後slackの招待を行います。
+  br
+  hr.line
+  br

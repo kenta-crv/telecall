@@ -9,13 +9,12 @@
 <%= @contract.post_title%>: <%= @contract.president_name%>
 所在地: <%= @contract.address%>
 契約の同意: <%= @contract.agree%>
-同意日: <%= @contract.period %>
-要望:<%= @contract.contract_date %>
+同意日: <%= Date.parse(@contract.contract_date).strftime("%Y年%m月%d日") %>
 --------------------------
 
 
 【契約締結内容】
-#{@contract.company}（以下、「甲」という。）と、株式会社Ri-Plus（以下、「乙」という。）とは、甲から乙への業務の委託に関し、次のとおり契約（以下、「本契約」という。）を締結する。
+<%= @contract.company%>（以下、「甲」という。）と、株式会社Ri-Plus（以下、「乙」という。）とは、甲から乙への業務の委託に関し、次のとおり契約（以下、「本契約」という。）を締結する。
 第１条（目的）
 本契約は甲乙相互間の信頼に基づく公正な取引関係を確立し、相互の利益と事業の発展をはかることを目的とする。なお、委託業務遂行に関する事務取扱の細目については、本契約の各条項で定めるほか、甲乙協議の上取り決めるものとする。
 第２条（業務委託）
@@ -34,8 +33,8 @@
 ３　甲は、訪問の場合は前確を、オンライン商談の場合、アポイント獲得後にオンラインURLの送信と商談前確を実行するものとする。
 
 第４条（契約期間と獲得件数）
-１　本契約の獲得件数は、お試しプランを利用し#{@contract.maximum_number}件とする。
-２　本契約は取切型の契約とし、契約期間は、#{@contract.maximum_number}件を獲得するか、稼働開始日から６ヶ月とその月末までの早い方とする。
+１　本契約の獲得件数は、お試しプランを利用し<%= @contract.maximum_number%>件とする。
+２　本契約は取切型の契約とし、契約期間は、<%= @contract.maximum_number%>件を獲得するか、稼働開始日から６ヶ月とその月末までの早い方とする。
 ３　お試しプランは、乙の業務の空き状況により稼働を行うものとする。そのため、獲得月が集中する場合や、架電を行わない時期があることを甲は理解し、当条項を理由としたクレームは行わないものとする。
 ４　甲は、本契約満了後、継続を希望する場合、１ヶ月以内に乙にslackもしくはメールのいずれかの方法で申請するものとする。尚、継続を行う場合、再開日も１ヶ月以内のいずれかとし、１ヶ月を超える場合、初期費用５００００円が別途発生する。
 ５　お試しプラン後に、契約を継続する場合、通常プランで契約を行う。
@@ -143,9 +142,9 @@
 
 契約名義
 甲：
-#{@contract.address}
-#{@contract.company}
-#{@contract.job_title}  #{@contract.president}
+<%= @contract.address%>
+<%= @contract.company%>
+<%= @contract.post_title%>  <%= @contract.president_name%>
 
 乙：
 東京都中央区銀座6-13-16 ヒューリック銀座ウォールビル7F
@@ -155,10 +154,10 @@
 料金表
 初期費用：0円
 トークスクリプト制作費：0円
-成果報酬（税抜）：#{@contract.unit_price}円
-獲得件数：#{@contract.maximum_number}円
-対象エリア：#{@contract.approach_area}
-ターゲット：#{@contract.approach_industry}
+成果報酬（税抜）：<%= @contract.unit_price%>円
+獲得件数：<%= @contract.maximum_number%>円
+対象エリア：<%= @contract.approach_area%>
+ターゲット：<%= @contract.approach_industry%>
 
 別紙2　アポイント獲得の認定基準
 

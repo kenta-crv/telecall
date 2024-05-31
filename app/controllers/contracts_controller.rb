@@ -16,8 +16,14 @@ class ContractsController < ApplicationController
     def thanks
       @contract = Contract.new(contract_params)
       @contract.save
-      ContractMailer.received_email(@contract).deliver # 管理者に通知
-      ContractMailer.send_email(@contract).deliver # 送信者に通知
+      if admin_signed_in?
+        ContractMailer.received_email(@contract).deliver # 管理者に通知
+        flash[:notice] = "管理者送信のため、取引先にはメールを送らず完了しました。"
+      else
+        # 一般ユーザーの場合はメール送信を行う
+        ContractMailer.received_email(@contract).deliver # 管理者に通知
+        ContractMailer.send_email(@contract).deliver # 送信者に通知
+      end
     end
   
     def create
@@ -50,6 +56,11 @@ class ContractsController < ApplicationController
       today = Date.today.strftime("%Y-%m-%d")
     end
 
+    def start
+      @contract = Contract.find(params[:id])
+      today = Date.today.strftime("%Y-%m-%d")
+    end
+
     def calendar
     end
 
@@ -64,13 +75,19 @@ class ContractsController < ApplicationController
     
       if @contract.update(contract_params)
         # conclusion.html.slimからの送信で、かつ同意が得られた場合
-        if @contract.agree == "同意しました"
+        if @contract.start_day.present?
           # メール送信処理
-          ContractMailer.contract_received_email(@contract).deliver_now
-          ContractMailer.contract_send_email(@contract).deliver_now
-          flash[:notice] = "契約が完了しました"
+          ContractMailer.send_start_email(@contract).deliver_now
+          ContractMailer.received_start_email(@contract).deliver_now
+          flash[:notice] = "開始日を送信しました"
           redirect_to info_contract_path(@contract)
-        # edit.html.slimからの送信、またはconclusion.html.slimからの送信でも同意が得られなかった場合
+        elsif @contract.agree == "同意しました"
+            # メール送信処理
+            ContractMailer.contract_received_email(@contract).deliver_now
+            ContractMailer.contract_send_email(@contract).deliver_now
+            flash[:notice] = "契約が完了しました"
+            redirect_to info_contract_path(@contract)
+          # edit.html.slimからの送信、またはconclusion.html.slimからの送信でも同意が得られなかった場合
         else
           redirect_to info_contract_path(@contract)
         end
@@ -79,14 +96,19 @@ class ContractsController < ApplicationController
         render :edit
       end
     end
-    
-    
   
     def send_mail
       @contract = Contract.find(params[:id])
-      @contract.update(send_mail_flag: true)
-      ContractMailer.client_email(@contract).deliver # 全企業に送信
-      redirect_to contract_path(@contract), alert: "送信しました"
+      ContractMailer.received_first_email(@contract).deliver_now
+      ContractMailer.send_first_email(@contract).deliver_now
+      redirect_to info_contract_path(@contract), notice: "#{@contract.company}へ契約依頼のメール送信を行いました。"
+    end
+
+    def send_mail_start
+      @contract = Contract.find(params[:id])
+      ContractMailer.received_start_email(@contract).deliver_now
+      ContractMailer.send_start_email(@contract).deliver_now
+      redirect_to info_contract_path(@contract), notice: "#{@contract.company}へ開始日のメール送信を行いました。"
     end
 
     private
@@ -111,7 +133,8 @@ class ContractsController < ApplicationController
       :president_name, #代表取締役
       :agree, #契約同意
       :post_title, #代表取締役
-      :contract_date #契約日
+      :contract_date, #契約日
+      :start_day
       )
     end
 end
