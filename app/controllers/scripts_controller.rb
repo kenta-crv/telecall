@@ -1,5 +1,5 @@
 class ScriptsController < ApplicationController
-    before_action :authenticate_admin!, only: [:index, :show, :edit, :update, :destroy, :send_mail]
+    before_action :authenticate_admin!, only: [:index, :show, :destroy, :send_mail]
     def index
       if params[:contract_id].present?
         @contract = Contract.find(params[:contract_id])
