@@ -14,6 +14,7 @@
      th メールアドレス
      th 導入希望時期
      th 問い合わせ日
+     th 削除
    - @contracts.each do |contract|
     tr
      td = link_to contract.company, contract_path(contract), clsss:"store"
@@ -22,6 +23,7 @@
      td = contract.email
      td = contract.period
      td = contract.created_at
+     td = link_to '削除', contract_path(contract), method: :delete, data: { confirm: '本当に削除しますか?' }, class:"btn btn-danger"
   br
     hr.line
     br

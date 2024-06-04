@@ -176,7 +176,14 @@
 
       tr
           td
-            = f.text_field :status
+            = f.select(:status, [\
+            ["未設定","未設定"],\
+            ["商談","商談"],\
+            ["見込低","見込低"],\
+            ["見込中","見込中"],\
+            ["見込高","見込高"],\
+            ["契約","契約"],\
+            ["NG","NG"]])     
           td
             = f.datetime_field :next
           td
@@ -185,6 +192,7 @@
         th[colspan="3"]
          .center
           = f.submit
+ small 商談ステータスを入れる場合は商談日を入力。　不在の場合、ステータスは以前のステータスにし、不在にチェックを入れる
  table.company[width="100%"]
   - if @contract.comments.any?
     tbody

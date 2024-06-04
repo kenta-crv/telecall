@@ -86,11 +86,4 @@
           = @contract.message
       tr
        td colspan="3"
-        = f.submit "送信", class:"btn btn-primary", data: {behavior: "fb-track"}
-      javascript:
-       document.addEventListener('DOMContentLoaded', function(){
-        var button = document.querySelector("[data-behavior='fb-track']");
-        button.addEventListener('click', function() {
-          fbq('track', 'CompleteRegistration');
-        });
-       });
+        = f.submit "送信", class:"btn btn-primary"
