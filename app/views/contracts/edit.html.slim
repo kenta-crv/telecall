@@ -132,6 +132,16 @@
            |アプローチ業種
          td
            = f.text_field :approach_industry
+        tr
+         td
+           strong.label 必須
+         td
+           |提供サービス
+         td
+           = f.select(:service,[\
+            ["トライアルプラン","トライアルプラン"],\
+            ["テストマーケティングプラン","テストマーケティングプラン"],\
+           ],include_blank: "選択してください")
       - else
         tr
          td
@@ -175,6 +185,13 @@
            |アプローチ業種
          td
            = @contract.approach_industry
+        tr
+         td
+           strong.label 必須
+         td
+           |提供サービス
+         td
+           = @contract.service
       tr
         td colspan="3"
           = f.submit "確認画面", class:"btn btn-primary"

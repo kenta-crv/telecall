@@ -153,6 +153,13 @@
            |アプローチ業種
          td
            = @contract.approach_industry
+        tr
+         td
+           strong.label 必須
+         td
+           |提供サービス
+         td
+           = @contract.service
 .actions_container style="text-align: center; margin-bottom: 30px;"
   = link_to "契約へ進む", info_contract_path(@contract), class: "btn btn-primary"
   - if admin_signed_in?
@@ -177,13 +184,12 @@
       tr
           td
             = f.select(:status, [\
-            ["未設定","未設定"],\
             ["商談","商談"],\
             ["見込低","見込低"],\
             ["見込中","見込中"],\
             ["見込高","見込高"],\
             ["契約","契約"],\
-            ["NG","NG"]])     
+            ["NG","NG"]],include_blank: "選択してください")     
           td
             = f.datetime_field :next
           td
@@ -191,7 +197,7 @@
       tr
         th[colspan="3"]
          .center
-          = f.submit
+          = f.submit "登録する", class:"btn btn-primary"
  small 商談ステータスを入れる場合は商談日を入力。　不在の場合、ステータスは以前のステータスにし、不在にチェックを入れる
  table.company[width="100%"]
   - if @contract.comments.any?

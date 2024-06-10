@@ -57,4 +57,24 @@ class ContractMailer < ActionMailer::Base
     @contract_url = "https://ri-plus.jp/contracts/#{contract.id}"
     mail(from:"info@ri-plus.jp", to: @contract.email, subject: "株式会社Ri-Plus業務開始日のご案内")
   end
+
+  def new_comment_notification(comment)
+    @comment = comment
+    @contract = comment.contract
+    @contract_url = "https://ri-plus.jp/contracts/#{@contract.id}"
+    mail to: "okuyama@ri-plus.jp"
+    mail(subject: "#{@contract.company}のステータスが#{@comment.status}に更新されました") do |format|
+      format.text
+    end
+  end
+
+  def edit_script_notification(script)
+    @script = script
+    @contract = script.contract
+    @contract_url = "https://ri-plus.jp/contracts/#{@contract.id}/script"
+    mail to: "okuyama@ri-plus.jp"
+    mail(subject: "#{@contract.company}よりスクリプト編集が実行されました") do |format|
+      format.text
+    end
+  end
 end

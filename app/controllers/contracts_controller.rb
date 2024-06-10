@@ -134,7 +134,8 @@ class ContractsController < ApplicationController
       :agree, #契約同意
       :post_title, #代表取締役
       :contract_date, #契約日
-      :start_day
+      :start_day,
+      :service
       )
     end
 end

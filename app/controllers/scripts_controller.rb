@@ -11,7 +11,6 @@ class ScriptsController < ApplicationController
       end
     end
       
-  
     def new
       @contract = Contract.find(params[:contract_id])
       @script = Script.new
@@ -53,6 +52,7 @@ class ScriptsController < ApplicationController
       @contract = Contract.find(params[:contract_id])
       @script = @contract.script
       if @script.update(script_params)
+        ContractMailer.edit_script_notification(@script).deliver_now
         redirect_to info_contract_path(@contract), alert: "更新しました"
       else
         render 'edit'

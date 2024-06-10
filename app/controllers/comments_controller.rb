@@ -1,10 +1,14 @@
 class CommentsController < ApplicationController
-
-	def create
-   @contract = Contract.find(params[:contract_id])
-   @contract.comments.create(comment_params)
-	 redirect_to contract_path(@contract)
-	end
+  def create
+    @contract = Contract.find(params[:contract_id])
+    @comment = @contract.comments.create(comment_params)
+    if @comment.save
+      ContractMailer.new_comment_notification(@comment).deliver_now
+      redirect_to contract_path(@contract), notice: 'コメントを更新しました。'
+    else
+      render :new
+    end
+  end
 
   def edit
     @contract = Contract.find(params[:contract_id])
