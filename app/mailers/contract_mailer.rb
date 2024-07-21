@@ -37,7 +37,7 @@ class ContractMailer < ActionMailer::Base
   def received_first_email(contract)
     @contract = contract
     @contract_url = "https://ri-plus.jp/contracts/#{contract.id}"
-    mail(to: "okuyama@ri-plus.jp", subject: "【#{@contract.company}】契約発行通知")
+    mail(to: "reply@ri-plus.jp", subject: "【#{@contract.company}】契約発行通知")
   end
 
   def send_first_email(contract)
@@ -49,7 +49,7 @@ class ContractMailer < ActionMailer::Base
   def received_start_email(contract)
     @contract = contract
     @contract_url = "https://ri-plus.jp/contracts/#{contract.id}"
-    mail(to: "okuyama@ri-plus.jp", subject: "【#{@contract.company}】開始日発行通知")
+    mail(to: "reply@ri-plus.jp", subject: "【#{@contract.company}】開始日発行通知")
   end
 
   def send_start_email(contract)
@@ -62,7 +62,7 @@ class ContractMailer < ActionMailer::Base
     @comment = comment
     @contract = comment.contract
     @contract_url = "https://ri-plus.jp/contracts/#{@contract.id}"
-    mail to: "okuyama@ri-plus.jp"
+    mail to: "reply@ri-plus.jp"
     mail(subject: "#{@contract.company}のステータスが#{@comment.status}に更新されました") do |format|
       format.text
     end
@@ -72,7 +72,7 @@ class ContractMailer < ActionMailer::Base
     @script = script
     @contract = script.contract
     @contract_url = "https://ri-plus.jp/contracts/#{@contract.id}/script"
-    mail to: "okuyama@ri-plus.jp"
+    mail to: "reply@ri-plus.jp"
     mail(subject: "#{@contract.company}よりスクリプト編集が実行されました") do |format|
       format.text
     end
