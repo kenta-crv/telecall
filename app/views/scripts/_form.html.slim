@@ -26,23 +26,17 @@
           | 質問したい内容①
       tr 
         td
-          = text_area :script, :hearing_1
+          = text_area :script, :hearing_1, placeholder: "ご希望のヒアリング内容についてお受付致します。内容によっては反映できないものがございますので、ご理解のほどお願い致します。"
       tr
         th.arrow_box
           | 質問したい内容②
       tr 
         td
-          = text_area :script, :hearing_2
-      tr
-        th.arrow_box
-          | 質問したい内容③
-      tr 
-        td
-          = text_area :script, :hearing_2
+          = text_area :script, :hearing_2, placeholder: "ご希望のヒアリング内容についてお受付致します。内容によっては反映できないものがございますので、ご理解のほどお願い致します。"
       tr
         th.arrow_box
          -if admin_signed_in?
-          = text_field :script, :question_1, class: 'text_field'
+          = text_field :script, :question_1, class: 'text_field', value: "架電先に最初にお伝えするための強みを教えてください。"
          -else 
           = @script.question_1
       tr 
@@ -51,7 +45,7 @@
       tr
         th.arrow_box
          -if admin_signed_in?
-          = text_field :script, :question_2, class: 'text_field'
+          = text_field :script, :question_2, class: 'text_field', value: "住居やビザにおけるサポートはございますか？"
          -else 
           = @script.question_2
       tr 
@@ -60,7 +54,7 @@
       tr
         th.arrow_box
          -if admin_signed_in?
-          = text_field :script, :question_3, class: 'text_field'
+          = text_field :script, :question_3, class: 'text_field', value: "提供人材の国籍を教えてください。"
          -else 
           = @script.question_3
       tr 
@@ -69,7 +63,7 @@
       tr
         th.arrow_box
          -if admin_signed_in?
-          = text_field :script, :question_4, class: 'text_field'
+          = text_field :script, :question_4, class: 'text_field', value: "紹介費用と管理組合費用を教えて下さい。"
          -else 
           = @script.question_4
       tr 
@@ -78,7 +72,7 @@
       tr
         th.arrow_box
          -if admin_signed_in?
-          = text_field :script, :question_5, class: 'text_field'
+          = text_field :script, :question_5, class: 'text_field', value: "他社と比較して御社の強みとなるアピールポイントを教えてください。"
          -else 
           = @script.question_5
       tr 
