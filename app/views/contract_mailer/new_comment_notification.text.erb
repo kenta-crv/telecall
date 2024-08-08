@@ -1,5 +1,14 @@
 <%= @contract.company %>のステータスが変更されました。
 
+サービス内容：<%= @contract.business %>
+単価：<%= @contract.unit_price %>
+件数：<%= @contract.maximum_number %>
+希望エリア：<%= @contract.approach_area %>
+希望業種：<%= @contract.approach_industry %>
+提供プラン：<%= @contract.service %>
+商談方法：<%= @contract.meeting %>
+レポート：<%= @contract.report %>
+
 変更後のステータスは以下のようになります。
 ステータス：<%= @comment.status %>
 次回更新日：<%= @comment.next %>

@@ -141,7 +141,36 @@
            = f.select(:service,[\
             ["トライアルプラン","トライアルプラン"],\
             ["テストマーケティングプラン","テストマーケティングプラン"],\
+            ["通常プラン","通常プラン"],\
+            ["その他","その他"],\
            ],include_blank: "選択してください")
+        tr
+         td
+           strong.label 必須
+         td
+           |サービス内容
+         td
+           = f.text_field :business
+        tr
+         td
+           strong.label 必須
+         td
+           |商談方法
+         td
+           = f.select(:meeting,[\
+            ["オンライン商談のみ","オンライン商談のみ"],\
+            ["訪問のみ","訪問のみ"],\
+            ["オンライン商談中心で訪問可","オンライン商談中心で訪問可"],\
+            ["訪問中心でオンライン商談可","訪問中心でオンライン商談可"],\
+            ["未定","未定"],\
+           ],include_blank: "選択してください")
+        tr
+         td
+           strong.label 必須
+         td
+           |レポート
+         td
+           = f.text_area :report
       - else
         tr
          td

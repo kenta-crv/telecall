@@ -134,7 +134,10 @@ class ContractsController < ApplicationController
       :post_title, #代表取締役
       :contract_date, #契約日
       :start_day,
-      :service
+      :service,
+      :business,
+      :meeting,
+      :report,
       )
     end
 end
