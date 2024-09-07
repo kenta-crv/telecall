@@ -37,7 +37,7 @@ Rails.application.routes.draw do
   resources :scripts, only: [:index]
 
   resources :contracts do
-    resource :comments
+    resources :comments
     resource :script #1:1
     collection do
       post :confirm
