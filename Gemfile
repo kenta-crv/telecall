@@ -5,7 +5,7 @@ gem 'thor'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', '< 1.7'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -68,12 +68,11 @@ gem 'slim-rails', '3.1.3'
 gem 'breadcrumbs_on_rails'
 #SNSボタン
 #gem 'social-share-button'
-gem 'annotate'
+gem 'annotate', '~> 3.2'
 #jQuiry
 gem "jquery-rails"
 #ページネート
 gem 'kaminari'
-gem 'annotate'
 gem 'will_paginate'
 #gem 'bootstrap-will_paginate'
 #リッチエディタ
