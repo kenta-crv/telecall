@@ -1,8 +1,8 @@
 class DocumentMailer < ActionMailer::Base
-  default from: "info@ri-plus.jp"
+  default from: "info@tele-match.net"
   def received_email(document)
     @document = document
-    mail to: "info@ri-plus.jp"
+    mail to: "info@tele-match.net"
     mail(subject: '資料ダウンロードがありました') do |format|
       format.text
     end

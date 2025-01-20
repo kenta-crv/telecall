@@ -1,9 +1,9 @@
 class ContractMailer < ActionMailer::Base
-  default from: "info@ri-plus.jp"
+  default from: "info@tele-match.net"
   def received_email(contract)
     @contract = contract
     mail from: contract.email
-    mail to: "info@ri-plus.jp"
+    mail to: "info@tele-match.net"
     mail cc: "kamon@ri-plus.jp"
     mail(subject: '株式会社Ri-Plusにお問い合わせがありました') do |format|
       format.text
@@ -20,7 +20,7 @@ class ContractMailer < ActionMailer::Base
 
   def contract_received_email(contract)
     @contract = contract
-    mail to: "info@ri-plus.jp"
+    mail to: "info@tele-match.net"
     mail(subject: '株式会社Ri-Plusで契約同意がありました') do |format|
       format.text
     end
@@ -43,7 +43,7 @@ class ContractMailer < ActionMailer::Base
   def send_first_email(contract)
     @contract = contract
     @contract_url = "https://ri-plus.jp/contracts/#{contract.id}"
-    mail(from:"info@ri-plus.jp", to: @contract.email, subject: "契約締結のご案内")
+    mail(from:"info@tele-match.net", to: @contract.email, subject: "契約締結のご案内")
   end
 
   def received_start_email(contract)
@@ -55,7 +55,7 @@ class ContractMailer < ActionMailer::Base
   def send_start_email(contract)
     @contract = contract
     @contract_url = "https://ri-plus.jp/contracts/#{contract.id}"
-    mail(from:"info@ri-plus.jp", to: @contract.email, subject: "株式会社Ri-Plus業務開始日のご案内")
+    mail(from:"info@tele-match.net", to: @contract.email, subject: "株式会社Ri-Plus業務開始日のご案内")
   end
 
   def new_comment_notification(comment)

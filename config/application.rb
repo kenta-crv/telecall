@@ -22,7 +22,7 @@ module Bookkeeping
     address: 'smtp.lolipop.jp',
     domain: 'ri-plus.jp',
     port: 587,
-    user_name: 'info@ri-plus.jp',
+    user_name: 'info@tele-match.net',
     password: ENV['EMAIL_PASSWORD'],
     authentication: 'plain',
     enable_starttls_auto: true

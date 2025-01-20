@@ -1,9 +1,9 @@
 class WorkerMailer < ActionMailer::Base
-  default from: "info@ri-plus.jp"
+  default from: "info@tele-match.net"
 
   def received_email(worker)
     @worker = worker
-    mail to: "info@ri-plus.jp"
+    mail to: "info@tele-match.net"
     mail(subject: '株式会社Ri-Plusに求人申込がありました') do |format|
       format.text
     end
