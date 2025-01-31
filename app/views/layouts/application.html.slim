@@ -3,22 +3,13 @@ html
   head
       = render template: 'layouts/_head.html.slim'
   header
-      .row
-        .col-xs-4
-           = link_to "/"
-            =image_tag "logo1.webp", width: "100%", class:"header-image", alt:"株式会社Ri-Plus『アポ匠ロゴ』"
-        .col-xs-3
-        .col-xs-4
-            =image_tag "tel.webp", width: "100%", class:"header-image", alt:"電話番号：050-5480-1131 メールアドレス：info@ri-plus.jp"
-        .col-xs-1
-                .navToggle
-                  span
-                  span
-                  span
-                  span menu
+
+      = link_to "/"
+            =image_tag "rogo.webp", width: "100%", class:"header-image", alt:"株式会社Ri-Plus『アポ匠ロゴ』"
+
       .row.navi
         .col-xs-12.center
-          ul#dropmenu
+          /ul#dropmenu
            li
              = link_to  'トップ', '/' , class: "col-md"
            li
@@ -42,7 +33,7 @@ html
             = link_to  '問い合わせ', '/contact' , :class=>"col-md"
 
 
-        nav.globalMenuSp
+        /nav.globalMenuSp
            ul
             li
               = link_to  'トップ', '/'
@@ -76,5 +67,5 @@ html
       = yield
   br
   br
-  footer
+  /footer
      = render template: 'layouts/_footer.html.slim'
